@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "glitter-gallery_bz template SEO rendering configuration",
+  "text_props": [
+    "text",
+    "label",
+    "value",
+    "title"
+  ],
+  "attr_map": {
+    "className": "class",
+    "htmlFor": "for"
+  },
+  "allowed_attrs": [
+    "class",
+    "id",
+    "href",
+    "src",
+    "alt",
+    "title",
+    "name",
+    "type",
+    "placeholder",
+    "for",
+    "target",
+    "rel",
+    "role",
+    "aria-label",
+    "aria-describedby",
+    "data-testid"
+  ],
+  "self_closing": [
+    "img",
+    "input",
+    "hr",
+    "br"
+  ],
+  "component_map": {
+    "Div": {
+      "tag": "div"
+    },
+    "Span": {
+      "tag": "span"
+    },
+    "P": {
+      "tag": "p"
+    },
+    "H1": {
+      "tag": "h1"
+    },
+    "H2": {
+      "tag": "h2"
+    },
+    "H3": {
+      "tag": "h3"
+    },
+    "H4": {
+      "tag": "h4"
+    },
+    "A": {
+      "tag": "a"
+    },
+    "Button": {
+      "tag": "button"
+    },
+    "Ul": {
+      "tag": "ul"
+    },
+    "Li": {
+      "tag": "li"
+    },
+    "Nav": {
+      "tag": "nav"
+    },
+    "Section": {
+      "tag": "section"
+    },
+    "Container": {
+      "tag": "div"
+    },
+    "Toast": {
+      "tag": "div",
+      "skip": true
+    },
+    "PageTransitionIndicator": {
+      "tag": "div",
+      "skip": true
+    },
+    "PageLoading": {
+      "tag": "div",
+      "skip": true
+    }
+  }
+}

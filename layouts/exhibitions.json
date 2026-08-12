@@ -1,0 +1,702 @@
+{
+  "version": "1.0.0",
+  "layout_name": "exhibitions",
+  "permissions": [],
+  "extends": "_user_base",
+  "data_sources": [
+    {
+      "id": "gallery_exhibitions",
+      "type": "static",
+      "data": {
+        "items": [
+          {
+            "id": "light-afterimage-record",
+            "slug": "light-afterimage-record",
+            "status": "current",
+            "visibility": "published",
+            "published_at": "2026-03-20T09:00:00+09:00",
+            "featured": true,
+            "cover_image": "",
+            "title_key": "gallery.content.exhibitions.light_afterimage.title",
+            "subtitle_key": "gallery.content.exhibitions.light_afterimage.subtitle",
+            "period_key": "gallery.content.exhibitions.light_afterimage.period",
+            "location_key": "gallery.content.exhibitions.light_afterimage.location",
+            "curator_note_key": "gallery.content.exhibitions.light_afterimage.curator_note",
+            "curator_summary_key": "gallery.content.exhibitions.light_afterimage.curator_summary",
+            "tags": [
+              "light",
+              "installation",
+              "archive"
+            ],
+            "sections": [
+              {
+                "id": "context",
+                "title_key": "gallery.content.exhibition_sections.context.title",
+                "body_key": "gallery.content.exhibition_sections.context.body"
+              },
+              {
+                "id": "records",
+                "title_key": "gallery.content.exhibition_sections.records.title",
+                "body_key": "gallery.content.exhibition_sections.records.body"
+              },
+              {
+                "id": "artwork-insertion",
+                "title_key": "gallery.content.exhibition_sections.artwork_insertion.title",
+                "body_key": "gallery.content.exhibition_sections.artwork_insertion.body",
+                "insertion_point": "artworks"
+              }
+            ],
+            "collections": [
+              "held-works",
+              "project-records"
+            ],
+            "related_notes": [
+              "curator-note",
+              "field-note"
+            ],
+            "archive_references": [
+              "installation-photo-set",
+              "press-release",
+              "lighting-plan"
+            ],
+            "relationship_meta": [
+              {
+                "label_key": "gallery.relationship_meta.related_records",
+                "value": 3
+              },
+              {
+                "label_key": "gallery.relationship_meta.archive_references",
+                "value": 3
+              },
+              {
+                "label_key": "gallery.relationship_meta.curator_notes",
+                "value": 2
+              }
+            ],
+            "timeline": [
+              "research-start",
+              "install-week",
+              "public-opening"
+            ]
+          },
+          {
+            "id": "studio-documents",
+            "slug": "studio-documents",
+            "status": "past",
+            "visibility": "published",
+            "published_at": "2026-02-10T09:00:00+09:00",
+            "featured": false,
+            "cover_image": "",
+            "title_key": "gallery.content.exhibitions.studio_documents.title",
+            "subtitle_key": "gallery.content.exhibitions.studio_documents.subtitle",
+            "period_key": "gallery.content.exhibitions.studio_documents.period",
+            "location_key": "gallery.content.exhibitions.studio_documents.location",
+            "curator_note_key": "gallery.content.exhibitions.studio_documents.curator_note",
+            "curator_summary_key": "gallery.content.exhibitions.studio_documents.curator_summary",
+            "tags": [
+              "document",
+              "studio",
+              "research"
+            ],
+            "sections": [
+              {
+                "id": "materials",
+                "title_key": "gallery.content.exhibition_sections.materials.title",
+                "body_key": "gallery.content.exhibition_sections.materials.body"
+              }
+            ],
+            "collections": [
+              "project-records"
+            ],
+            "related_notes": [
+              "process-note"
+            ],
+            "archive_references": [
+              "studio-scan-set"
+            ],
+            "relationship_meta": [
+              {
+                "label_key": "gallery.relationship_meta.linked_documents",
+                "value": 2
+              },
+              {
+                "label_key": "gallery.relationship_meta.curator_notes",
+                "value": 1
+              },
+              {
+                "label_key": "gallery.relationship_meta.revision_history"
+              }
+            ],
+            "timeline": [
+              "document-selection",
+              "archive-release"
+            ]
+          },
+          {
+            "id": "threshold-study",
+            "slug": "threshold-study",
+            "status": "upcoming",
+            "visibility": "scheduled",
+            "published_at": "2026-06-01T09:00:00+09:00",
+            "featured": false,
+            "cover_image": "",
+            "title_key": "gallery.content.exhibitions.threshold_study.title",
+            "subtitle_key": "gallery.content.exhibitions.threshold_study.subtitle",
+            "period_key": "gallery.content.exhibitions.threshold_study.period",
+            "location_key": "gallery.content.exhibitions.threshold_study.location",
+            "curator_note_key": "gallery.content.exhibitions.threshold_study.curator_note",
+            "curator_summary_key": "gallery.content.exhibitions.threshold_study.curator_summary",
+            "tags": [
+              "research",
+              "field",
+              "timeline"
+            ],
+            "sections": [
+              {
+                "id": "research",
+                "title_key": "gallery.content.exhibition_sections.research.title",
+                "body_key": "gallery.content.exhibition_sections.research.body"
+              }
+            ],
+            "collections": [
+              "research-notes"
+            ],
+            "related_notes": [
+              "field-note",
+              "process-note"
+            ],
+            "archive_references": [
+              "site-note-index"
+            ],
+            "relationship_meta": [
+              {
+                "label_key": "gallery.relationship_meta.related_records",
+                "value": 2
+              },
+              {
+                "label_key": "gallery.relationship_meta.archive_references",
+                "value": 1
+              },
+              {
+                "label_key": "gallery.relationship_meta.connected_exhibitions",
+                "value": 1
+              }
+            ],
+            "timeline": [
+              "field-research"
+            ]
+          }
+        ],
+        "groups": [
+          {
+            "id": "current",
+            "title_key": "gallery.exhibitions.groups.current.title",
+            "description_key": "gallery.exhibitions.groups.current.description",
+            "items": [
+              {
+                "id": "light-afterimage-record",
+                "slug": "light-afterimage-record",
+                "status": "current",
+                "visibility": "published",
+                "published_at": "2026-03-20T09:00:00+09:00",
+                "featured": true,
+                "cover_image": "",
+                "title_key": "gallery.content.exhibitions.light_afterimage.title",
+                "subtitle_key": "gallery.content.exhibitions.light_afterimage.subtitle",
+                "period_key": "gallery.content.exhibitions.light_afterimage.period",
+                "location_key": "gallery.content.exhibitions.light_afterimage.location",
+                "curator_note_key": "gallery.content.exhibitions.light_afterimage.curator_note",
+                "curator_summary_key": "gallery.content.exhibitions.light_afterimage.curator_summary",
+                "tags": [
+                  "light",
+                  "installation",
+                  "archive"
+                ],
+                "sections": [
+                  {
+                    "id": "context",
+                    "title_key": "gallery.content.exhibition_sections.context.title",
+                    "body_key": "gallery.content.exhibition_sections.context.body"
+                  },
+                  {
+                    "id": "records",
+                    "title_key": "gallery.content.exhibition_sections.records.title",
+                    "body_key": "gallery.content.exhibition_sections.records.body"
+                  },
+                  {
+                    "id": "artwork-insertion",
+                    "title_key": "gallery.content.exhibition_sections.artwork_insertion.title",
+                    "body_key": "gallery.content.exhibition_sections.artwork_insertion.body",
+                    "insertion_point": "artworks"
+                  }
+                ],
+                "collections": [
+                  "held-works",
+                  "project-records"
+                ],
+                "related_notes": [
+                  "curator-note",
+                  "field-note"
+                ],
+                "archive_references": [
+                  "installation-photo-set",
+                  "press-release",
+                  "lighting-plan"
+                ],
+                "relationship_meta": [
+                  {
+                    "label_key": "gallery.relationship_meta.related_records",
+                    "value": 3
+                  },
+                  {
+                    "label_key": "gallery.relationship_meta.archive_references",
+                    "value": 3
+                  },
+                  {
+                    "label_key": "gallery.relationship_meta.curator_notes",
+                    "value": 2
+                  }
+                ],
+                "timeline": [
+                  "research-start",
+                  "install-week",
+                  "public-opening"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "upcoming",
+            "title_key": "gallery.exhibitions.groups.upcoming.title",
+            "description_key": "gallery.exhibitions.groups.upcoming.description",
+            "items": [
+              {
+                "id": "threshold-study",
+                "slug": "threshold-study",
+                "status": "upcoming",
+                "visibility": "scheduled",
+                "published_at": "2026-06-01T09:00:00+09:00",
+                "featured": false,
+                "cover_image": "",
+                "title_key": "gallery.content.exhibitions.threshold_study.title",
+                "subtitle_key": "gallery.content.exhibitions.threshold_study.subtitle",
+                "period_key": "gallery.content.exhibitions.threshold_study.period",
+                "location_key": "gallery.content.exhibitions.threshold_study.location",
+                "curator_note_key": "gallery.content.exhibitions.threshold_study.curator_note",
+                "curator_summary_key": "gallery.content.exhibitions.threshold_study.curator_summary",
+                "tags": [
+                  "research",
+                  "field",
+                  "timeline"
+                ],
+                "sections": [
+                  {
+                    "id": "research",
+                    "title_key": "gallery.content.exhibition_sections.research.title",
+                    "body_key": "gallery.content.exhibition_sections.research.body"
+                  }
+                ],
+                "collections": [
+                  "research-notes"
+                ],
+                "related_notes": [
+                  "field-note",
+                  "process-note"
+                ],
+                "archive_references": [
+                  "site-note-index"
+                ],
+                "relationship_meta": [
+                  {
+                    "label_key": "gallery.relationship_meta.related_records",
+                    "value": 2
+                  },
+                  {
+                    "label_key": "gallery.relationship_meta.archive_references",
+                    "value": 1
+                  },
+                  {
+                    "label_key": "gallery.relationship_meta.connected_exhibitions",
+                    "value": 1
+                  }
+                ],
+                "timeline": [
+                  "field-research"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "past",
+            "title_key": "gallery.exhibitions.groups.past.title",
+            "description_key": "gallery.exhibitions.groups.past.description",
+            "items": [
+              {
+                "id": "studio-documents",
+                "slug": "studio-documents",
+                "status": "past",
+                "visibility": "published",
+                "published_at": "2026-02-10T09:00:00+09:00",
+                "featured": false,
+                "cover_image": "",
+                "title_key": "gallery.content.exhibitions.studio_documents.title",
+                "subtitle_key": "gallery.content.exhibitions.studio_documents.subtitle",
+                "period_key": "gallery.content.exhibitions.studio_documents.period",
+                "location_key": "gallery.content.exhibitions.studio_documents.location",
+                "curator_note_key": "gallery.content.exhibitions.studio_documents.curator_note",
+                "curator_summary_key": "gallery.content.exhibitions.studio_documents.curator_summary",
+                "tags": [
+                  "document",
+                  "studio",
+                  "research"
+                ],
+                "sections": [
+                  {
+                    "id": "materials",
+                    "title_key": "gallery.content.exhibition_sections.materials.title",
+                    "body_key": "gallery.content.exhibition_sections.materials.body"
+                  }
+                ],
+                "collections": [
+                  "project-records"
+                ],
+                "related_notes": [
+                  "process-note"
+                ],
+                "archive_references": [
+                  "studio-scan-set"
+                ],
+                "relationship_meta": [
+                  {
+                    "label_key": "gallery.relationship_meta.linked_documents",
+                    "value": 2
+                  },
+                  {
+                    "label_key": "gallery.relationship_meta.curator_notes",
+                    "value": 1
+                  },
+                  {
+                    "label_key": "gallery.relationship_meta.revision_history"
+                  }
+                ],
+                "timeline": [
+                  "document-selection",
+                  "archive-release"
+                ]
+              }
+            ]
+          }
+        ],
+        "pagination": {
+          "page": 1,
+          "per_page": 12,
+          "total": 3
+        },
+        "filters": [
+          {
+            "id": "all",
+            "label_key": "gallery.exhibitions.filters.all"
+          },
+          {
+            "id": "current",
+            "label_key": "gallery.exhibitions.filters.current"
+          },
+          {
+            "id": "upcoming",
+            "label_key": "gallery.exhibitions.filters.upcoming"
+          },
+          {
+            "id": "past",
+            "label_key": "gallery.exhibitions.filters.past"
+          }
+        ]
+      }
+    }
+  ],
+  "slots": {
+    "content": [
+      {
+        "type": "basic",
+        "name": "Section",
+        "props": {
+          "className": "gallery-page-head"
+        },
+        "children": [
+          {
+            "type": "basic",
+            "name": "Span",
+            "props": {
+              "className": "gallery-kicker"
+            },
+            "text": "$t:gallery.exhibitions.kicker"
+          },
+          {
+            "type": "basic",
+            "name": "H1",
+            "props": {
+              "className": "gallery-page-title"
+            },
+            "text": "$t:gallery.exhibitions.title"
+          },
+          {
+            "type": "basic",
+            "name": "P",
+            "props": {
+              "className": "gallery-page-lead"
+            },
+            "text": "$t:gallery.exhibitions.lead"
+          },
+          {
+            "type": "basic",
+            "name": "Div",
+            "props": {
+              "className": "gallery-chip-list"
+            },
+            "children": [
+              {
+                "type": "basic",
+                "name": "Span",
+                "props": {
+                  "className": "gallery-chip"
+                },
+                "iteration": {
+                  "source": "gallery_exhibitions.filters",
+                  "item_var": "filter"
+                },
+                "text": "{{$t(filter.label_key)}}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "basic",
+        "name": "Section",
+        "props": {
+          "className": "gallery-featured-index"
+        },
+        "children": [
+          {
+            "type": "basic",
+            "name": "Span",
+            "props": {
+              "className": "gallery-kicker"
+            },
+            "text": "$t:gallery.exhibitions.featured_kicker"
+          },
+          {
+            "type": "basic",
+            "name": "Div",
+            "props": {
+              "className": "gallery-list"
+            },
+            "children": [
+              {
+                "type": "basic",
+                "name": "Div",
+                "props": {
+                  "className": "gallery-record gallery-record-featured"
+                },
+                "iteration": {
+                  "source": "gallery_exhibitions.items.filter((item) => item.featured)",
+                  "item_var": "exhibition"
+                },
+                "children": [
+                  {
+                    "partial": "partials/exhibitions/_exhibition_card.json"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "basic",
+        "name": "Section",
+        "props": {
+          "className": "gallery-list gallery-exhibition-groups"
+        },
+        "children": [
+          {
+            "type": "basic",
+            "name": "Div",
+            "props": {
+              "className": "gallery-group"
+            },
+            "children": [
+              {
+                "type": "basic",
+                "name": "Div",
+                "props": {
+                  "className": "gallery-group-head"
+                },
+                "children": [
+                  {
+                    "type": "basic",
+                    "name": "H2",
+                    "props": {
+                      "className": "gallery-section-title"
+                    },
+                    "text": "$t:gallery.exhibitions.groups.current.title"
+                  },
+                  {
+                    "type": "basic",
+                    "name": "P",
+                    "props": {
+                      "className": "gallery-muted"
+                    },
+                    "text": "$t:gallery.exhibitions.groups.current.description"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "name": "Div",
+                "props": {
+                  "className": "gallery-list"
+                },
+                "children": [
+                  {
+                    "type": "basic",
+                    "name": "Div",
+                    "props": {
+                      "className": "gallery-record"
+                    },
+                    "iteration": {
+                      "source": "gallery_exhibitions.groups.find((group) => group.id === 'current')?.items ?? gallery_exhibitions.items.filter((item) => item.status === 'current')",
+                      "item_var": "exhibition"
+                    },
+                    "children": [
+                      {
+                        "partial": "partials/exhibitions/_exhibition_card.json"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "basic",
+            "name": "Div",
+            "props": {
+              "className": "gallery-group"
+            },
+            "children": [
+              {
+                "type": "basic",
+                "name": "Div",
+                "props": {
+                  "className": "gallery-group-head"
+                },
+                "children": [
+                  {
+                    "type": "basic",
+                    "name": "H2",
+                    "props": {
+                      "className": "gallery-section-title"
+                    },
+                    "text": "$t:gallery.exhibitions.groups.upcoming.title"
+                  },
+                  {
+                    "type": "basic",
+                    "name": "P",
+                    "props": {
+                      "className": "gallery-muted"
+                    },
+                    "text": "$t:gallery.exhibitions.groups.upcoming.description"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "name": "Div",
+                "props": {
+                  "className": "gallery-list"
+                },
+                "children": [
+                  {
+                    "type": "basic",
+                    "name": "Div",
+                    "props": {
+                      "className": "gallery-record"
+                    },
+                    "iteration": {
+                      "source": "gallery_exhibitions.groups.find((group) => group.id === 'upcoming')?.items ?? gallery_exhibitions.items.filter((item) => item.status === 'upcoming')",
+                      "item_var": "exhibition"
+                    },
+                    "children": [
+                      {
+                        "partial": "partials/exhibitions/_exhibition_card.json"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "basic",
+            "name": "Div",
+            "props": {
+              "className": "gallery-group"
+            },
+            "children": [
+              {
+                "type": "basic",
+                "name": "Div",
+                "props": {
+                  "className": "gallery-group-head"
+                },
+                "children": [
+                  {
+                    "type": "basic",
+                    "name": "H2",
+                    "props": {
+                      "className": "gallery-section-title"
+                    },
+                    "text": "$t:gallery.exhibitions.groups.past.title"
+                  },
+                  {
+                    "type": "basic",
+                    "name": "P",
+                    "props": {
+                      "className": "gallery-muted"
+                    },
+                    "text": "$t:gallery.exhibitions.groups.past.description"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "name": "Div",
+                "props": {
+                  "className": "gallery-list"
+                },
+                "children": [
+                  {
+                    "type": "basic",
+                    "name": "Div",
+                    "props": {
+                      "className": "gallery-record"
+                    },
+                    "iteration": {
+                      "source": "gallery_exhibitions.groups.find((group) => group.id === 'past')?.items ?? gallery_exhibitions.items.filter((item) => item.status === 'past')",
+                      "item_var": "exhibition"
+                    },
+                    "children": [
+                      {
+                        "partial": "partials/exhibitions/_exhibition_card.json"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

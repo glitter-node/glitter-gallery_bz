@@ -1,0 +1,277 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-section gallery-section-muted gallery-home-section"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-feature-split"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Div",
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-kicker"
+              },
+              "text": "$t:gallery.home.records.kicker"
+            },
+            {
+              "type": "basic",
+              "name": "H2",
+              "props": {
+                "className": "gallery-section-title"
+              },
+              "text": "$t:gallery.home.records.title"
+            },
+            {
+              "type": "basic",
+              "name": "P",
+              "props": {
+                "className": "gallery-body-lg"
+              },
+              "text": "$t:gallery.home.records.body"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-note-list"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "A",
+              "props": {
+                "href": "{{record.href ?? \"/records\"}}",
+                "className": "gallery-note gallery-home-record-note"
+              },
+              "iteration": {
+                "source": "{{(gallery_home.data?.recent_records ?? gallery_home.recent_records ?? []).slice(0, 3)}}",
+                "item_var": "record"
+              },
+              "children": [
+                {
+                  "type": "basic",
+                  "name": "Div",
+                  "props": {
+                    "className": "gallery-media-frame gallery-media-record-note gallery-home-media-note"
+                  },
+                  "children": [
+                    {
+                      "type": "basic",
+                      "name": "Img",
+                      "props": {
+                        "src": "{{(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '')}}",
+                        "alt": "{{record.title_label ?? $t(record.title_key ?? 'gallery.home.records.empty_title')}}",
+                        "className": "gallery-media-image"
+                      },
+                      "if": "{{!!(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '') && !(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '').startsWith('/images/gallery/') && !(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '').startsWith('images/gallery/') && !(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '').startsWith('/api/templates/assets/glitter-gallery_bz/images/gallery/')}}"
+                    },
+                    {
+                      "type": "basic",
+                      "name": "Div",
+                      "props": {
+                        "className": "gallery-media-placeholder gallery-media-placeholder-small"
+                      },
+                      "if": "{{!(!!(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '') && !(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '').startsWith('/images/gallery/') && !(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '').startsWith('images/gallery/') && !(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '').startsWith('/api/templates/assets/glitter-gallery_bz/images/gallery/'))}}",
+                      "children": [
+                        {
+                          "type": "basic",
+                          "name": "Span",
+                          "props": {
+                            "className": "gallery-media-placeholder-label"
+                          },
+                          "text": "$t:gallery.media.record_note"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "basic",
+                  "name": "Span",
+                  "props": {
+                    "className": "gallery-meta"
+                  },
+                  "text": "{{record.recorded_at_display ?? $t(record.date_key ?? 'gallery.home.records.empty_date')}} · {{$t(record.type_label_key ?? 'gallery.home.records.empty_type')}}"
+                },
+                {
+                  "type": "basic",
+                  "name": "Div",
+                  "props": {
+                    "className": "gallery-home-record-hierarchy"
+                  },
+                  "children": [
+                    {
+                      "type": "basic",
+                      "name": "Span",
+                      "props": {
+                        "className": "gallery-quiet-label"
+                      },
+                      "text": "$t:gallery.home.records.labels.record_type"
+                    },
+                    {
+                      "type": "basic",
+                      "name": "Span",
+                      "props": {
+                        "className": "gallery-quiet-value"
+                      },
+                      "text": "{{$t(record.type_label_key ?? 'gallery.home.records.empty_type')}}"
+                    }
+                  ]
+                },
+                {
+                  "type": "basic",
+                  "name": "H3",
+                  "props": {
+                    "className": "gallery-card-title"
+                  },
+                  "text": "{{record.title_label ?? $t(record.title_key ?? 'gallery.home.records.empty_title')}}"
+                },
+                {
+                  "type": "basic",
+                  "name": "P",
+                  "text": "{{record.summary_label ?? $t(record.excerpt_key ?? 'gallery.home.records.empty_summary')}}"
+                },
+                {
+                  "type": "basic",
+                  "name": "Span",
+                  "props": {
+                    "className": "gallery-home-related-context"
+                  },
+                  "text": "{{record.related_exhibition?.title?.[$locale] ?? record.related_exhibition?.slug ?? $t(record.related_context_key ?? 'gallery.home.records.empty_related')}}"
+                },
+                {
+                  "type": "basic",
+                  "name": "Div",
+                  "props": {
+                    "className": "gallery-relationship-row"
+                  },
+                  "if": "{{(record.relationship_meta ?? []).length > 0}}",
+                  "children": [
+                    {
+                      "type": "basic",
+                      "name": "Span",
+                      "iteration": {
+                        "source": "record.relationship_meta",
+                        "item_var": "meta"
+                      },
+                      "text": "{{meta.value !== undefined ? $t(meta.label_key) + ' ' + meta.value : $t(meta.label_key)}}"
+                    }
+                  ]
+                },
+                {
+                  "type": "basic",
+                  "name": "Div",
+                  "props": {
+                    "className": "gallery-home-record-context-grid"
+                  },
+                  "children": [
+                    {
+                      "type": "basic",
+                      "name": "Div",
+                      "props": {
+                        "className": "gallery-archive-meta-pair"
+                      },
+                      "children": [
+                        {
+                          "type": "basic",
+                          "name": "Span",
+                          "props": {
+                            "className": "gallery-quiet-label"
+                          },
+                          "text": "$t:gallery.home.records.labels.relationship"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "Span",
+                          "props": {
+                            "className": "gallery-quiet-value"
+                          },
+                          "text": "{{record.relationship_label ?? $t(record.relationship_key ?? 'gallery.home.records.relationships.connected_record')}}"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "basic",
+                      "name": "Div",
+                      "props": {
+                        "className": "gallery-archive-meta-pair"
+                      },
+                      "children": [
+                        {
+                          "type": "basic",
+                          "name": "Span",
+                          "props": {
+                            "className": "gallery-quiet-label"
+                          },
+                          "text": "$t:gallery.home.records.labels.chronology"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "Span",
+                          "props": {
+                            "className": "gallery-quiet-value"
+                          },
+                          "text": "{{record.chronology_label ?? $t(record.chronology_key ?? 'gallery.home.records.chronology.recorded_during')}}"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "basic",
+                      "name": "Div",
+                      "props": {
+                        "className": "gallery-archive-meta-pair gallery-archive-meta-pair-wide"
+                      },
+                      "children": [
+                        {
+                          "type": "basic",
+                          "name": "Span",
+                          "props": {
+                            "className": "gallery-quiet-label"
+                          },
+                          "text": "$t:gallery.home.records.labels.continue"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "Span",
+                          "props": {
+                            "className": "gallery-quiet-value"
+                          },
+                          "text": "{{record.continuity_label ?? $t(record.continuity_key ?? 'gallery.home.records.continuity.same_exhibition')}}"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "basic",
+              "name": "P",
+              "props": {
+                "className": "gallery-muted"
+              },
+              "if": "{{((gallery_home.data?.recent_records ?? gallery_home.recent_records ?? []).slice(0, 3)).length == 0}}",
+              "text": "$t:gallery.home.records.empty"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

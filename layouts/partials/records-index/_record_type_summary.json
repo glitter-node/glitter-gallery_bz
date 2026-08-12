@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-section gallery-section-tight"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Span",
+      "props": {
+        "className": "gallery-kicker"
+      },
+      "text": "$t:gallery.records.index.type_summary"
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-chip-list"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Span",
+          "props": {
+            "className": "gallery-chip"
+          },
+          "iteration": {
+            "source": "gallery_records_index.record_types",
+            "item_var": "type"
+          },
+          "text": "{{$t(type.label_key)}} · {{type.count ?? 0}}"
+        }
+      ]
+    }
+  ]
+}

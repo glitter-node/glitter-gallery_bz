@@ -1,0 +1,446 @@
+{
+  "version": "1.0.0",
+  "layout_name": "home",
+  "extends": "_user_base",
+  "permissions": [],
+  "meta": {
+    "seo": {
+      "enabled": true,
+      "priority": 1,
+      "changefreq": "weekly",
+      "og": {
+        "type": "website",
+        "title": "$t:gallery.home.seo_title",
+        "description": "$t:gallery.home.seo_description"
+      },
+      "structured_data": {
+        "@type": "WebSite",
+        "name": "$t:gallery.brand.name"
+      }
+    }
+  },
+  "data_sources": [
+    {
+      "id": "gallery_home",
+      "type": "api",
+      "endpoint": "/api/gallery/home",
+      "method": "GET",
+      "auth_mode": "none",
+      "loading_strategy": "blocking",
+      "fallback": {
+        "featured_exhibition": null,
+        "highlighted_items": [],
+        "recent_records": [],
+        "recent_archive_materials": [],
+        "relationship_paths": [],
+        "archive_categories": [],
+        "about_context": {}
+      }
+    },
+    {
+      "id": "gallery_home_stats",
+      "type": "static",
+      "data": [
+        {
+          "value": "06",
+          "label_key": "gallery.home.stats.exhibitions"
+        },
+        {
+          "value": "18",
+          "label_key": "gallery.home.stats.archive"
+        },
+        {
+          "value": "32",
+          "label_key": "gallery.home.stats.notes"
+        }
+      ]
+    },
+    {
+      "id": "gallery_featured_exhibition_metadata",
+      "type": "static",
+      "data": [
+        {
+          "label_key": "gallery.content.metadata.period",
+          "value_key": "gallery.content.exhibitions.light_afterimage.period"
+        },
+        {
+          "label_key": "gallery.content.metadata.location",
+          "value_key": "gallery.content.exhibitions.light_afterimage.location"
+        },
+        {
+          "label_key": "gallery.content.metadata.format",
+          "value_key": "gallery.content.exhibitions.light_afterimage.format"
+        }
+      ]
+    },
+    {
+      "id": "gallery_home_item_highlights_fallback",
+      "type": "static",
+      "data": [
+        {
+          "id": "pale-grid-01",
+          "slug": "pale-grid-01",
+          "type": "artwork",
+          "href": "/items/pale-grid-01",
+          "title_key": "gallery.items.pale_grid.title",
+          "subtitle_key": "gallery.items.pale_grid.subtitle",
+          "artist_name_key": "gallery.items.artists.min_jiwon",
+          "year": "2025",
+          "medium_key": "gallery.items.pale_grid.medium",
+          "relation_key": "gallery.home.item_highlights.relations.entry_work",
+          "label_key": "gallery.home.item_highlights.labels.artwork"
+        },
+        {
+          "id": "installation-axis-record",
+          "slug": "installation-axis-record",
+          "type": "installation",
+          "href": "/items/installation-axis-record",
+          "title_key": "gallery.items.installation_axis.title",
+          "subtitle_key": "gallery.items.installation_axis.subtitle",
+          "artist_name_key": "gallery.items.artists.gallery_team",
+          "year": "2026",
+          "medium_key": "gallery.items.installation_axis.medium",
+          "relation_key": "gallery.home.item_highlights.relations.installation",
+          "label_key": "gallery.home.item_highlights.labels.installation"
+        },
+        {
+          "id": "press-release-fragment",
+          "slug": "press-release-fragment",
+          "type": "document",
+          "href": "/archive/document/press-release",
+          "title_key": "gallery.items.press_fragment.title",
+          "subtitle_key": "gallery.items.press_fragment.subtitle",
+          "artist_name_key": "gallery.items.artists.archive_editor",
+          "year": "2026",
+          "medium_key": "gallery.items.press_fragment.medium",
+          "relation_key": "gallery.home.item_highlights.relations.document",
+          "label_key": "gallery.home.item_highlights.labels.document"
+        }
+      ]
+    },
+    {
+      "id": "gallery_home_recent_archive_materials_fallback",
+      "type": "static",
+      "data": [
+        {
+          "id": "installation-photo-set",
+          "slug": "installation-photo-set",
+          "category": "material",
+          "href": "/archive/material/installation-photo-set",
+          "type_label_key": "gallery.archive_materials.types.installation_photo",
+          "title_key": "gallery.archive_materials.installation_photo_set.title",
+          "summary_key": "gallery.archive_materials.installation_photo_set.summary",
+          "source_key": "gallery.archive_materials.sources.gallery_records_team",
+          "date_key": "gallery.archive_materials.installation_photo_set.date_label"
+        },
+        {
+          "id": "press-release",
+          "slug": "press-release",
+          "category": "document",
+          "href": "/archive/document/press-release",
+          "type_label_key": "gallery.archive_materials.types.press",
+          "title_key": "gallery.archive_materials.press_release.title",
+          "summary_key": "gallery.archive_materials.press_release.summary",
+          "source_key": "gallery.archive_materials.sources.archive_editor",
+          "date_key": "gallery.archive_materials.press_release.date_label"
+        },
+        {
+          "id": "lighting-plan",
+          "slug": "lighting-plan",
+          "category": "field-record",
+          "href": "/archive/field-record/lighting-plan",
+          "type_label_key": "gallery.archive_materials.types.note",
+          "title_key": "gallery.archive_materials.lighting_plan.title",
+          "summary_key": "gallery.archive_materials.lighting_plan.summary",
+          "source_key": "gallery.archive_materials.sources.installation_team",
+          "date_key": "gallery.archive_materials.lighting_plan.date_label"
+        }
+      ]
+    },
+    {
+      "id": "gallery_home_relationship_paths",
+      "type": "static",
+      "data": [
+        {
+          "id": "exhibition-to-field-note",
+          "index": "01",
+          "href": "/records/field-note",
+          "title_key": "gallery.home.relationship_paths.exhibition_to_field_note.title",
+          "body_key": "gallery.home.relationship_paths.exhibition_to_field_note.body",
+          "from_key": "gallery.content.exhibitions.light_afterimage.title",
+          "mid_key": "gallery.records.field_note.title",
+          "to_key": "gallery.archive_materials.installation_photo_set.title",
+          "role_key": "gallery.home.relationship_paths.roles.installation_context",
+          "timeline_key": "gallery.home.relationship_paths.timeline.install_week",
+          "continuity_key": "gallery.home.relationship_paths.continuity.open_archive_material",
+          "relationship_meta": [
+            {
+              "label_key": "gallery.relationship_meta.related_records",
+              "value": 2
+            },
+            {
+              "label_key": "gallery.relationship_meta.archive_references",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "installation-records",
+          "index": "02",
+          "href": "/archive/material/installation-photo-set",
+          "title_key": "gallery.home.relationship_paths.installation_records.title",
+          "body_key": "gallery.home.relationship_paths.installation_records.body",
+          "from_key": "gallery.items.pale_grid.title",
+          "mid_key": "gallery.archive_materials.installation_photo_set.title",
+          "to_key": "gallery.records.field_note.title",
+          "role_key": "gallery.home.relationship_paths.roles.visual_reference",
+          "timeline_key": "gallery.home.relationship_paths.timeline.recorded_after_install",
+          "continuity_key": "gallery.home.relationship_paths.continuity.open_field_note",
+          "relationship_meta": [
+            {
+              "label_key": "gallery.relationship_meta.installation_phase",
+              "value": "B2"
+            },
+            {
+              "label_key": "gallery.relationship_meta.linked_documents",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": "research-connected-work",
+          "index": "03",
+          "href": "/items/pale-grid-01",
+          "title_key": "gallery.home.relationship_paths.research_connected_work.title",
+          "body_key": "gallery.home.relationship_paths.research_connected_work.body",
+          "from_key": "gallery.archive.categories.research.title",
+          "mid_key": "gallery.records.curator_note.title",
+          "to_key": "gallery.items.pale_grid.title",
+          "role_key": "gallery.home.relationship_paths.roles.curatorial_context",
+          "timeline_key": "gallery.home.relationship_paths.timeline.research_to_work",
+          "continuity_key": "gallery.home.relationship_paths.continuity.open_item_record",
+          "relationship_meta": [
+            {
+              "label_key": "gallery.relationship_meta.curator_notes",
+              "value": 2
+            },
+            {
+              "label_key": "gallery.relationship_meta.linked_artists",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery_archive_categories_fallback",
+      "type": "static",
+      "data": [
+        {
+          "id": "exhibition",
+          "slug": "exhibition",
+          "href": "/archive/exhibition",
+          "visibility": "public",
+          "title_key": "gallery.archive.categories.exhibition.title",
+          "body_key": "gallery.archive.categories.exhibition.body",
+          "meta_key": "gallery.archive.categories.exhibition.meta",
+          "card_class": "gallery-card gallery-card-accent"
+        },
+        {
+          "id": "artist",
+          "slug": "artist",
+          "href": "/archive/artist",
+          "visibility": "public",
+          "title_key": "gallery.archive.categories.artist.title",
+          "body_key": "gallery.archive.categories.artist.body",
+          "meta_key": "gallery.archive.categories.artist.meta",
+          "card_class": "gallery-card gallery-card-green"
+        },
+        {
+          "id": "material",
+          "slug": "material",
+          "href": "/archive/material",
+          "visibility": "public",
+          "title_key": "gallery.archive.categories.material.title",
+          "body_key": "gallery.archive.categories.material.body",
+          "meta_key": "gallery.archive.categories.material.meta",
+          "card_class": "gallery-card gallery-card-blue"
+        },
+        {
+          "id": "document",
+          "slug": "document",
+          "href": "/archive/document",
+          "visibility": "public",
+          "title_key": "gallery.archive.categories.document.title",
+          "body_key": "gallery.archive.categories.document.body",
+          "meta_key": "gallery.archive.categories.document.meta",
+          "card_class": "gallery-card"
+        },
+        {
+          "id": "research",
+          "slug": "research",
+          "href": "/archive/research",
+          "visibility": "public",
+          "title_key": "gallery.archive.categories.research.title",
+          "body_key": "gallery.archive.categories.research.body",
+          "meta_key": "gallery.archive.categories.research.meta",
+          "card_class": "gallery-card"
+        },
+        {
+          "id": "field-record",
+          "slug": "field-record",
+          "href": "/archive/field-record",
+          "visibility": "private-ready",
+          "title_key": "gallery.archive.categories.field_record.title",
+          "body_key": "gallery.archive.categories.field_record.body",
+          "meta_key": "gallery.archive.categories.field_record.meta",
+          "card_class": "gallery-card"
+        }
+      ]
+    },
+    {
+      "id": "gallery_collections",
+      "type": "static",
+      "data": [
+        {
+          "id": "held-works",
+          "index": "01",
+          "title_key": "gallery.collections.items.held_works.title",
+          "body_key": "gallery.collections.items.held_works.body",
+          "visibility": "public"
+        },
+        {
+          "id": "project-records",
+          "index": "02",
+          "title_key": "gallery.collections.items.project_records.title",
+          "body_key": "gallery.collections.items.project_records.body",
+          "visibility": "public"
+        },
+        {
+          "id": "research-notes",
+          "index": "03",
+          "title_key": "gallery.collections.items.research_notes.title",
+          "body_key": "gallery.collections.items.research_notes.body",
+          "visibility": "public"
+        }
+      ]
+    },
+    {
+      "id": "gallery_record_notes",
+      "type": "static",
+      "data": [
+        {
+          "id": "curator-note",
+          "type": "curator-note",
+          "visibility": "published",
+          "published_at": "2026-04-01T09:00:00+09:00",
+          "title_key": "gallery.notes.types.curator.title",
+          "body_key": "gallery.notes.types.curator.body",
+          "meta_key": "gallery.notes.types.curator.meta",
+          "tags": [
+            "curatorial",
+            "essay"
+          ]
+        },
+        {
+          "id": "field-note",
+          "type": "field-note",
+          "visibility": "published",
+          "published_at": "2026-04-02T09:00:00+09:00",
+          "title_key": "gallery.notes.types.field.title",
+          "body_key": "gallery.notes.types.field.body",
+          "meta_key": "gallery.notes.types.field.meta",
+          "tags": [
+            "field",
+            "record"
+          ]
+        },
+        {
+          "id": "installation-note",
+          "type": "installation-note",
+          "visibility": "draft-ready",
+          "published_at": null,
+          "title_key": "gallery.notes.types.installation.title",
+          "body_key": "gallery.notes.types.installation.body",
+          "meta_key": "gallery.notes.types.installation.meta",
+          "tags": [
+            "installation",
+            "space"
+          ]
+        },
+        {
+          "id": "process-note",
+          "type": "process-note",
+          "visibility": "draft-ready",
+          "published_at": null,
+          "title_key": "gallery.notes.types.process.title",
+          "body_key": "gallery.notes.types.process.body",
+          "meta_key": "gallery.notes.types.process.meta",
+          "tags": [
+            "process",
+            "research"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery_about_paths",
+      "type": "static",
+      "data": [
+        {
+          "id": "artist-profiles",
+          "title_key": "gallery.future.artist_profiles"
+        },
+        {
+          "id": "artwork-detail-pages",
+          "title_key": "gallery.future.artwork_detail_pages"
+        },
+        {
+          "id": "timeline-view",
+          "title_key": "gallery.future.timeline_view"
+        },
+        {
+          "id": "archive-filtering",
+          "title_key": "gallery.future.archive_filtering"
+        },
+        {
+          "id": "multilingual-exhibitions",
+          "title_key": "gallery.future.multilingual_exhibitions"
+        },
+        {
+          "id": "private-archives",
+          "title_key": "gallery.future.private_archives"
+        },
+        {
+          "id": "guest-curator-pages",
+          "title_key": "gallery.future.guest_curator_pages"
+        }
+      ]
+    }
+  ],
+  "slots": {
+    "content": [
+      {
+        "partial": "partials/home/_homepage_featured_exhibition.json"
+      },
+      {
+        "partial": "partials/home/_homepage_item_highlights.json"
+      },
+      {
+        "partial": "partials/home/_homepage_recent_records.json"
+      },
+      {
+        "partial": "partials/home/_homepage_recent_archive_materials.json"
+      },
+      {
+        "partial": "partials/home/_homepage_relationship_paths.json"
+      },
+      {
+        "partial": "partials/home/_homepage_archive_categories_compact.json"
+      },
+      {
+        "partial": "partials/home/_homepage_about_compact.json"
+      }
+    ]
+  }
+}

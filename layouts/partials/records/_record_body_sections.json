@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-section gallery-section-muted gallery-record-body-section"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Span",
+      "props": {
+        "className": "gallery-kicker"
+      },
+      "text": "$t:gallery.records.body_kicker"
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-list gallery-section-list"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-record gallery-record-longform"
+          },
+          "iteration": {
+            "source": "gallery_record_detail.body_sections",
+            "item_var": "section"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-meta"
+              },
+              "text": "{{section.id}}"
+            },
+            {
+              "type": "basic",
+              "name": "H2",
+              "props": {
+                "className": "gallery-record-title"
+              },
+              "text": "{{$t(section.title_key)}}"
+            },
+            {
+              "type": "basic",
+              "name": "P",
+              "props": {
+                "className": "gallery-record-body gallery-longform-preview"
+              },
+              "text": "{{$t(section.body_key)}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-section gallery-section-muted"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Span",
+      "props": {
+        "className": "gallery-kicker"
+      },
+      "text": "$t:gallery.exhibition_detail.archive_materials_kicker"
+    },
+    {
+      "type": "basic",
+      "name": "H2",
+      "props": {
+        "className": "gallery-section-title"
+      },
+      "text": "$t:gallery.exhibition_detail.archive_materials_title"
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-grid gallery-grid-3"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "A",
+          "props": {
+            "href": "{{material.href ?? \"/archive\"}}",
+            "className": "gallery-card gallery-record-link"
+          },
+          "iteration": {
+            "source": "gallery_exhibition_detail.archive_materials",
+            "item_var": "material"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Div",
+              "props": {
+                "className": "gallery-media-frame gallery-media-archive-preview gallery-media-scan"
+              },
+              "children": [
+                {
+                  "type": "basic",
+                  "name": "Img",
+                  "props": {
+                    "src": "{{(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.image ?? material.media?.url ?? \"\")}}",
+                    "alt": "{{material.title_label ?? $t(material.title_key ?? 'gallery.media.archive_material')}}",
+                    "className": "gallery-media-image"
+                  },
+                  "if": "{{material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.image ?? material.media?.url ?? false}}"
+                },
+                {
+                  "type": "basic",
+                  "name": "Div",
+                  "props": {
+                    "className": "gallery-media-placeholder gallery-media-document"
+                  },
+                  "if": "{{!(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.image ?? material.media?.url ?? false)}}",
+                  "children": [
+                    {
+                      "type": "basic",
+                      "name": "Span",
+                      "props": {
+                        "className": "gallery-media-placeholder-label"
+                      },
+                      "text": "$t:gallery.media.archive_material"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-meta"
+              },
+              "text": "{{material.category}}"
+            },
+            {
+              "type": "basic",
+              "name": "H3",
+              "props": {
+                "className": "gallery-card-title"
+              },
+              "text": "{{$t(material.title_key)}}"
+            },
+            {
+              "type": "basic",
+              "name": "P",
+              "props": {
+                "className": "gallery-card-body"
+              },
+              "text": "{{$t(material.body_key)}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-artwork-slot"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Span",
+          "props": {
+            "className": "gallery-kicker"
+          },
+          "text": "$t:gallery.exhibition_detail.artwork_slot_kicker"
+        },
+        {
+          "type": "basic",
+          "name": "P",
+          "props": {
+            "className": "gallery-muted"
+          },
+          "text": "$t:gallery.exhibition_detail.artwork_slot_body"
+        }
+      ]
+    }
+  ]
+}

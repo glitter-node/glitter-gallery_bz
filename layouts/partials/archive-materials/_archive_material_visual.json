@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-section gallery-section-tight"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-archive-visual-panel"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-media-frame gallery-media-detail gallery-media-detail-panel gallery-media-scan gallery-archive-detail-image"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Img",
+              "props": {
+                "src": "{{(gallery_archive_material_detail.preview_image ?? gallery_archive_material_detail.image_url ?? gallery_archive_material_detail.image ?? gallery_archive_material_detail.media?.url ?? \"\")}}",
+                "alt": "{{gallery_archive_material_detail.title_label ?? $t(gallery_archive_material_detail.title_key ?? 'gallery.media.archive_material')}}",
+                "className": "gallery-media-image"
+              },
+              "if": "{{gallery_archive_material_detail.preview_image ?? gallery_archive_material_detail.image_url ?? gallery_archive_material_detail.image ?? gallery_archive_material_detail.media?.url ?? false}}"
+            },
+            {
+              "type": "basic",
+              "name": "Div",
+              "props": {
+                "className": "gallery-media-placeholder gallery-media-document"
+              },
+              "if": "{{!(gallery_archive_material_detail.preview_image ?? gallery_archive_material_detail.image_url ?? gallery_archive_material_detail.image ?? gallery_archive_material_detail.media?.url ?? false)}}",
+              "children": [
+                {
+                  "type": "basic",
+                  "name": "Span",
+                  "props": {
+                    "className": "gallery-media-placeholder-label"
+                  },
+                  "text": "$t:gallery.media.document_scan"
+                }
+              ]
+            },
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-media-caption"
+              },
+              "text": "{{gallery_archive_material_detail.media_caption ?? gallery_archive_material_detail.media?.credit ?? $t('gallery.media.preview_caption')}}"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "name": "P",
+          "props": {
+            "className": "gallery-muted"
+          },
+          "text": "{{$t(gallery_archive_material_detail.rights_key)}} / {{gallery_archive_material_detail.identifier ?? \"\"}}"
+        }
+      ]
+    }
+  ]
+}

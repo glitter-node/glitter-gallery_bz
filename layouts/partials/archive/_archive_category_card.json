@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "A",
+  "props": {
+    "href": "{{category.href ?? \"/archive\"}}",
+    "className": "{{category.card_class ?? 'gallery-card'}} gallery-record-link gallery-index-card"
+  },
+  "iteration": {
+    "source": "gallery_archive_index.categories",
+    "item_var": "category"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Span",
+      "props": {
+        "className": "gallery-meta"
+      },
+      "text": "{{$t(category.meta_key)}}"
+    },
+    {
+      "type": "basic",
+      "name": "H2",
+      "props": {
+        "className": "gallery-card-title"
+      },
+      "text": "{{$t(category.title_key)}}"
+    },
+    {
+      "type": "basic",
+      "name": "P",
+      "props": {
+        "className": "gallery-card-body"
+      },
+      "text": "{{$t(category.body_key)}}"
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-relationship-row"
+      },
+      "if": "{{(category.relationship_meta ?? []).length > 0}}",
+      "children": [
+        {
+          "type": "basic",
+          "name": "Span",
+          "iteration": {
+            "source": "category.relationship_meta",
+            "item_var": "meta"
+          },
+          "text": "{{meta.value !== undefined ? $t(meta.label_key) + ' ' + meta.value : $t(meta.label_key)}}"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-record-meta-list"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Span",
+          "props": {
+            "className": "gallery-chip"
+          },
+          "text": "{{$t(\"gallery.archive.index.material_count\")}} {{category.material_count ?? 0}}"
+        },
+        {
+          "type": "basic",
+          "name": "Span",
+          "props": {
+            "className": "gallery-chip"
+          },
+          "iteration": {
+            "source": "category.type_summary",
+            "item_var": "type"
+          },
+          "text": "{{$t(\"gallery.archive_materials.types.\" + type)}}"
+        }
+      ]
+    }
+  ]
+}

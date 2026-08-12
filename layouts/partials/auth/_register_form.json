@@ -1,0 +1,265 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Form",
+  "dataKey": "registerForm",
+  "props": {
+    "className": "gallery-auth-form"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Div",
+      "if": "{{_local.registerError}}",
+      "props": {
+        "className": "gallery-auth-error"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "P",
+          "text": "{{_local.registerError}}"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-auth-field"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Label",
+          "props": {
+            "htmlFor": "register_name",
+            "className": "gallery-auth-label"
+          },
+          "text": "$t:auth.register_page.name"
+        },
+        {
+          "type": "basic",
+          "name": "Input",
+          "props": {
+            "id": "register_name",
+            "name": "name",
+            "type": "text",
+            "autoComplete": "name",
+            "required": true,
+            "disabled": "{{_local.isRegistering}}",
+            "placeholder": "$t:auth.register_page.name_placeholder",
+            "className": "gallery-auth-input"
+          }
+        },
+        {
+          "type": "basic",
+          "name": "P",
+          "if": "{{_local.registerErrors?.name}}",
+          "props": {
+            "className": "gallery-auth-field-error"
+          },
+          "text": "{{Array.isArray(_local.registerErrors?.name) ? _local.registerErrors.name[0] : _local.registerErrors?.name}}"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-auth-field"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Label",
+          "props": {
+            "htmlFor": "register_email",
+            "className": "gallery-auth-label"
+          },
+          "text": "$t:auth.register_page.email"
+        },
+        {
+          "type": "basic",
+          "name": "Input",
+          "props": {
+            "id": "register_email",
+            "name": "email",
+            "type": "email",
+            "autoComplete": "email",
+            "required": true,
+            "disabled": "{{_local.isRegistering}}",
+            "placeholder": "$t:auth.register_page.email_placeholder",
+            "className": "gallery-auth-input"
+          }
+        },
+        {
+          "type": "basic",
+          "name": "P",
+          "if": "{{_local.registerErrors?.email}}",
+          "props": {
+            "className": "gallery-auth-field-error"
+          },
+          "text": "{{Array.isArray(_local.registerErrors?.email) ? _local.registerErrors.email[0] : _local.registerErrors?.email}}"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-auth-field"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Label",
+          "props": {
+            "htmlFor": "register_password",
+            "className": "gallery-auth-label"
+          },
+          "text": "$t:auth.register_page.password"
+        },
+        {
+          "type": "basic",
+          "name": "Input",
+          "props": {
+            "id": "register_password",
+            "name": "password",
+            "type": "password",
+            "autoComplete": "new-password",
+            "required": true,
+            "disabled": "{{_local.isRegistering}}",
+            "placeholder": "$t:auth.register_page.password_placeholder",
+            "className": "gallery-auth-input"
+          }
+        },
+        {
+          "type": "basic",
+          "name": "P",
+          "if": "{{_local.registerErrors?.password}}",
+          "props": {
+            "className": "gallery-auth-field-error"
+          },
+          "text": "{{Array.isArray(_local.registerErrors?.password) ? _local.registerErrors.password[0] : _local.registerErrors?.password}}"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-auth-field"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Label",
+          "props": {
+            "htmlFor": "register_password_confirmation",
+            "className": "gallery-auth-label"
+          },
+          "text": "$t:auth.register_page.password_confirmation"
+        },
+        {
+          "type": "basic",
+          "name": "Input",
+          "props": {
+            "id": "register_password_confirmation",
+            "name": "password_confirmation",
+            "type": "password",
+            "autoComplete": "new-password",
+            "required": true,
+            "disabled": "{{_local.isRegistering}}",
+            "placeholder": "$t:auth.register_page.password_confirmation_placeholder",
+            "className": "gallery-auth-input"
+          }
+        },
+        {
+          "type": "basic",
+          "name": "P",
+          "if": "{{_local.registerErrors?.password_confirmation}}",
+          "props": {
+            "className": "gallery-auth-field-error"
+          },
+          "text": "{{Array.isArray(_local.registerErrors?.password_confirmation) ? _local.registerErrors.password_confirmation[0] : _local.registerErrors?.password_confirmation}}"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "name": "Button",
+      "props": {
+        "type": "submit",
+        "className": "gallery-auth-submit",
+        "disabled": "{{_local.isRegistering}}"
+      },
+      "text": "{{_local.isRegistering ? $t('auth.register_page.submitting') : $t('auth.register_page.submit')}}"
+    },
+    {
+      "type": "basic",
+      "name": "A",
+      "props": {
+        "href": "/login",
+        "className": "gallery-auth-back-link"
+      },
+      "text": "$t:auth.register_page.back_to_login"
+    }
+  ],
+  "actions": [
+    {
+      "type": "submit",
+      "handler": "sequence",
+      "actions": [
+        {
+          "handler": "setState",
+          "params": {
+            "target": "local",
+            "isRegistering": true,
+            "registerError": null,
+            "registerErrors": null
+          }
+        },
+        {
+          "handler": "apiCall",
+          "target": "/api/auth/register",
+          "params": {
+            "method": "POST",
+            "body": {
+              "name": "{{_local.registerForm.name}}",
+              "email": "{{_local.registerForm.email}}",
+              "password": "{{_local.registerForm.password}}",
+              "password_confirmation": "{{_local.registerForm.password_confirmation}}"
+            }
+          },
+          "onSuccess": [
+            {
+              "handler": "setState",
+              "params": {
+                "target": "local",
+                "isRegistering": false
+              }
+            },
+            {
+              "handler": "navigate",
+              "target": "{{query.redirect || '/'}}"
+            }
+          ],
+          "onError": [
+            {
+              "handler": "setState",
+              "params": {
+                "target": "local",
+                "isRegistering": false,
+                "registerError": "{{error.message}}",
+                "registerErrors": "{{error.errors}}"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

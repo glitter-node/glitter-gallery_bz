@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-section gallery-section-muted"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Span",
+      "props": {
+        "className": "gallery-kicker"
+      },
+      "text": "$t:gallery.archive_materials.related_items"
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-list"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "A",
+          "props": {
+            "href": "{{item.href ?? \"/items\"}}",
+            "className": "gallery-record gallery-record-link"
+          },
+          "iteration": {
+            "source": "gallery_archive_material_detail.related_items",
+            "item_var": "item"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-meta"
+              },
+              "text": "{{item.type}} / {{item.year ?? \"\"}}"
+            },
+            {
+              "type": "basic",
+              "name": "H3",
+              "props": {
+                "className": "gallery-record-title"
+              },
+              "text": "{{$t(item.title_key)}}"
+            },
+            {
+              "type": "basic",
+              "name": "P",
+              "props": {
+                "className": "gallery-record-body"
+              },
+              "text": "{{$t(item.artist_name_key)}} / {{$t(item.medium_key)}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

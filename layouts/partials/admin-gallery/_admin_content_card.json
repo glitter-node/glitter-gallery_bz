@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "A",
+  "props": {
+    "href": "{{content.href}}",
+    "className": "gallery-record gallery-record-link gallery-admin-content-card"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Span",
+      "props": {
+        "className": "gallery-meta"
+      },
+      "text": "{{$t(\"gallery.admin.types.\" + content.type)}} / {{$t(content.status_key)}}"
+    },
+    {
+      "type": "basic",
+      "name": "H2",
+      "props": {
+        "className": "gallery-record-title"
+      },
+      "text": "{{$t(content.title_key)}}"
+    },
+    {
+      "type": "basic",
+      "name": "P",
+      "props": {
+        "className": "gallery-record-body"
+      },
+      "text": "{{$t(content.subtitle_key)}}"
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-record-meta-list"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Span",
+          "props": {
+            "className": "gallery-chip"
+          },
+          "text": "{{$t(content.related_key)}}"
+        },
+        {
+          "type": "basic",
+          "name": "Span",
+          "props": {
+            "className": "gallery-chip"
+          },
+          "text": "{{$t(content.relation_key)}}"
+        },
+        {
+          "type": "basic",
+          "name": "Span",
+          "props": {
+            "className": "gallery-chip"
+          },
+          "text": "{{$t(content.updated_at_key)}}"
+        },
+        {
+          "type": "basic",
+          "name": "Span",
+          "props": {
+            "className": "gallery-chip"
+          },
+          "text": "$t:gallery.admin.actions.edit"
+        }
+      ]
+    }
+  ]
+}

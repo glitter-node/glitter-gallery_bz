@@ -1,0 +1,107 @@
+{
+  "identifier": "glitter-gallery_bz",
+  "vendor": "Glitter.kr",
+  "name": {
+    "ko": "반짝이 갤러리 비즈",
+    "en": "Glitter Gallery Bz"
+  },
+  "version": "1.0.0-beta.5",
+  "license": "MIT",
+  "description": {
+    "ko": "전시, 아카이브, 기록 중심 웹사이트를 빠르게 구축하기 위한 그누보드7 사용자 템플릿 예시",
+    "en": "A GnuBoard7 user template example for quickly building exhibition, archive, and record-centered websites"
+  },
+  "type": "user",
+  "locales": [
+    "ko",
+    "en"
+  ],
+  "author": {
+    "name": "Glitter.kr",
+    "email": "admin@glitter.kr",
+    "url": "https://glitter.kr"
+  },
+  "release_date": "2026-05-12",
+  "g7_version": ">=7.0.0-beta.2",
+  "dependencies": {
+    "modules": {
+      "glitter-gallery": ">=0.1.1",
+      "sirsoft-board": ">=1.0.0-beta.2",
+      "sirsoft-page": ">=1.0.0-beta.2"
+    },
+    "plugins": {}
+  },
+  "assets": {
+    "css": [
+      "dist/css/components.css"
+    ],
+    "js": [
+      "dist/js/components.iife.js"
+    ],
+    "fonts": [],
+    "images": [
+      "images/gallery/featured-exhibition.jpg",
+      "images/gallery/items/pale-grid-01-thumb.jpg",
+      "images/gallery/items/installation-axis-record-thumb.jpg",
+      "images/gallery/records/curator-note.jpg",
+      "images/gallery/archive/press-release.jpg",
+      "images/gallery/archive/installation-photo-set.jpg",
+      "images/gallery/relationships/path.jpg"
+    ]
+  },
+  "performance": {
+    "preload": []
+  },
+  "components": {
+    "basic": [
+      "a",
+      "badge",
+      "button",
+      "div",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "hr",
+      "li",
+      "nav",
+      "p",
+      "section",
+      "span",
+      "ul"
+    ],
+    "composite": [
+      "toast",
+      "page-transition-indicator",
+      "page-loading"
+    ],
+    "layout": [
+      "container"
+    ]
+  },
+  "preview": {
+    "thumbnail": "preview/thumbnail.png",
+    "screenshots": [
+      "preview/screenshot1.png",
+      "preview/screenshot2.png"
+    ]
+  },
+  "error_config": {
+    "layouts": {
+      "401": "errors/401",
+      "403": "errors/403",
+      "404": "errors/404",
+      "500": "errors/500",
+      "503": "errors/503",
+      "maintenance": "errors/maintenance"
+    }
+  },
+  "features": {
+    "dark_mode": true,
+    "responsive": true,
+    "multi_language": true,
+    "multi_currency": false
+  },
+  "github_url": "https://github.com/glitter-node/Gallery-Biz-BETA_2",
+  "github_changelog_url": "https://github.com/glitter-node/Gallery-Biz-BETA_2/templates/_bundled/glitter-gallery_bz/CHANGELOG.md"
+}

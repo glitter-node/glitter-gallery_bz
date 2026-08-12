@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-section gallery-section-tight"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Span",
+      "props": {
+        "className": "gallery-kicker"
+      },
+      "text": "$t:gallery.admin.dashboard.status_summary"
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-grid gallery-grid-4 gallery-admin-status-grid"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-stat"
+          },
+          "iteration": {
+            "source": "admin_gallery.status_summary",
+            "item_var": "status"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-stat-value"
+              },
+              "text": "{{status.count ?? 0}}"
+            },
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-stat-label"
+              },
+              "text": "{{$t(status.label_key)}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

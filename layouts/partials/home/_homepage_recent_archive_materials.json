@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-section gallery-home-section"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-home-section-inner"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Span",
+          "props": {
+            "className": "gallery-kicker"
+          },
+          "text": "$t:gallery.home.archive_materials.kicker"
+        },
+        {
+          "type": "basic",
+          "name": "H2",
+          "props": {
+            "className": "gallery-section-title"
+          },
+          "text": "$t:gallery.home.archive_materials.title"
+        },
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-home-archive-list"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "A",
+              "props": {
+                "href": "{{material.href ?? \"/archive\"}}",
+                "className": "gallery-record gallery-home-archive-row"
+              },
+              "iteration": {
+                "source": "{{(gallery_home.data?.recent_archive_materials ?? gallery_home.recent_archive_materials ?? []).slice(0, 3)}}",
+                "item_var": "material"
+              },
+              "children": [
+                {
+                  "type": "basic",
+                  "name": "Div",
+                  "props": {
+                    "className": "gallery-media-frame gallery-media-archive-preview gallery-home-media-list"
+                  },
+                  "children": [
+                    {
+                      "type": "basic",
+                      "name": "Img",
+                      "props": {
+                        "src": "{{(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.media?.url ?? '')}}",
+                        "alt": "{{material.title_label ?? $t(material.title_key ?? 'gallery.home.archive_materials.empty')}}",
+                        "className": "gallery-media-image",
+                        "loading": "lazy",
+                        "decoding": "async",
+                        "width": 1000,
+                        "height": 1300
+                      },
+                      "if": "{{!!(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.media?.url ?? '') && !(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.media?.url ?? '').startsWith('/images/gallery/') && !(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.media?.url ?? '').startsWith('images/gallery/') && !(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.media?.url ?? '').startsWith('/api/templates/assets/glitter-gallery_bz/images/gallery/')}}"
+                    },
+                    {
+                      "type": "basic",
+                      "name": "Div",
+                      "props": {
+                        "className": "gallery-media-placeholder gallery-media-document"
+                      },
+                      "if": "{{!(!!(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.media?.url ?? '') && !(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.media?.url ?? '').startsWith('/images/gallery/') && !(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.media?.url ?? '').startsWith('images/gallery/') && !(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.media?.url ?? '').startsWith('/api/templates/assets/glitter-gallery_bz/images/gallery/'))}}",
+                      "children": [
+                        {
+                          "type": "basic",
+                          "name": "Span",
+                          "props": {
+                            "className": "gallery-media-placeholder-label"
+                          },
+                          "text": "$t:gallery.media.archive_material"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "basic",
+                  "name": "Span",
+                  "props": {
+                    "className": "gallery-meta"
+                  },
+                  "text": "{{$t(material.type_label_key ?? 'gallery.archive_materials.types.note')}} · {{material.date_label ?? material.published_at_display ?? ''}}"
+                },
+                {
+                  "type": "basic",
+                  "name": "H3",
+                  "props": {
+                    "className": "gallery-card-title"
+                  },
+                  "text": "{{material.title_label ?? $t(material.title_key ?? 'gallery.home.archive_materials.empty')}}"
+                },
+                {
+                  "type": "basic",
+                  "name": "P",
+                  "text": "{{material.summary_label ?? $t(material.summary_key ?? 'gallery.home.archive_materials.empty')}}"
+                },
+                {
+                  "type": "basic",
+                  "name": "Span",
+                  "props": {
+                    "className": "gallery-home-related-context"
+                  },
+                  "text": "{{$t(material.category_label_key ?? 'gallery.archive.categories.material.meta')}}"
+                },
+                {
+                  "type": "basic",
+                  "name": "Div",
+                  "props": {
+                    "className": "gallery-relationship-row"
+                  },
+                  "if": "{{(material.relationship_meta ?? []).length > 0}}",
+                  "children": [
+                    {
+                      "type": "basic",
+                      "name": "Span",
+                      "iteration": {
+                        "source": "material.relationship_meta",
+                        "item_var": "meta"
+                      },
+                      "text": "{{meta.value !== undefined ? $t(meta.label_key) + ' ' + meta.value : $t(meta.label_key)}}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "basic",
+              "name": "P",
+              "props": {
+                "className": "gallery-muted"
+              },
+              "if": "{{((gallery_home.data?.recent_archive_materials ?? gallery_home.recent_archive_materials ?? []).slice(0, 3)).length == 0}}",
+              "text": "$t:gallery.home.archive_materials.empty"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-section gallery-home-section"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-home-section-inner"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Span",
+          "props": {
+            "className": "gallery-kicker"
+          },
+          "text": "$t:gallery.home.item_highlights.kicker"
+        },
+        {
+          "type": "basic",
+          "name": "H2",
+          "props": {
+            "className": "gallery-section-title"
+          },
+          "text": "$t:gallery.home.item_highlights.title"
+        },
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-home-item-strip"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "A",
+              "props": {
+                "href": "{{item.href ?? \"/items\"}}",
+                "className": "gallery-home-item-card"
+              },
+              "iteration": {
+                "source": "{{((gallery_home.data?.highlighted_items ?? gallery_home.highlighted_items ?? []).length > 0 ? (gallery_home.data?.highlighted_items ?? gallery_home.highlighted_items ?? []) : (gallery_home_item_highlights_fallback ?? [])).slice(0, 3)}}",
+                "item_var": "item"
+              },
+              "children": [
+                {
+                  "type": "basic",
+                  "name": "Div",
+                  "props": {
+                    "className": "gallery-media-frame gallery-media-thumbnail gallery-home-media-standard"
+                  },
+                  "children": [
+                    {
+                      "type": "basic",
+                      "name": "Img",
+                      "props": {
+                        "src": "{{(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '')}}",
+                        "alt": "{{item.title_label ?? $t(item.title_key ?? 'gallery.home.item_highlights.empty_title')}}",
+                        "className": "gallery-media-image",
+                        "loading": "lazy",
+                        "decoding": "async",
+                        "width": 900,
+                        "height": 900
+                      },
+                      "if": "{{!!(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '') && !(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '').startsWith('/images/gallery/') && !(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '').startsWith('images/gallery/') && !(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '').startsWith('/api/templates/assets/glitter-gallery_bz/images/gallery/')}}"
+                    },
+                    {
+                      "type": "basic",
+                      "name": "Div",
+                      "props": {
+                        "className": "gallery-media-placeholder gallery-media-placeholder-small"
+                      },
+                      "if": "{{!(!!(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '') && !(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '').startsWith('/images/gallery/') && !(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '').startsWith('images/gallery/') && !(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '').startsWith('/api/templates/assets/glitter-gallery_bz/images/gallery/'))}}",
+                      "children": [
+                        {
+                          "type": "basic",
+                          "name": "Span",
+                          "props": {
+                            "className": "gallery-media-placeholder-label"
+                          },
+                          "text": "$t:gallery.media.item_thumbnail"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "basic",
+                  "name": "Span",
+                  "props": {
+                    "className": "gallery-meta"
+                  },
+                  "text": "{{$t(item.type_label_key ?? item.label_key ?? 'gallery.home.item_highlights.labels.artwork')}}"
+                },
+                {
+                  "type": "basic",
+                  "name": "H3",
+                  "props": {
+                    "className": "gallery-card-title"
+                  },
+                  "text": "{{item.title_label ?? $t(item.title_key ?? 'gallery.home.item_highlights.empty_title')}}"
+                },
+                {
+                  "type": "basic",
+                  "name": "P",
+                  "props": {
+                    "className": "gallery-card-body"
+                  },
+                  "text": "{{item.artist_label ?? $t(item.artist_name_key ?? 'gallery.home.item_highlights.empty_meta')}} · {{item.year_label ?? item.year ?? ''}} · {{item.medium_label ?? $t(item.medium_key ?? 'gallery.home.item_highlights.empty_meta')}}"
+                },
+                {
+                  "type": "basic",
+                  "name": "P",
+                  "props": {
+                    "className": "gallery-muted"
+                  },
+                  "text": "{{item.summary_label ?? $t(item.relation_key ?? 'gallery.home.item_highlights.empty_relation')}}"
+                }
+              ]
+            },
+            {
+              "type": "basic",
+              "name": "P",
+              "props": {
+                "className": "gallery-muted"
+              },
+              "if": "{{(((gallery_home.data?.highlighted_items ?? gallery_home.highlighted_items ?? []).length > 0 ? (gallery_home.data?.highlighted_items ?? gallery_home.highlighted_items ?? []) : (gallery_home_item_highlights_fallback ?? [])).slice(0, 3)).length == 0}}",
+              "text": "$t:gallery.home.item_highlights.empty"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

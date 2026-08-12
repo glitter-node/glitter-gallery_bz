@@ -1,0 +1,91 @@
+{
+  "version": "1.0.0",
+  "layout_name": "about",
+  "permissions": [],
+  "extends": "_user_base",
+  "data_sources": [],
+  "slots": {
+    "content": [
+      {
+        "type": "basic",
+        "name": "Section",
+        "props": {
+          "className": "gallery-page-head"
+        },
+        "children": [
+          {
+            "type": "basic",
+            "name": "Span",
+            "props": {
+              "className": "gallery-kicker"
+            },
+            "text": "$t:gallery.about.kicker"
+          },
+          {
+            "type": "basic",
+            "name": "H1",
+            "props": {
+              "className": "gallery-page-title"
+            },
+            "text": "$t:gallery.about.title"
+          },
+          {
+            "type": "basic",
+            "name": "P",
+            "props": {
+              "className": "gallery-page-lead"
+            },
+            "text": "$t:gallery.about.lead"
+          }
+        ]
+      },
+      {
+        "type": "basic",
+        "name": "Section",
+        "props": {
+          "className": "gallery-grid gallery-grid-2"
+        },
+        "children": [
+          {
+            "type": "basic",
+            "name": "Div",
+            "props": {
+              "className": "gallery-card gallery-card-blue"
+            },
+            "children": [
+              {
+                "type": "basic",
+                "name": "H2",
+                "text": "$t:gallery.about.card_one_title"
+              },
+              {
+                "type": "basic",
+                "name": "P",
+                "text": "$t:gallery.about.card_one_body"
+              }
+            ]
+          },
+          {
+            "type": "basic",
+            "name": "Div",
+            "props": {
+              "className": "gallery-card gallery-card-green"
+            },
+            "children": [
+              {
+                "type": "basic",
+                "name": "H2",
+                "text": "$t:gallery.about.card_two_title"
+              },
+              {
+                "type": "basic",
+                "name": "P",
+                "text": "$t:gallery.about.card_two_body"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

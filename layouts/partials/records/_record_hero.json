@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-page-head gallery-record-detail-hero"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Span",
+      "props": {
+        "className": "gallery-kicker"
+      },
+      "text": "{{$t(\"gallery.records.types.\" + gallery_record_detail.type)}}"
+    },
+    {
+      "type": "basic",
+      "name": "H1",
+      "props": {
+        "className": "gallery-page-title"
+      },
+      "text": "{{$t(gallery_record_detail.title_key)}}"
+    },
+    {
+      "type": "basic",
+      "name": "P",
+      "props": {
+        "className": "gallery-page-lead"
+      },
+      "text": "{{$t(gallery_record_detail.subtitle_key)}}"
+    },
+    {
+      "type": "basic",
+      "name": "P",
+      "props": {
+        "className": "gallery-muted"
+      },
+      "text": "{{$t(gallery_record_detail.summary_key)}}"
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-media-frame gallery-media-record-note gallery-media-detail-panel"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Img",
+          "props": {
+            "src": "{{(gallery_record_detail.preview_image ?? gallery_record_detail.thumbnail_url ?? gallery_record_detail.image_url ?? gallery_record_detail.media?.url ?? \"\")}}",
+            "alt": "{{gallery_record_detail.title_label ?? $t(gallery_record_detail.title_key ?? 'gallery.media.record_note')}}",
+            "className": "gallery-media-image"
+          },
+          "if": "{{gallery_record_detail.preview_image ?? gallery_record_detail.thumbnail_url ?? gallery_record_detail.image_url ?? gallery_record_detail.media?.url ?? false}}"
+        },
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-media-placeholder gallery-media-placeholder-small"
+          },
+          "if": "{{!(gallery_record_detail.preview_image ?? gallery_record_detail.thumbnail_url ?? gallery_record_detail.image_url ?? gallery_record_detail.media?.url ?? false)}}",
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-media-placeholder-label"
+              },
+              "text": "$t:gallery.media.record_note"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "name": "Span",
+          "props": {
+            "className": "gallery-media-caption"
+          },
+          "text": "{{gallery_record_detail.media_caption ?? gallery_record_detail.media?.credit ?? $t('gallery.media.preview_caption')}}"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "name": "A",
+      "props": {
+        "href": "{{gallery_record_detail.parent_href ?? \"/exhibitions\"}}",
+        "className": "gallery-text-link"
+      },
+      "text": "$t:gallery.records.back_to_context"
+    }
+  ]
+}

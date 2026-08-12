@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-record gallery-admin-form-section"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Span",
+      "props": {
+        "className": "gallery-meta"
+      },
+      "text": "{{$t(form_section.kicker_key)}}"
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-admin-form-body"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "H2",
+          "props": {
+            "className": "gallery-record-title"
+          },
+          "text": "{{$t(form_section.title_key)}}"
+        },
+        {
+          "type": "basic",
+          "name": "P",
+          "props": {
+            "className": "gallery-record-body"
+          },
+          "text": "{{$t(form_section.body_key)}}"
+        },
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-admin-field-grid"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Div",
+              "props": {
+                "className": "gallery-admin-field"
+              },
+              "iteration": {
+                "source": "form_section.fields",
+                "item_var": "field"
+              },
+              "children": [
+                {
+                  "type": "basic",
+                  "name": "Span",
+                  "props": {
+                    "className": "gallery-meta"
+                  },
+                  "text": "{{$t(field.label_key)}}"
+                },
+                {
+                  "type": "basic",
+                  "name": "P",
+                  "props": {
+                    "className": "gallery-muted"
+                  },
+                  "text": "{{$t(field.placeholder_key)}}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

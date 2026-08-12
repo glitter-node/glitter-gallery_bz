@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-section gallery-section-muted"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Span",
+      "props": {
+        "className": "gallery-kicker"
+      },
+      "text": "$t:gallery.archive_materials.description_kicker"
+    },
+    {
+      "type": "basic",
+      "name": "P",
+      "props": {
+        "className": "gallery-body-lg"
+      },
+      "text": "{{$t(gallery_archive_material_detail.summary_key)}}"
+    },
+    {
+      "type": "basic",
+      "name": "P",
+      "props": {
+        "className": "gallery-body-lg gallery-material-description"
+      },
+      "text": "{{$t(gallery_archive_material_detail.description_key)}}"
+    }
+  ]
+}

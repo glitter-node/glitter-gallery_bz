@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-section"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Span",
+      "props": {
+        "className": "gallery-kicker"
+      },
+      "text": "$t:gallery.home.collections_kicker"
+    },
+    {
+      "type": "basic",
+      "name": "H2",
+      "props": {
+        "className": "gallery-section-title"
+      },
+      "text": "$t:gallery.home.collections_title"
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-collection-grid"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-collection-card"
+          },
+          "iteration": {
+            "source": "gallery_collections",
+            "item_var": "collection"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-collection-index"
+              },
+              "text": "{{collection.index ?? ''}}"
+            },
+            {
+              "type": "basic",
+              "name": "H3",
+              "props": {
+                "className": "gallery-card-title"
+              },
+              "text": "{{$t(collection.title_key)}}"
+            },
+            {
+              "type": "basic",
+              "name": "P",
+              "props": {
+                "className": "gallery-card-body"
+              },
+              "text": "{{$t(collection.body_key)}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

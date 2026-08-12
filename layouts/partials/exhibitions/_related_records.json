@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-section"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Span",
+      "props": {
+        "className": "gallery-kicker"
+      },
+      "text": "$t:gallery.exhibition_detail.related_records"
+    },
+    {
+      "type": "basic",
+      "name": "H2",
+      "props": {
+        "className": "gallery-section-title"
+      },
+      "text": "$t:gallery.exhibition_detail.related_records_title"
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-list"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "A",
+          "props": {
+            "href": "{{record.href ?? \"/records\"}}",
+            "className": "gallery-record gallery-record-link"
+          },
+          "iteration": {
+            "source": "gallery_exhibition_detail.related_records",
+            "item_var": "record"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-meta"
+              },
+              "text": "{{record.type}}"
+            },
+            {
+              "type": "basic",
+              "name": "H3",
+              "props": {
+                "className": "gallery-record-title"
+              },
+              "text": "{{$t(record.title_key)}}"
+            },
+            {
+              "type": "basic",
+              "name": "P",
+              "props": {
+                "className": "gallery-record-body"
+              },
+              "text": "{{$t(record.body_key)}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-list gallery-section-list"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-record"
+          },
+          "iteration": {
+            "source": "gallery_exhibition_detail.field_notes",
+            "item_var": "note"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-meta"
+              },
+              "text": "$t:gallery.exhibition_detail.field_notes_kicker"
+            },
+            {
+              "type": "basic",
+              "name": "H3",
+              "props": {
+                "className": "gallery-record-title"
+              },
+              "text": "{{$t(note.title_key)}}"
+            },
+            {
+              "type": "basic",
+              "name": "P",
+              "props": {
+                "className": "gallery-record-body"
+              },
+              "text": "{{$t(note.body_key)}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

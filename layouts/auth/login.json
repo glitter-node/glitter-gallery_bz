@@ -1,0 +1,73 @@
+{
+  "version": "1.0.0",
+  "layout_name": "auth/login",
+  "permissions": [],
+  "extends": "_user_base",
+  "state": {
+    "loginForm": {
+      "email": "",
+      "password": ""
+    },
+    "isLoggingIn": false,
+    "loginError": null,
+    "loginErrors": null
+  },
+  "slots": {
+    "content": [
+      {
+        "type": "basic",
+        "name": "Section",
+        "props": {
+          "className": "gallery-auth-page"
+        },
+        "children": [
+          {
+            "type": "basic",
+            "name": "Div",
+            "props": {
+              "className": "gallery-auth-shell"
+            },
+            "children": [
+              {
+                "type": "basic",
+                "name": "Div",
+                "props": {
+                  "className": "gallery-auth-copy"
+                },
+                "children": [
+                  {
+                    "type": "basic",
+                    "name": "P",
+                    "props": {
+                      "className": "gallery-kicker"
+                    },
+                    "text": "$t:auth.login_page.kicker"
+                  },
+                  {
+                    "type": "basic",
+                    "name": "H1",
+                    "props": {
+                      "className": "gallery-auth-title"
+                    },
+                    "text": "$t:auth.login_page.title"
+                  },
+                  {
+                    "type": "basic",
+                    "name": "P",
+                    "props": {
+                      "className": "gallery-auth-subtitle"
+                    },
+                    "text": "$t:auth.login_page.subtitle"
+                  }
+                ]
+              },
+              {
+                "partial": "partials/auth/_login_form.json"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

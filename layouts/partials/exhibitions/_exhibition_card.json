@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Div",
+  "props": {
+    "className": "gallery-exhibition-card"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-media-frame gallery-media-secondary gallery-exhibition-cover"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Img",
+          "props": {
+            "src": "{{(exhibition.image_url ?? exhibition.preview_image ?? exhibition.cover_image ?? exhibition.featured_image?.url ?? '')}}",
+            "alt": "{{exhibition.title_label ?? $t(exhibition.title_key ?? 'gallery.media.featured_exhibition')}}",
+            "className": "gallery-media-image"
+          },
+          "if": "{{!!(exhibition.image_url ?? exhibition.preview_image ?? exhibition.cover_image ?? exhibition.featured_image?.url ?? '')}}"
+        },
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-media-placeholder gallery-media-installation"
+          },
+          "if": "{{!(!!(exhibition.image_url ?? exhibition.preview_image ?? exhibition.cover_image ?? exhibition.featured_image?.url ?? ''))}}",
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-media-placeholder-label"
+              },
+              "text": "$t:gallery.media.featured_exhibition"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-exhibition-card-body"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Span",
+          "props": {
+            "className": "gallery-meta"
+          },
+          "text": "{{$t(exhibition.period_key)}} / {{$t(exhibition.location_key)}}"
+        },
+        {
+          "type": "basic",
+          "name": "H2",
+          "props": {
+            "className": "gallery-record-title"
+          },
+          "text": "{{$t(exhibition.title_key)}}"
+        },
+        {
+          "type": "basic",
+          "name": "P",
+          "props": {
+            "className": "gallery-record-body gallery-longform-preview"
+          },
+          "text": "{{$t(exhibition.curator_summary_key)}}"
+        },
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-relationship-row"
+          },
+          "if": "{{(exhibition.relationship_meta ?? []).length > 0}}",
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "iteration": {
+                "source": "exhibition.relationship_meta",
+                "item_var": "meta"
+              },
+              "text": "{{meta.value !== undefined ? $t(meta.label_key) + ' ' + meta.value : $t(meta.label_key)}}"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-record-meta-list"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-chip"
+              },
+              "iteration": {
+                "source": "exhibition.tags",
+                "item_var": "tag"
+              },
+              "text": "{{$t(\"gallery.tags.\" + tag)}}"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "name": "A",
+          "props": {
+            "href": "/exhibitions/{{exhibition.slug}}",
+            "className": "gallery-text-link"
+          },
+          "text": "$t:gallery.exhibitions.read_record"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,422 @@
+{
+  "version": "1.0.0",
+  "layout_name": "records",
+  "permissions": [],
+  "extends": "_user_base",
+  "data_sources": [
+    {
+      "id": "gallery_records_index",
+      "type": "static",
+      "data": {
+        "records": [
+          {
+            "id": "curator-note",
+            "slug": "curator-note",
+            "type": "curator_note",
+            "title_key": "gallery.records.curator_note.title",
+            "subtitle_key": "gallery.records.curator_note.subtitle",
+            "author_name_key": "gallery.records.authors.chief_curator",
+            "recorded_at_key": "gallery.records.curator_note.recorded_at",
+            "summary_key": "gallery.records.curator_note.summary",
+            "exhibition_slug": "light-afterimage-record",
+            "exhibition_title_key": "gallery.content.exhibitions.light_afterimage.title",
+            "item_slugs": [
+              "pale-grid-01",
+              "press-fragment-a"
+            ],
+            "archive_material_slugs": [
+              "press-release",
+              "installation-photo-set"
+            ],
+            "relationship_meta": [
+              {
+                "label_key": "gallery.relationship_meta.related_records",
+                "value": 3
+              },
+              {
+                "label_key": "gallery.relationship_meta.linked_documents",
+                "value": 2
+              },
+              {
+                "label_key": "gallery.relationship_meta.connected_exhibitions",
+                "value": 1
+              }
+            ],
+            "tags": [
+              "curatorial",
+              "essay",
+              "exhibition-context"
+            ],
+            "visibility_state": "published",
+            "published_at": "2026-04-01T09:00:00+09:00",
+            "href": "/records/curator-note"
+          },
+          {
+            "id": "field-note",
+            "slug": "field-note",
+            "type": "field_note",
+            "title_key": "gallery.records.field_note.title",
+            "subtitle_key": "gallery.records.field_note.subtitle",
+            "author_name_key": "gallery.records.authors.field_archivist",
+            "recorded_at_key": "gallery.records.field_note.recorded_at",
+            "summary_key": "gallery.records.field_note.summary",
+            "exhibition_slug": "light-afterimage-record",
+            "exhibition_title_key": "gallery.content.exhibitions.light_afterimage.title",
+            "item_slugs": [
+              "pale-grid-01",
+              "installation-axis-note"
+            ],
+            "archive_material_slugs": [
+              "installation-photo-set",
+              "lighting-plan"
+            ],
+            "relationship_meta": [
+              {
+                "label_key": "gallery.relationship_meta.related_records",
+                "value": 2
+              },
+              {
+                "label_key": "gallery.relationship_meta.archive_references",
+                "value": 2
+              },
+              {
+                "label_key": "gallery.relationship_meta.installation_phase",
+                "value": "B2"
+              }
+            ],
+            "tags": [
+              "field",
+              "installation",
+              "space"
+            ],
+            "visibility_state": "published",
+            "published_at": "2026-04-02T09:00:00+09:00",
+            "href": "/records/field-note"
+          },
+          {
+            "id": "installation-note",
+            "slug": "installation-note",
+            "type": "installation_note",
+            "title_key": "gallery.records.installation_note.title",
+            "subtitle_key": "gallery.records.installation_note.subtitle",
+            "author_name_key": "gallery.records.authors.field_archivist",
+            "recorded_at_key": "gallery.records.installation_note.recorded_at",
+            "summary_key": "gallery.records.installation_note.summary",
+            "exhibition_slug": "light-afterimage-record",
+            "exhibition_title_key": "gallery.content.exhibitions.light_afterimage.title",
+            "item_slugs": [
+              "installation-axis-note"
+            ],
+            "archive_material_slugs": [
+              "lighting-plan"
+            ],
+            "relationship_meta": [
+              {
+                "label_key": "gallery.relationship_meta.related_records",
+                "value": 1
+              },
+              {
+                "label_key": "gallery.relationship_meta.linked_documents",
+                "value": 1
+              },
+              {
+                "label_key": "gallery.relationship_meta.installation_week",
+                "value": 3
+              }
+            ],
+            "tags": [
+              "installation",
+              "lighting",
+              "movement"
+            ],
+            "visibility_state": "published",
+            "published_at": "2026-04-03T09:00:00+09:00",
+            "href": "/records/installation-note"
+          },
+          {
+            "id": "process-note",
+            "slug": "process-note",
+            "type": "process_note",
+            "title_key": "gallery.records.process_note.title",
+            "subtitle_key": "gallery.records.process_note.subtitle",
+            "author_name_key": "gallery.records.authors.archive_editor",
+            "recorded_at_key": "gallery.records.process_note.recorded_at",
+            "summary_key": "gallery.records.process_note.summary",
+            "exhibition_slug": "light-afterimage-record",
+            "exhibition_title_key": "gallery.content.exhibitions.light_afterimage.title",
+            "item_slugs": [
+              "press-fragment-a"
+            ],
+            "archive_material_slugs": [
+              "press-release"
+            ],
+            "relationship_meta": [
+              {
+                "label_key": "gallery.relationship_meta.linked_documents",
+                "value": 1
+              },
+              {
+                "label_key": "gallery.relationship_meta.connected_exhibitions",
+                "value": 1
+              },
+              {
+                "label_key": "gallery.relationship_meta.revision_history"
+              }
+            ],
+            "tags": [
+              "process",
+              "document",
+              "editing"
+            ],
+            "visibility_state": "published",
+            "published_at": "2026-04-04T09:00:00+09:00",
+            "href": "/records/process-note"
+          },
+          {
+            "id": "research-note",
+            "slug": "research-note",
+            "type": "research_note",
+            "title_key": "gallery.records.research_note.title",
+            "subtitle_key": "gallery.records.research_note.subtitle",
+            "author_name_key": "gallery.records.authors.archive_editor",
+            "recorded_at_key": "gallery.records.research_note.recorded_at",
+            "summary_key": "gallery.records.research_note.summary",
+            "exhibition_slug": "threshold-study",
+            "exhibition_title_key": "gallery.content.exhibitions.threshold_study.title",
+            "item_slugs": [],
+            "archive_material_slugs": [
+              "site-note-index"
+            ],
+            "relationship_meta": [
+              {
+                "label_key": "gallery.relationship_meta.archive_references",
+                "value": 1
+              },
+              {
+                "label_key": "gallery.relationship_meta.connected_exhibitions",
+                "value": 1
+              },
+              {
+                "label_key": "gallery.relationship_meta.preservation_note"
+              }
+            ],
+            "tags": [
+              "research",
+              "future-exhibition",
+              "field"
+            ],
+            "visibility_state": "scheduled",
+            "published_at": "2026-05-01T09:00:00+09:00",
+            "href": "/records/research-note"
+          }
+        ],
+        "record_types": [
+          {
+            "id": "curator_note",
+            "label_key": "gallery.records.types.curator_note",
+            "count": 1
+          },
+          {
+            "id": "field_note",
+            "label_key": "gallery.records.types.field_note",
+            "count": 1
+          },
+          {
+            "id": "installation_note",
+            "label_key": "gallery.records.types.installation_note",
+            "count": 1
+          },
+          {
+            "id": "process_note",
+            "label_key": "gallery.records.types.process_note",
+            "count": 1
+          },
+          {
+            "id": "research_note",
+            "label_key": "gallery.records.types.research_note",
+            "count": 1
+          }
+        ],
+        "filters": {
+          "record_type_filters": [
+            {
+              "id": "curator_note",
+              "label_key": "gallery.records.types.curator_note",
+              "count": 1
+            },
+            {
+              "id": "field_note",
+              "label_key": "gallery.records.types.field_note",
+              "count": 1
+            },
+            {
+              "id": "installation_note",
+              "label_key": "gallery.records.types.installation_note",
+              "count": 1
+            },
+            {
+              "id": "process_note",
+              "label_key": "gallery.records.types.process_note",
+              "count": 1
+            },
+            {
+              "id": "research_note",
+              "label_key": "gallery.records.types.research_note",
+              "count": 1
+            }
+          ],
+          "material_type_filters": [
+            {
+              "id": "installation_photo",
+              "label_key": "gallery.archive_materials.types.installation_photo"
+            },
+            {
+              "id": "note",
+              "label_key": "gallery.archive_materials.types.note"
+            },
+            {
+              "id": "press",
+              "label_key": "gallery.archive_materials.types.press"
+            },
+            {
+              "id": "document",
+              "label_key": "gallery.archive_materials.types.document"
+            },
+            {
+              "id": "image",
+              "label_key": "gallery.archive_materials.types.image"
+            },
+            {
+              "id": "interview",
+              "label_key": "gallery.archive_materials.types.interview"
+            },
+            {
+              "id": "object_reference",
+              "label_key": "gallery.archive_materials.types.object_reference"
+            }
+          ],
+          "tag_filters": [
+            {
+              "id": "installation",
+              "label_key": "gallery.tags.installation"
+            },
+            {
+              "id": "document",
+              "label_key": "gallery.tags.document"
+            },
+            {
+              "id": "field",
+              "label_key": "gallery.tags.field"
+            },
+            {
+              "id": "research",
+              "label_key": "gallery.tags.research"
+            },
+            {
+              "id": "context",
+              "label_key": "gallery.tags.context"
+            }
+          ],
+          "sort_options": [
+            {
+              "id": "date_desc",
+              "label_key": "gallery.filters.sort.date_desc"
+            },
+            {
+              "id": "date_asc",
+              "label_key": "gallery.filters.sort.date_asc"
+            },
+            {
+              "id": "title",
+              "label_key": "gallery.filters.sort.title"
+            }
+          ],
+          "relation_filters": [
+            {
+              "id": "light-afterimage-record",
+              "label_key": "gallery.content.exhibitions.light_afterimage.title"
+            },
+            {
+              "id": "threshold-study",
+              "label_key": "gallery.content.exhibitions.threshold_study.title"
+            }
+          ],
+          "author_source_filters": [
+            {
+              "id": "chief_curator",
+              "label_key": "gallery.records.authors.chief_curator"
+            },
+            {
+              "id": "field_archivist",
+              "label_key": "gallery.records.authors.field_archivist"
+            },
+            {
+              "id": "gallery_records_team",
+              "label_key": "gallery.archive_materials.sources.gallery_records_team"
+            }
+          ]
+        },
+        "pagination": {
+          "page": 1,
+          "per_page": 12,
+          "total": 5
+        },
+        "sort": {
+          "default": "date_desc",
+          "supported": [
+            "date_desc",
+            "date_asc",
+            "title"
+          ]
+        }
+      }
+    }
+  ],
+  "slots": {
+    "content": [
+      {
+        "partial": "partials/records-index/_records_hero.json"
+      },
+      {
+        "partial": "partials/records-index/_record_type_summary.json"
+      },
+      {
+        "partial": "partials/records-index/_records_filter_bar.json"
+      },
+      {
+        "type": "basic",
+        "name": "Section",
+        "props": {
+          "className": "gallery-section gallery-index-list-section"
+        },
+        "children": [
+          {
+            "type": "basic",
+            "name": "Div",
+            "props": {
+              "className": "gallery-list"
+            },
+            "children": [
+              {
+                "type": "basic",
+                "name": "Div",
+                "props": {
+                  "className": "gallery-record gallery-index-entry"
+                },
+                "iteration": {
+                  "source": "gallery_records_index.records",
+                  "item_var": "record"
+                },
+                "children": [
+                  {
+                    "partial": "partials/records-index/_record_card.json"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Form",
+  "dataKey": "loginForm",
+  "props": {
+    "className": "gallery-auth-form"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Div",
+      "if": "{{_local.loginError}}",
+      "props": {
+        "className": "gallery-auth-error"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "P",
+          "text": "{{_local.loginError}}"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-auth-field"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Label",
+          "props": {
+            "htmlFor": "login_email",
+            "className": "gallery-auth-label"
+          },
+          "text": "$t:auth.login_page.email"
+        },
+        {
+          "type": "basic",
+          "name": "Input",
+          "props": {
+            "id": "login_email",
+            "name": "email",
+            "type": "email",
+            "autoComplete": "email",
+            "required": true,
+            "disabled": "{{_local.isLoggingIn}}",
+            "placeholder": "$t:auth.login_page.email_placeholder",
+            "className": "gallery-auth-input"
+          }
+        },
+        {
+          "type": "basic",
+          "name": "P",
+          "if": "{{_local.loginErrors?.email}}",
+          "props": {
+            "className": "gallery-auth-field-error"
+          },
+          "text": "{{Array.isArray(_local.loginErrors?.email) ? _local.loginErrors.email[0] : _local.loginErrors?.email}}"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-auth-field"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Label",
+          "props": {
+            "htmlFor": "login_password",
+            "className": "gallery-auth-label"
+          },
+          "text": "$t:auth.login_page.password"
+        },
+        {
+          "type": "basic",
+          "name": "Input",
+          "props": {
+            "id": "login_password",
+            "name": "password",
+            "type": "password",
+            "autoComplete": "current-password",
+            "required": true,
+            "disabled": "{{_local.isLoggingIn}}",
+            "placeholder": "$t:auth.login_page.password_placeholder",
+            "className": "gallery-auth-input"
+          }
+        },
+        {
+          "type": "basic",
+          "name": "P",
+          "if": "{{_local.loginErrors?.password}}",
+          "props": {
+            "className": "gallery-auth-field-error"
+          },
+          "text": "{{Array.isArray(_local.loginErrors?.password) ? _local.loginErrors.password[0] : _local.loginErrors?.password}}"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "name": "Button",
+      "props": {
+        "type": "submit",
+        "className": "gallery-auth-submit",
+        "disabled": "{{_local.isLoggingIn}}"
+      },
+      "text": "{{_local.isLoggingIn ? $t('auth.login_page.submitting') : $t('auth.login_page.submit')}}"
+    },
+    {
+      "type": "basic",
+      "name": "A",
+      "props": {
+        "href": "/archive",
+        "className": "gallery-auth-back-link"
+      },
+      "text": "$t:auth.login_page.back_to_archive"
+    }
+  ],
+  "actions": [
+    {
+      "type": "submit",
+      "handler": "sequence",
+      "actions": [
+        {
+          "handler": "setState",
+          "params": {
+            "target": "local",
+            "isLoggingIn": true,
+            "loginError": null,
+            "loginErrors": null
+          }
+        },
+        {
+          "handler": "login",
+          "target": "user",
+          "params": {
+            "body": {
+              "email": "{{_local.loginForm.email}}",
+              "password": "{{_local.loginForm.password}}"
+            }
+          },
+          "onSuccess": [
+            {
+              "handler": "setState",
+              "params": {
+                "target": "global",
+                "currentUser": "{{response.user}}"
+              }
+            },
+            {
+              "handler": "setState",
+              "params": {
+                "target": "local",
+                "isLoggingIn": false
+              }
+            },
+            {
+              "handler": "navigate",
+              "target": "{{query.redirect || '/'}}"
+            }
+          ],
+          "onError": [
+            {
+              "handler": "setState",
+              "params": {
+                "target": "local",
+                "isLoggingIn": false,
+                "loginError": "{{error.message}}",
+                "loginErrors": "{{error.errors}}"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-section gallery-section-tight"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-item-visual-panel"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-media-frame gallery-media-detail gallery-media-detail-panel gallery-item-detail-image"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Img",
+              "props": {
+                "src": "{{(gallery_item_detail.image_url ?? gallery_item_detail.preview_image ?? gallery_item_detail.detail_image ?? gallery_item_detail.media?.url ?? \"\")}}",
+                "alt": "{{gallery_item_detail.title_label ?? $t(gallery_item_detail.title_key ?? 'gallery.media.item_thumbnail')}}",
+                "className": "gallery-media-image"
+              },
+              "if": "{{gallery_item_detail.image_url ?? gallery_item_detail.preview_image ?? gallery_item_detail.detail_image ?? gallery_item_detail.media?.url ?? false}}"
+            },
+            {
+              "type": "basic",
+              "name": "Div",
+              "props": {
+                "className": "gallery-media-placeholder"
+              },
+              "if": "{{!(gallery_item_detail.image_url ?? gallery_item_detail.preview_image ?? gallery_item_detail.detail_image ?? gallery_item_detail.media?.url ?? false)}}",
+              "children": [
+                {
+                  "type": "basic",
+                  "name": "Span",
+                  "props": {
+                    "className": "gallery-media-placeholder-label"
+                  },
+                  "text": "$t:gallery.media.detail_hero"
+                }
+              ]
+            },
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-media-caption"
+              },
+              "text": "{{gallery_item_detail.media_caption ?? gallery_item_detail.media?.credit ?? $t(gallery_item_detail.credit_line_key ?? 'gallery.media.preview_caption')}}"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "name": "P",
+          "props": {
+            "className": "gallery-muted"
+          },
+          "text": "{{$t(gallery_item_detail.credit_line_key)}}"
+        }
+      ]
+    }
+  ]
+}

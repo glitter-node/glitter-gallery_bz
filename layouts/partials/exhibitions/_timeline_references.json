@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-section"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Span",
+      "props": {
+        "className": "gallery-kicker"
+      },
+      "text": "$t:gallery.exhibition_detail.timeline_references"
+    },
+    {
+      "type": "basic",
+      "name": "H2",
+      "props": {
+        "className": "gallery-section-title"
+      },
+      "text": "$t:gallery.exhibition_detail.timeline_references_title"
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-list gallery-timeline-list"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-record"
+          },
+          "iteration": {
+            "source": "gallery_exhibition_detail.timeline_references",
+            "item_var": "event"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-meta"
+              },
+              "text": "{{$t(event.date_key)}}"
+            },
+            {
+              "type": "basic",
+              "name": "H3",
+              "props": {
+                "className": "gallery-record-title"
+              },
+              "text": "{{$t(event.title_key)}}"
+            },
+            {
+              "type": "basic",
+              "name": "P",
+              "props": {
+                "className": "gallery-record-body"
+              },
+              "text": "{{$t(event.body_key)}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-grid gallery-grid-2"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "A",
+          "props": {
+            "href": "{{collection.href ?? \"/collections\"}}",
+            "className": "gallery-card gallery-record-link"
+          },
+          "iteration": {
+            "source": "gallery_exhibition_detail.related_collections",
+            "item_var": "collection"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-meta"
+              },
+              "text": "$t:gallery.exhibition_detail.related_collections"
+            },
+            {
+              "type": "basic",
+              "name": "H3",
+              "props": {
+                "className": "gallery-card-title"
+              },
+              "text": "{{$t(collection.title_key)}}"
+            },
+            {
+              "type": "basic",
+              "name": "P",
+              "props": {
+                "className": "gallery-card-body"
+              },
+              "text": "{{$t(collection.body_key)}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

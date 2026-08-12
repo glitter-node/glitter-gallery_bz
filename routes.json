@@ -1,0 +1,270 @@
+{
+  "version": "1.0.0",
+  "description": "glitter-gallery_bz user template routes",
+  "routes": [
+    {
+      "path": "/",
+      "layout": "home",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:gallery.nav.home"
+      }
+    },
+    {
+      "path": "/exhibitions",
+      "layout": "exhibitions",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:gallery.nav.exhibitions"
+      }
+    },
+    {
+      "path": "/archive",
+      "layout": "archive",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:gallery.nav.archive"
+      }
+    },
+    {
+      "path": "/collections",
+      "layout": "collections",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:gallery.nav.collections"
+      }
+    },
+    {
+      "path": "/stories",
+      "layout": "stories",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:gallery.nav.stories"
+      }
+    },
+    {
+      "path": "/records",
+      "layout": "records",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:gallery.records.index.title"
+      }
+    },
+    {
+      "path": "/about",
+      "layout": "about",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:gallery.nav.about"
+      }
+    },
+    {
+      "path": "/login",
+      "layout": "auth/login",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:auth.login_page.meta_title"
+      }
+    },
+    {
+      "path": "/register",
+      "layout": "auth/register",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:auth.register_page.meta_title"
+      }
+    },
+    {
+      "path": "/notes",
+      "redirect": "/stories",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:gallery.nav.stories"
+      }
+    },
+    {
+      "path": "/collection",
+      "redirect": "/collections",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:gallery.nav.collections"
+      }
+    },
+    {
+      "path": "/404",
+      "layout": "errors/404",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:gallery.errors.not_found_title"
+      }
+    },
+    {
+      "path": "/403",
+      "layout": "errors/403",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:gallery.errors.forbidden_title"
+      }
+    },
+    {
+      "path": "/500",
+      "layout": "errors/500",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:gallery.errors.server_error_title"
+      }
+    },
+    {
+      "path": "/exhibitions/:slug",
+      "layout": "exhibition-detail",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:gallery.exhibition_detail.meta_title"
+      }
+    },
+    {
+      "path": "/archive/:category",
+      "layout": "archive-category",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:gallery.archive.category_meta_title"
+      }
+    },
+    {
+      "path": "/records/:slug",
+      "layout": "record-detail",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:gallery.records.meta_title"
+      }
+    },
+    {
+      "path": "/items/:slug",
+      "layout": "item-detail",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:gallery.items.meta_title"
+      }
+    },
+    {
+      "path": "/archive/:category/:slug",
+      "layout": "archive-material-detail",
+      "auth_required": false,
+      "meta": {
+        "title": "$t:gallery.archive_materials.meta_title"
+      }
+    },
+    {
+      "path": "/admin/gallery",
+      "layout": "admin-gallery-dashboard",
+      "auth_required": true,
+      "meta": {
+        "title": "$t:gallery.admin.dashboard.title"
+      }
+    },
+    {
+      "path": "/admin/gallery/exhibitions",
+      "layout": "admin-gallery-exhibitions",
+      "auth_required": true,
+      "meta": {
+        "title": "$t:gallery.admin.pages.exhibitions.title"
+      }
+    },
+    {
+      "path": "/admin/gallery/exhibitions/create",
+      "layout": "admin-gallery-exhibition-form",
+      "auth_required": true,
+      "meta": {
+        "title": "$t:gallery.admin.forms.exhibition.title"
+      }
+    },
+    {
+      "path": "/admin/gallery/exhibitions/:id/edit",
+      "layout": "admin-gallery-exhibition-form",
+      "auth_required": true,
+      "meta": {
+        "title": "$t:gallery.admin.forms.exhibition.title"
+      }
+    },
+    {
+      "path": "/admin/gallery/items",
+      "layout": "admin-gallery-items",
+      "auth_required": true,
+      "meta": {
+        "title": "$t:gallery.admin.pages.items.title"
+      }
+    },
+    {
+      "path": "/admin/gallery/items/create",
+      "layout": "admin-gallery-item-form",
+      "auth_required": true,
+      "meta": {
+        "title": "$t:gallery.admin.forms.item.title"
+      }
+    },
+    {
+      "path": "/admin/gallery/items/:id/edit",
+      "layout": "admin-gallery-item-form",
+      "auth_required": true,
+      "meta": {
+        "title": "$t:gallery.admin.forms.item.title"
+      }
+    },
+    {
+      "path": "/admin/gallery/records",
+      "layout": "admin-gallery-records",
+      "auth_required": true,
+      "meta": {
+        "title": "$t:gallery.admin.pages.records.title"
+      }
+    },
+    {
+      "path": "/admin/gallery/records/create",
+      "layout": "admin-gallery-record-form",
+      "auth_required": true,
+      "meta": {
+        "title": "$t:gallery.admin.forms.record.title"
+      }
+    },
+    {
+      "path": "/admin/gallery/records/:id/edit",
+      "layout": "admin-gallery-record-form",
+      "auth_required": true,
+      "meta": {
+        "title": "$t:gallery.admin.forms.record.title"
+      }
+    },
+    {
+      "path": "/admin/gallery/archive-materials",
+      "layout": "admin-gallery-archive-materials",
+      "auth_required": true,
+      "meta": {
+        "title": "$t:gallery.admin.pages.archive_materials.title"
+      }
+    },
+    {
+      "path": "/admin/gallery/archive-materials/create",
+      "layout": "admin-gallery-archive-material-form",
+      "auth_required": true,
+      "meta": {
+        "title": "$t:gallery.admin.forms.archive_material.title"
+      }
+    },
+    {
+      "path": "/admin/gallery/archive-materials/:id/edit",
+      "layout": "admin-gallery-archive-material-form",
+      "auth_required": true,
+      "meta": {
+        "title": "$t:gallery.admin.forms.archive_material.title"
+      }
+    },
+    {
+      "path": "/admin/gallery/relationships",
+      "layout": "admin-gallery-relationships",
+      "auth_required": true,
+      "meta": {
+        "title": "$t:gallery.admin.pages.relationships.title"
+      }
+    }
+  ]
+}

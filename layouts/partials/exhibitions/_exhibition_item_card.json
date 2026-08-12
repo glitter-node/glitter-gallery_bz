@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Div",
+  "props": {
+    "className": "gallery-item-card"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-media-frame gallery-media-thumbnail gallery-item-thumb"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Img",
+          "props": {
+            "src": "{{(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_image ?? item.media?.url ?? \"\")}}",
+            "alt": "{{item.title_label ?? $t(item.title_key ?? 'gallery.media.item_thumbnail')}}",
+            "className": "gallery-media-image"
+          },
+          "if": "{{item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_image ?? item.media?.url ?? false}}"
+        },
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-media-placeholder gallery-media-placeholder-small"
+          },
+          "if": "{{!(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_image ?? item.media?.url ?? false)}}",
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-media-placeholder-label"
+              },
+              "text": "$t:gallery.media.item_thumbnail"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-item-card-body"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Span",
+          "props": {
+            "className": "gallery-meta"
+          },
+          "text": "{{item.type}} / {{item.year ?? \"\"}}"
+        },
+        {
+          "type": "basic",
+          "name": "H3",
+          "props": {
+            "className": "gallery-record-title"
+          },
+          "text": "{{$t(item.title_key)}}"
+        },
+        {
+          "type": "basic",
+          "name": "P",
+          "props": {
+            "className": "gallery-muted"
+          },
+          "text": "{{$t(item.artist_name_key)}} / {{$t(item.medium_key)}}"
+        },
+        {
+          "type": "basic",
+          "name": "P",
+          "props": {
+            "className": "gallery-record-body gallery-longform-preview"
+          },
+          "text": "{{$t(item.summary_key)}}"
+        },
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-record-meta-list"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-chip"
+              },
+              "iteration": {
+                "source": "item.tags",
+                "item_var": "tag"
+              },
+              "text": "{{$t(\"gallery.tags.\" + tag)}}"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "name": "A",
+          "props": {
+            "href": "/items/{{item.slug}}",
+            "className": "gallery-text-link"
+          },
+          "text": "$t:gallery.items.view_detail"
+        }
+      ]
+    }
+  ]
+}

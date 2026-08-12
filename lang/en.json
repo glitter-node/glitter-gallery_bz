@@ -1,0 +1,1305 @@
+{
+  "gallery": {
+    "brand": {
+      "name": "Glitter Gallery Bz"
+    },
+    "meta": {
+      "base_title": "Glitter Gallery Bz"
+    },
+    "nav": {
+      "home": "Home",
+      "current_exhibition": "Current Exhibition",
+      "exhibitions": "Exhibitions",
+      "archive": "Archive",
+      "collections": "Collections",
+      "records": "Records",
+      "stories": "Stories",
+      "about": "About"
+    },
+    "header": {
+      "subtitle": "Exhibition archive and record index",
+      "status_label": "OPEN CATALOG",
+      "status_value": "A public index for reading exhibitions through records",
+      "mobile_menu_open": "Open mobile menu",
+      "mobile_menu_close": "Close mobile menu",
+      "mobile_menu_label": "Mobile navigation",
+      "mobile_menu_title": "Menu"
+    },
+    "footer": {
+      "summary": "A GnuBoard7 user template example centered on exhibitions, archives, collections, and written records.",
+      "mission": "An institutional index for exhibitions, works, documents, field records, and the relationships that keep them readable.",
+      "metadata": "Public catalogue structure · Exhibition archive · Record notes",
+      "sections_heading": "Sections",
+      "archive_heading": "Archive paths",
+      "context_heading": "Record context"
+    },
+    "media": {
+      "featured_exhibition": "Exhibition image placeholder",
+      "item_thumbnail": "Item thumbnail placeholder",
+      "archive_material": "Archive material preview",
+      "record_note": "Record note visual area",
+      "relationship": "Relationship preview",
+      "detail_hero": "Detail hero image",
+      "installation": "Installation record image",
+      "document_scan": "Document scan placeholder",
+      "preview_caption": "Image and material captions will appear when publication assets are ready."
+    },
+    "mode_control": {
+      "aria_label": "Display mode selector",
+      "title": "Display mode selector",
+      "system": "System",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "relationship_meta": {
+      "related_records": "Related records",
+      "linked_documents": "Reference documents",
+      "connected_exhibitions": "Connected exhibitions",
+      "installation_phase": "Installation phase",
+      "revision_history": "Revision history present",
+      "curator_notes": "Curator notes",
+      "archive_references": "Archive references",
+      "preservation_note": "Preservation memo included",
+      "installation_week": "Installation week",
+      "linked_artists": "Linked artists"
+    },
+    "home": {
+      "seo_title": "Glitter Gallery Bz",
+      "seo_description": "A user template for quickly building exhibition, archive, and record-centered websites.",
+      "kicker": "Gallery / Archive / Record",
+      "title": "A gallery template that connects exhibitions and records",
+      "lead": "A public-site example for calmly browsing works, exhibitions, archives, and written notes.",
+      "primary_action": "View exhibitions",
+      "secondary_action": "Explore archive",
+      "stat_exhibitions_value": "06",
+      "stat_exhibitions_label": "Exhibition sections",
+      "stat_archive_value": "18",
+      "stat_archive_label": "Archive categories",
+      "stat_notes_value": "32",
+      "stat_notes_label": "Record notes",
+      "featured_kicker": "Featured Exhibition",
+      "featured_title": "Records of where the light passed",
+      "featured_body": "The featured exhibition presents title, period, space, and curatorial point of view in one readable area. Visitors can understand context and browsing direction before scanning images.",
+      "featured_period": "Period: Spring 2026 season",
+      "featured_location": "Space: Main gallery and online archive",
+      "featured_format": "Format: Work introductions, installation records, artist notes",
+      "archive_kicker": "Archive Categories",
+      "archive_title": "Archive categories ready for operators to expand",
+      "archive_one_meta": "Exhibition",
+      "archive_one_title": "Records by exhibition",
+      "archive_one_body": "Works, installation photos, press material, and curatorial notes are grouped by exhibition so past shows remain easy to revisit.",
+      "archive_two_meta": "Artist",
+      "archive_two_title": "Records by artist",
+      "archive_two_body": "Artist profiles, participation history, work lists, and interviews are connected into a deeper browsing path.",
+      "archive_three_meta": "Material",
+      "archive_three_title": "Records by document type",
+      "archive_three_body": "Images, manuscripts, links, and conservation notes are separated by management type to reduce operational friction.",
+      "collections_kicker": "Collections",
+      "collections_title": "Collection cards",
+      "collection_one_index": "01",
+      "collection_one_title": "Held works",
+      "collection_one_body": "Representative images and work descriptions are paired with concise background and collecting criteria.",
+      "collection_two_index": "02",
+      "collection_two_title": "Project materials",
+      "collection_two_body": "Planning documents, installation photos, and collaboration records from exhibition preparation are presented as one group.",
+      "collection_three_index": "03",
+      "collection_three_title": "Research notes",
+      "collection_three_body": "Public research memos, links, and reference material become readable supporting records.",
+      "notes_kicker": "Record Notes",
+      "notes_title": "Sentences that remain after an exhibition closes",
+      "notes_body": "The record notes area is a home entry point for durable texts such as curatorial essays, field notes, and conservation records.",
+      "note_one_meta": "Curatorial Note",
+      "note_one_body": "Opening sentences and criteria for reading works give visitors a reason to return.",
+      "note_two_meta": "Field Record",
+      "note_two_body": "Information from installation, photography, and deinstallation is turned into record-centered content.",
+      "about_kicker": "About",
+      "about_title": "A first screen for small galleries and archive projects",
+      "about_body": "This home layout presents exhibitions, archives, collections, and notes with static content first, then can expand into board and page data later.",
+      "about_action": "View template overview",
+      "stats": {
+        "exhibitions": "Exhibition structures",
+        "archive": "Archive categories",
+        "notes": "Record notes"
+      },
+      "current_exhibition_kicker": "Current Exhibition",
+      "featured_empty_title": "Exhibition in preparation",
+      "featured_empty_subtitle": "Published exhibition data will appear here when it is available.",
+      "featured_empty_body": "There is no currently available exhibition, but the archive and record notes remain browsable.",
+      "explore_current_exhibition": "View current exhibition",
+      "explore_archive": "Move into the archive",
+      "visual_placeholder": "Exhibition image placeholder",
+      "publication_signal": "Published exhibition · archive relationships available",
+      "item_highlights": {
+        "kicker": "Selected Items",
+        "title": "Items to read first in the exhibition",
+        "empty": "No items are connected to the exhibition yet.",
+        "empty_title": "Connected item in preparation",
+        "empty_meta": "Material information",
+        "empty_relation": "Exhibition item relationships will appear when they are ready.",
+        "labels": {
+          "artwork": "Artwork",
+          "installation": "Installation Record",
+          "document": "Archive Object"
+        },
+        "relations": {
+          "entry_work": "The first artwork record in the current exhibition",
+          "installation": "Material connecting visitor flow and installation decisions",
+          "document": "A document record where exhibition language remains"
+        }
+      },
+      "records": {
+        "kicker": "Recent Records",
+        "title": "Recently opened record notes",
+        "body": "Curator notes and field records open with the exhibition rather than waiting behind the work list.",
+        "empty": "No published record notes are available yet.",
+        "empty_date": "Record date pending",
+        "empty_type": "Record note",
+        "empty_title": "Record note in preparation",
+        "empty_summary": "A summary will appear when the public record is ready.",
+        "empty_related": "Related exhibition pending",
+        "labels": {
+          "record_type": "Record type",
+          "relationship": "Relationship",
+          "chronology": "Timing",
+          "continue": "Continue"
+        },
+        "related_current_exhibition": "Related exhibition: Records of where the light passed",
+        "related_installation": "Related material: Installation Photo Set",
+        "related_item": "Related item: Pale Grid 01",
+        "relationships": {
+          "connected_record": "Connected record",
+          "curatorial_context": "Curator note explains the exhibition reading order",
+          "installation_context": "Installation context is linked with field material",
+          "same_session": "Record derived from the same installation session"
+        },
+        "chronology": {
+          "recorded_during": "Recorded during the exhibition",
+          "after_opening": "Interpretive record arranged after opening",
+          "install_week": "Field record from installation week",
+          "after_install": "Placement record reviewed after installation"
+        },
+        "continuity": {
+          "same_exhibition": "Continue to a related record from the same exhibition",
+          "to_field_note": "Check installation decisions in the field note",
+          "to_archive_material": "Continue into installation photo material",
+          "to_item_record": "Read the artwork record with placement context"
+        }
+      },
+      "archive_materials": {
+        "kicker": "Recent Archive Materials",
+        "title": "Recently arranged archive materials",
+        "empty": "No public archive categories are available yet."
+      },
+      "relationship_paths": {
+        "kicker": "Relationship Paths",
+        "title": "Exploration paths through relationships",
+        "arrow": "→",
+        "labels": {
+          "relationship_type": "Relationship type",
+          "timeline": "Archive timing",
+          "next": "Continue"
+        },
+        "roles": {
+          "connected_record": "Connected record",
+          "featured_item": "Featured item",
+          "curatorial_context": "Curatorial context",
+          "visual_reference": "Visual reference",
+          "installation_context": "Installation context"
+        },
+        "bridge": {
+          "connected_record": "Connected record"
+        },
+        "node_types": {
+          "exhibition": "Exhibition",
+          "item": "Item",
+          "record": "Record note",
+          "archive_material": "Archive material"
+        },
+        "timeline": {
+          "linked_after_record": "Linked after the record",
+          "install_week": "Extends from installation-week observation into material",
+          "recorded_after_install": "Material and note arranged after installation",
+          "research_to_work": "Research memo returns to the artwork record"
+        },
+        "continuity": {
+          "follow_target": "Continue to the target record",
+          "open_archive_material": "Open the connected archive material",
+          "open_field_note": "Check context in the field note",
+          "open_item_record": "Return to the artwork record"
+        },
+        "exhibition_to_field_note": {
+          "title": "From Exhibition to Field Note",
+          "body": "Move from the exhibition overview into observations from installation week."
+        },
+        "installation_records": {
+          "title": "Between Installation Records and Work",
+          "body": "Read the artwork surface together with material about exhibition placement."
+        },
+        "research_connected_work": {
+          "title": "A Work Connected by Research",
+          "body": "Return to an artwork record by following relationships rather than categories."
+        }
+      },
+      "archive_categories_compact": {
+        "kicker": "Archive Categories",
+        "title": "Enter quickly by category",
+        "empty": "Archive categories will appear here when they are ready."
+      },
+      "about_compact": {
+        "kicker": "About",
+        "title": "A record structure that remains after exhibitions",
+        "body": "This screen foregrounds the current exhibition, notes, and material relationships before explaining the platform itself.",
+        "action": "View archive context"
+      }
+    },
+    "exhibitions": {
+      "kicker": "Exhibitions",
+      "title": "Exhibition records",
+      "lead": "Current, upcoming, and past exhibitions are presented as consistent record cards.",
+      "record_one_meta": "Current / Main Hall",
+      "record_one_title": "Collecting the surface of memory",
+      "record_one_body": "A record-oriented exhibition introduction that foregrounds subject, period, artists, and visitor flow.",
+      "record_two_meta": "Archive / Project Room",
+      "record_two_title": "Documents left in the studio",
+      "record_two_body": "Drawings, photographs, artist notes, and installation records are grouped as a readable exhibition archive.",
+      "featured_kicker": "Featured Exhibition",
+      "read_record": "View exhibition record",
+      "filters": {
+        "all": "All",
+        "current": "Current",
+        "upcoming": "Upcoming",
+        "past": "Past"
+      },
+      "status": {
+        "current": "Current exhibition",
+        "upcoming": "Upcoming exhibition",
+        "past": "Past exhibition"
+      },
+      "visibility": {
+        "published": "Published record",
+        "scheduled": "Scheduled"
+      },
+      "groups": {
+        "current": {
+          "title": "Current",
+          "description": "The exhibition record at the center of the current reading path."
+        },
+        "upcoming": {
+          "title": "Upcoming",
+          "description": "A prepared structure for research and pre-opening records."
+        },
+        "past": {
+          "title": "Past",
+          "description": "Exhibitions and materials that remain readable after closing."
+        }
+      }
+    },
+    "archive": {
+      "kicker": "Archive",
+      "title": "Archive browsing",
+      "lead": "The archive makes the criteria for finding works and documents clear.",
+      "category_one_title": "By exhibition",
+      "category_one_body": "Works, installation photos, press material, and curatorial notes can be grouped by exhibition.",
+      "category_two_title": "By artist",
+      "category_two_body": "Artist profiles, work lists, interviews, and participation history can be organized together.",
+      "category_three_title": "By document type",
+      "category_three_body": "Images, texts, links, and conservation notes can be separated into practical management groups.",
+      "categories": {
+        "exhibition": {
+          "meta": "Exhibition",
+          "title": "Exhibition Records",
+          "body": "Works, installation images, press material, and curator notes are grouped by exhibition."
+        },
+        "artist": {
+          "meta": "Artist",
+          "title": "Artist Records",
+          "body": "Artist profiles, participation history, artwork lists, and interviews form one exploration path."
+        },
+        "material": {
+          "meta": "Material",
+          "title": "Material Records",
+          "body": "Images, manuscripts, links, and preservation notes are separated for clearer operations."
+        },
+        "document": {
+          "meta": "Document",
+          "title": "Document Archive",
+          "body": "Press releases, public documents, leaflets, and statements are prepared as document records."
+        },
+        "research": {
+          "meta": "Research",
+          "title": "Research Materials",
+          "body": "Public research notes, reference links, and research paths connect to exhibitions and artworks."
+        },
+        "field_record": {
+          "meta": "Field Record",
+          "title": "Field Records",
+          "body": "Installation, photography, deinstallation, and preservation issues are kept as a separate record axis."
+        }
+      },
+      "category_meta_title": "Archive Category",
+      "index": {
+        "filter_ready_body": "Category, material type, tag, exhibition relation, source, and date sorting criteria are visible at the index level.",
+        "material_count": "Materials",
+        "related_records_prefix": "Related records"
+      },
+      "category_kicker": "Archive Category"
+    },
+    "collections": {
+      "kicker": "Collections",
+      "title": "Collection groups",
+      "lead": "Present held works, project materials, and research documents as grouped records.",
+      "feature_title": "A page for work groups and document sets",
+      "feature_body": "Collections go beyond single work lists by explaining background, collecting criteria, and available records.",
+      "index_one": "01 / Held works and representative images",
+      "index_two": "02 / Project documents and installation records",
+      "index_three": "03 / Research notes and public links",
+      "items": {
+        "held_works": {
+          "title": "Held Works",
+          "body": "Representative images and artwork descriptions introduce the background and acquisition logic of a group."
+        },
+        "project_records": {
+          "title": "Project Records",
+          "body": "Documents, installation photos, and collaboration records produced during exhibition preparation are grouped together."
+        },
+        "research_notes": {
+          "title": "Research Notes",
+          "body": "Public research memos, links, and references are placed as readable supporting records."
+        }
+      }
+    },
+    "stories": {
+      "kicker": "Stories / Notes",
+      "title": "Written records",
+      "lead": "Gather sentences, interviews, and field notes that should remain after an exhibition closes.",
+      "note_one_meta": "Curatorial Note",
+      "note_one_title": "Short sentences that describe an exhibition",
+      "note_one_body": "Texts about works and curatorial criteria become a record visitors can return to.",
+      "note_two_meta": "Field Record",
+      "note_two_title": "Records between installation and deinstallation",
+      "note_two_body": "Installation process, spatial conditions, and conservation issues can become record-centered content."
+    },
+    "about": {
+      "kicker": "About",
+      "title": "A starting point for record-centered gallery sites",
+      "lead": "This template helps small exhibition spaces, archive projects, and independent curatorial teams build public sites on GnuBoard7.",
+      "card_one_title": "Editorial information structure",
+      "card_one_body": "The first screen clearly presents the main routes into exhibitions, archives, collections, and notes.",
+      "card_two_title": "An extensible record model",
+      "card_two_body": "Start with static presentation pages, then progressively connect board, page, and module data."
+    },
+    "errors": {
+      "unauthorized_code": "401",
+      "unauthorized_title": "This record requires login",
+      "unauthorized_body": "You need access permission to view this page.",
+      "forbidden_code": "403",
+      "forbidden_title": "You do not have access",
+      "forbidden_body": "This account cannot view the requested record.",
+      "not_found_code": "404",
+      "not_found_title": "Record not found",
+      "not_found_body": "The requested page may have moved or may not be public yet.",
+      "server_error_code": "500",
+      "server_error_title": "The record could not be loaded",
+      "server_error_body": "Please try again later.",
+      "unavailable_code": "503",
+      "unavailable_title": "Temporarily unavailable",
+      "unavailable_body": "The site is under maintenance or deployment.",
+      "maintenance_code": "MAINTENANCE",
+      "maintenance_title": "The archive is being arranged",
+      "maintenance_body": "The site is temporarily under maintenance for a better browsing experience."
+    },
+    "content": {
+      "metadata": {
+        "period": "Period",
+        "location": "Location",
+        "format": "Format",
+        "status": "Status",
+        "visibility": "Visibility"
+      },
+      "exhibitions": {
+        "light_afterimage": {
+          "title": "Records Where Light Passed",
+          "subtitle": "A featured exhibition linking exhibition and installation records",
+          "period": "Spring 2026 season",
+          "location": "Main gallery and online archive",
+          "format": "Artwork introductions, installation records, artist notes",
+          "curator_note": "The featured exhibition presents title, period, location, and curatorial context in one structured view so visitors can understand the exhibition before browsing images.",
+          "curator_summary": "A current exhibition showing how light, installation, and document records explain one another."
+        },
+        "studio_documents": {
+          "title": "Documents Left in the Studio",
+          "subtitle": "Process materials connected as an exhibition archive",
+          "period": "Winter 2026 season",
+          "location": "Project room",
+          "curator_note": "Drawings, photographs, artist notes, and installation records are grouped so the project can be read as one exhibition archive.",
+          "curator_summary": "Documents and images produced in the studio are arranged into a structure that remains readable after the exhibition."
+        },
+        "threshold_study": {
+          "title": "Threshold Study",
+          "subtitle": "An upcoming exhibition centered on field research and time records",
+          "period": "Summer 2026 planned",
+          "location": "Research room",
+          "curator_note": "This exhibition records movement, waiting, and observation around entries and boundaries in space.",
+          "curator_summary": "An upcoming exhibition linking thresholds and movement through field records, research notes, and time materials."
+        }
+      },
+      "exhibition_sections": {
+        "context": {
+          "title": "Exhibition Context",
+          "body": "Theme, period, participating artists, and visitor flow are recorded before individual assets."
+        },
+        "records": {
+          "title": "Record Set",
+          "body": "Artwork images, installation photos, press material, and curator notes are connected by exhibition."
+        },
+        "materials": {
+          "title": "Material Structure",
+          "body": "Manuscripts, images, links, and preservation notes are separated by operating needs."
+        },
+        "artwork_insertion": {
+          "title": "Artwork Insertion Area",
+          "body": "When artwork detail data is connected, this exhibition section can lead into artwork lists and individual artwork records."
+        },
+        "research": {
+          "title": "Research Flow",
+          "body": "Field research, interviews, and material review connect from the preparation phase."
+        }
+      }
+    },
+    "notes": {
+      "types": {
+        "curator": {
+          "meta": "Curatorial Note",
+          "title": "Curator Note",
+          "body": "Opening sentences and interpretive criteria are preserved as long-form text that visitors can return to."
+        },
+        "field": {
+          "meta": "Field Note",
+          "title": "Field Note",
+          "body": "Information from installation, shooting, and deinstallation becomes record content."
+        },
+        "installation": {
+          "meta": "Installation Note",
+          "title": "Installation Note",
+          "body": "Spatial conditions, placement, lighting, and circulation notes are accumulated for future exhibitions."
+        },
+        "process": {
+          "meta": "Process Note",
+          "title": "Process Note",
+          "body": "Planning, research, collaboration decisions, and changes are preserved as long-term records."
+        }
+      }
+    },
+    "future": {
+      "artist_profiles": "Artist profiles",
+      "artwork_detail_pages": "Artwork detail pages",
+      "timeline_view": "Timeline view",
+      "archive_filtering": "Archive filtering",
+      "multilingual_exhibitions": "Multilingual exhibitions",
+      "private_archives": "Private archives",
+      "guest_curator_pages": "Guest curator pages"
+    },
+    "exhibition_detail": {
+      "meta_title": "Exhibition Detail",
+      "kicker": "Exhibition Record",
+      "curator_note": "Curator Note",
+      "related_records": "Related Records",
+      "related_records_title": "Records Along the Exhibition",
+      "field_notes": {
+        "install_observation": {
+          "title": "Installation Observation",
+          "body": "Distances, visitor flow, and lighting changes visible only in the exhibition space are preserved."
+        },
+        "space_condition": {
+          "title": "Space Condition Memo",
+          "body": "Walls, floor, natural light, and sound are recorded for future exhibition and preservation decisions."
+        }
+      },
+      "archive_materials": {
+        "installation_photo_set": {
+          "title": "Installation Photo Set",
+          "body": "Photographs that document the room structure and artwork placement."
+        },
+        "press_release": {
+          "title": "Press Release Text",
+          "body": "Public exhibition descriptions and base information are connected as documents."
+        },
+        "lighting_plan": {
+          "title": "Lighting Plan Record",
+          "body": "Field material for revisiting brightness and direction by artwork."
+        }
+      },
+      "archive_materials_title": "Materials Around the Exhibition",
+      "timeline_references": "Timeline References",
+      "timeline_references_title": "From Research to Opening",
+      "related_collections": "Related Collections",
+      "artwork_slot_kicker": "Artwork Insertion Point",
+      "artwork_slot_body": "When artwork detail data is ready, exhibition artwork lists and artwork detail navigation can be inserted here.",
+      "timeline": {
+        "research_start": {
+          "date": "2026.01",
+          "title": "Research Start",
+          "body": "The exhibition theme and material range were set while artist records were gathered."
+        },
+        "install_week": {
+          "date": "2026.03",
+          "title": "Installation Week",
+          "body": "Spatial conditions and artwork placement were adjusted while field notes accumulated."
+        },
+        "public_opening": {
+          "date": "2026.04",
+          "title": "Public Opening",
+          "body": "Record notes, material groups, and collection relationships were connected with the opening."
+        }
+      },
+      "field_notes_kicker": "Field Notes",
+      "archive_materials_kicker": "Archive Materials"
+    },
+    "records": {
+      "meta_title": "Record Detail",
+      "related_exhibition": "Related Exhibition",
+      "back_to_context": "Back to parent context",
+      "metadata_kicker": "Record Metadata",
+      "body_kicker": "Record Body",
+      "related_items": "Related Items",
+      "archive_materials": "Archive Materials",
+      "types": {
+        "curator_note": "Curator Note",
+        "field_note": "Field Note",
+        "installation_note": "Installation Note",
+        "process_note": "Process Note",
+        "research_note": "Research Note"
+      },
+      "authors": {
+        "chief_curator": "Chief Curator",
+        "field_archivist": "Field Archivist",
+        "archive_editor": "Archive editor"
+      },
+      "metadata": {
+        "type": "Record type",
+        "author": "Author",
+        "recorded_at": "Recorded at",
+        "visibility_state": "Visibility"
+      },
+      "curator_note": {
+        "title": "Curator Note for Records Where Light Passed",
+        "subtitle": "A long-form record explaining reading order and material positions",
+        "recorded_at": "2026.04.01",
+        "summary": "A curator note written to read works, documents, and installation records inside one exhibition context.",
+        "sections": {
+          "opening_frame": {
+            "title": "Opening Frame",
+            "body": "This exhibition centers not on the scene of light but on the surfaces and materials left after light has passed. Viewing continues slowly through documents and installation records."
+          },
+          "material_reading": {
+            "title": "Reading Materials",
+            "body": "Artwork records and archive materials are positioned as evidence that explain one another. Each item is independent while also becoming a clue for rereading the exhibition."
+          },
+          "archive_afterlife": {
+            "title": "Afterlife of the Exhibition",
+            "body": "What remains after closing is not only a work list, but field decisions, lighting records, sentences, and preservation notes. This note passes those relationships to the next reader."
+          }
+        }
+      },
+      "field_note": {
+        "title": "Installation Week Field Note",
+        "subtitle": "A field document recording space conditions and artwork placement",
+        "summary": "A record of distance, lighting, and circulation changes observed during installation.",
+        "recorded_at": "April 2, 2026"
+      },
+      "index": {
+        "kicker": "Record Notes",
+        "title": "Record note index",
+        "lead": "Curatorial writing, field memos, installation records, process notes, and research notes are arranged through their exhibition and material relationships.",
+        "type_summary": "Record type summary",
+        "filter_ready_body": "The structure exposes record type, tag, author, exhibition relation, and date sorting data before interactive filtering is added.",
+        "related_items_prefix": "Related items"
+      },
+      "installation_note": {
+        "title": "Installation note on light and visitor movement",
+        "subtitle": "A record of spatial conditions and distance between works",
+        "recorded_at": "April 3, 2026",
+        "summary": "Lighting angle, visitor movement, and wall spacing are preserved with exhibition context for future reinstallations."
+      },
+      "process_note": {
+        "title": "Press material editing process note",
+        "subtitle": "How a public document becomes an exhibition record",
+        "recorded_at": "April 4, 2026",
+        "summary": "An editing record that separates durable exhibition language from promotional wording in press and artwork descriptions."
+      },
+      "research_note": {
+        "title": "Field index for threshold research",
+        "subtitle": "A research note connected to an upcoming exhibition",
+        "recorded_at": "May 1, 2026",
+        "summary": "Site research, observation terms, and reference material for the next exhibition are grouped for later archive connection."
+      }
+    },
+    "items": {
+      "meta_title": "Artwork and Material Detail",
+      "section_kicker": "Artwork / Materials",
+      "section_title": "Works and Materials in the Exhibition",
+      "section_description": "Works, documents, and installation records are read in one calm list while their types and context remain clear.",
+      "view_detail": "View item record",
+      "back_to_exhibition": "Back to exhibition record",
+      "metadata_kicker": "Item Metadata",
+      "curator_note": "Item Curator Note",
+      "exhibition_context": "Exhibition Context",
+      "related_records": "Related Records",
+      "related_archive_materials": "Archive Materials",
+      "types": {
+        "artwork": "Artwork",
+        "document": "Document",
+        "installation": "Installation Record",
+        "photo": "Photo",
+        "object": "Object",
+        "note": "Note"
+      },
+      "artists": {
+        "min_jiwon": "Min Jiwon",
+        "gallery_team": "Gallery Records Team",
+        "archive_editor": "Archive Editor"
+      },
+      "metadata": {
+        "artist": "Artist",
+        "year": "Year",
+        "medium": "Medium",
+        "dimensions": "Dimensions",
+        "collection": "Collection",
+        "credit_line": "Credit line",
+        "visibility_state": "Visibility"
+      },
+      "visibility": {
+        "published": "Published record"
+      },
+      "pale_grid": {
+        "title": "Pale Grid 01",
+        "subtitle": "A work recording afterimages of light and paper surface",
+        "medium": "Pigment and archival print on hanji",
+        "dimensions": "72 x 54 cm",
+        "credit_line": "Courtesy of the artist and Glitter Gallery Bz",
+        "summary": "A work record showing surface layers that remain after light disappears in the first exhibition section.",
+        "curator_note": "This work sets the density of brightness and paper that visitors meet at the entrance of the exhibition.",
+        "material_description": "Thin pigment layers and printed images overlap on fibrous paper, preserving both light direction and surface time."
+      },
+      "installation_axis": {
+        "title": "Installation Axis Record",
+        "subtitle": "Installation material preserving placement and movement",
+        "medium": "Installation photographs, placement notes, lighting records",
+        "dimensions": "Variable dimensions",
+        "credit_line": "Glitter Gallery Bz Records Team",
+        "summary": "A field record kept to review distances between works and the movement of sight.",
+        "curator_note": "This material preserves the movement and intervals produced by the exhibition rather than a single artwork."
+      },
+      "press_fragment": {
+        "title": "Press Fragment A",
+        "subtitle": "Document material for rereading exhibition language",
+        "medium": "Text document, PDF scan",
+        "dimensions": "Two A4 pages",
+        "credit_line": "Glitter Gallery Bz Archive",
+        "summary": "A document preserved to compare the language of the public opening with later archive language.",
+        "curator_note": "The press text shows the difference between the first public explanation and later record language."
+      }
+    },
+    "archive_materials": {
+      "meta_title": "Archive Material Detail",
+      "back_to_category": "Back to archive category",
+      "metadata_kicker": "Archive Metadata",
+      "description_kicker": "Descriptive Note",
+      "related_exhibition": "Related Exhibition",
+      "related_items": "Related Items",
+      "related_records": "Related Records",
+      "types": {
+        "image": "Image",
+        "document": "Document",
+        "note": "Note",
+        "installation_photo": "Installation Photo",
+        "interview": "Interview",
+        "press": "Press",
+        "object_reference": "Object Reference"
+      },
+      "metadata": {
+        "category": "Category",
+        "type": "Material type",
+        "date_label": "Date",
+        "source": "Source",
+        "rights": "Rights",
+        "format": "Format",
+        "identifier": "Identifier"
+      },
+      "sources": {
+        "gallery_records_team": "Glitter Gallery Bz Records Team",
+        "installation_team": "Installation Team",
+        "archive_editor": "Archive Editor"
+      },
+      "rights": {
+        "gallery_bz": "Courtesy of Glitter Gallery Bz"
+      },
+      "formats": {
+        "digital_image_set": "Digital image set",
+        "field_note_scan": "Field note scan",
+        "pdf_document": "PDF document"
+      },
+      "installation_photo_set": {
+        "title": "Installation Photo Set",
+        "subtitle": "Image material showing exhibition structure and artwork placement",
+        "date_label": "Installation week, 2026.03",
+        "summary": "Installation photographs for reading the structure of the exhibition space and relationships between works.",
+        "description": "This photo set shows distance and direction between works inside the room rather than isolated front-facing artwork images. It is preserved as reference material for future reinstallation and research viewing."
+      },
+      "lighting_plan": {
+        "title": "Lighting Plan Record",
+        "subtitle": "A field record of brightness and direction by work",
+        "date_label": "2026.03.28",
+        "summary": "Field notes for reviewing lighting direction and brightness by artwork.",
+        "description": "The lighting record explains surface response and visitor movement together. It is used as field evidence for reconstructing installation decisions."
+      },
+      "press_release": {
+        "title": "Press Release Text",
+        "subtitle": "Public explanation document from the exhibition opening",
+        "date_label": "2026.04.01",
+        "summary": "A public document showing how the exhibition was first explained externally.",
+        "description": "The press release is the first public document of the exhibition language. It remains a reference point for reading differences between curator notes and later archive sentences."
+      }
+    },
+    "filters": {
+      "ready_kicker": "Filter Ready Structure",
+      "sort_label": "Sort basis",
+      "sort": {
+        "date_desc": "Newest records first",
+        "date_asc": "Oldest records first",
+        "title": "By title"
+      }
+    },
+    "tags": {
+      "light": "Light",
+      "curatorial": "Curatorial",
+      "essay": "Essay",
+      "exhibition-context": "Exhibition context",
+      "field": "Field",
+      "installation": "Installation",
+      "space": "Space",
+      "lighting": "Lighting",
+      "movement": "Movement",
+      "process": "Process",
+      "document": "Document",
+      "studio": "Studio",
+      "editing": "Editing",
+      "research": "Research",
+      "future-exhibition": "Future exhibition",
+      "timeline": "Timeline",
+      "photo": "Photo",
+      "field-record": "Field record",
+      "archive": "Archive",
+      "press": "Press",
+      "context": "Context"
+    },
+    "admin": {
+      "dashboard": {
+        "kicker": "Gallery Admin",
+        "title": "Gallery content operations",
+        "lead": "An operations structure for reviewing exhibitions, items, records, materials, collections, publication state, and relationship completeness together.",
+        "content_overview": "Content overview",
+        "status_summary": "Publication status summary",
+        "quick_actions": "Quick creation links"
+      },
+      "sections": {
+        "exhibitions": "Exhibitions",
+        "items": "Exhibition items",
+        "records": "Record notes",
+        "archive_materials": "Archive materials",
+        "collections": "Collections",
+        "taxonomy": "Taxonomy and tags",
+        "relationships": "Relationships"
+      },
+      "pages": {
+        "exhibitions": {
+          "kicker": "Exhibitions",
+          "title": "Exhibition management",
+          "lead": "Prepare exhibition identity, period, curatorial notes, publication state, and related materials."
+        },
+        "items": {
+          "kicker": "Items",
+          "title": "Item management",
+          "lead": "Manage artworks, documents, installation materials, photographs, and objects inside exhibition context."
+        },
+        "records": {
+          "kicker": "Record Notes",
+          "title": "Record note management",
+          "lead": "Create curator notes, field notes, installation notes, process notes, and research notes."
+        },
+        "archive_materials": {
+          "kicker": "Archive Materials",
+          "title": "Archive material management",
+          "lead": "Arrange images, documents, interviews, press material, and field records with source and rights metadata."
+        },
+        "relationships": {
+          "kicker": "Relationships",
+          "title": "Relationship review",
+          "lead": "Review missing links between exhibitions, items, records, materials, and collections."
+        }
+      },
+      "forms": {
+        "exhibition": {
+          "kicker": "Exhibition Form",
+          "title": "Exhibition authoring structure",
+          "lead": "Prepare basic information and relationship settings for exhibition publication."
+        },
+        "item": {
+          "kicker": "Item Form",
+          "title": "Exhibition item authoring structure",
+          "lead": "Prepare object metadata, images, exhibition context, and related records together."
+        },
+        "record": {
+          "kicker": "Record Form",
+          "title": "Record note authoring structure",
+          "lead": "Separate long-form writing and relationship data for future API persistence."
+        },
+        "archive_material": {
+          "kicker": "Archive Material Form",
+          "title": "Archive material authoring structure",
+          "lead": "A structure for source, rights, identifier, related exhibition, items, and records."
+        },
+        "sections": {
+          "identity": {
+            "kicker": "Identity",
+            "title": "Basic identity",
+            "body": "Prepare shared identifiers such as title, subtitle, and slug."
+          },
+          "period_location": {
+            "kicker": "Period / Location",
+            "title": "Period and location",
+            "body": "Separate exhibition period, space, and planned publication date for future timeline use."
+          },
+          "curator_note": {
+            "kicker": "Curator Note",
+            "title": "Curator note",
+            "body": "Preserve the exhibition reading position and summary as structured record data."
+          },
+          "sections": {
+            "kicker": "Sections",
+            "title": "Exhibition sections",
+            "body": "Manage exhibition flow and future item insertion points by section."
+          },
+          "publication": {
+            "kicker": "Publication",
+            "title": "Publication settings",
+            "body": "Manage draft, published, private, scheduled state, and tags."
+          },
+          "relationships": {
+            "kicker": "Relationships",
+            "title": "Related content",
+            "body": "Prepare item, record, and archive material links at exhibition level."
+          },
+          "object_metadata": {
+            "kicker": "Object Metadata",
+            "title": "Artist and object metadata",
+            "body": "Separate catalogue data such as artist, year, medium, and dimensions."
+          },
+          "media_visual": {
+            "kicker": "Media",
+            "title": "Images and credit",
+            "body": "Prepare thumbnail, detail image, and credit for future file storage."
+          },
+          "exhibition_context": {
+            "kicker": "Exhibition Context",
+            "title": "Exhibition context",
+            "body": "Manage exhibition, section, and collection context with the item record."
+          },
+          "archive_relationships": {
+            "kicker": "Archive Relationships",
+            "title": "Record and material links",
+            "body": "Prepare record notes and archive materials referenced by the item."
+          },
+          "author_date": {
+            "kicker": "Author / Date",
+            "title": "Author and date",
+            "body": "Separate author, recorded date, and publication date as long-form metadata."
+          },
+          "body_sections": {
+            "kicker": "Body Sections",
+            "title": "Body sections",
+            "body": "Prepare long records as repeatable heading and body sections."
+          },
+          "record_relationships": {
+            "kicker": "Record Relationships",
+            "title": "Record relationships",
+            "body": "Connect the record to the exhibition, items, and materials it explains."
+          },
+          "source_rights": {
+            "kicker": "Source / Rights",
+            "title": "Source and rights",
+            "body": "Manage source, rights, and identifier as preservation metadata."
+          },
+          "document_metadata": {
+            "kicker": "Document Metadata",
+            "title": "Material format",
+            "body": "Separate format, date label, and image or document location."
+          },
+          "material_relationships": {
+            "kicker": "Material Relationships",
+            "title": "Material relationships",
+            "body": "Review the exhibition, items, and records connected to the material."
+          }
+        },
+        "fields": {
+          "title": {
+            "label": "Field: title",
+            "placeholder": "Future title value."
+          },
+          "subtitle": {
+            "label": "Field: subtitle",
+            "placeholder": "Future subtitle value."
+          },
+          "slug": {
+            "label": "Field: slug",
+            "placeholder": "Future slug value."
+          },
+          "period": {
+            "label": "Field: period",
+            "placeholder": "Future period value."
+          },
+          "location": {
+            "label": "Field: location",
+            "placeholder": "Future location value."
+          },
+          "published_at": {
+            "label": "Field: published at",
+            "placeholder": "Future published at value."
+          },
+          "curator_summary": {
+            "label": "Field: curator summary",
+            "placeholder": "Future curator summary value."
+          },
+          "curator_note": {
+            "label": "Field: curator note",
+            "placeholder": "Future curator note value."
+          },
+          "section_title": {
+            "label": "Field: section title",
+            "placeholder": "Future section title value."
+          },
+          "section_body": {
+            "label": "Field: section body",
+            "placeholder": "Future section body value."
+          },
+          "section_order": {
+            "label": "Field: section order",
+            "placeholder": "Future section order value."
+          },
+          "featured": {
+            "label": "Field: featured",
+            "placeholder": "Future featured value."
+          },
+          "visibility_state": {
+            "label": "Field: visibility state",
+            "placeholder": "Future visibility state value."
+          },
+          "tags": {
+            "label": "Field: tags",
+            "placeholder": "Future tags value."
+          },
+          "related_items": {
+            "label": "Field: related items",
+            "placeholder": "Future related items value."
+          },
+          "related_records": {
+            "label": "Field: related records",
+            "placeholder": "Future related records value."
+          },
+          "related_archive_materials": {
+            "label": "Field: related archive materials",
+            "placeholder": "Future related archive materials value."
+          },
+          "artist_name": {
+            "label": "Field: artist name",
+            "placeholder": "Future artist name value."
+          },
+          "year": {
+            "label": "Field: year",
+            "placeholder": "Future year value."
+          },
+          "medium": {
+            "label": "Field: medium",
+            "placeholder": "Future medium value."
+          },
+          "dimensions": {
+            "label": "Field: dimensions",
+            "placeholder": "Future dimensions value."
+          },
+          "thumbnail_image": {
+            "label": "Field: thumbnail image",
+            "placeholder": "Future thumbnail image value."
+          },
+          "detail_image": {
+            "label": "Field: detail image",
+            "placeholder": "Future detail image value."
+          },
+          "credit_line": {
+            "label": "Field: credit line",
+            "placeholder": "Future credit line value."
+          },
+          "exhibition_slug": {
+            "label": "Field: exhibition slug",
+            "placeholder": "Future exhibition slug value."
+          },
+          "section_id": {
+            "label": "Field: section id",
+            "placeholder": "Future section id value."
+          },
+          "collection_name": {
+            "label": "Field: collection name",
+            "placeholder": "Future collection name value."
+          },
+          "archive_category": {
+            "label": "Field: archive category",
+            "placeholder": "Future archive category value."
+          },
+          "record_type": {
+            "label": "Field: record type",
+            "placeholder": "Future record type value."
+          },
+          "author_name": {
+            "label": "Field: author name",
+            "placeholder": "Future author name value."
+          },
+          "recorded_at": {
+            "label": "Field: recorded at",
+            "placeholder": "Future recorded at value."
+          },
+          "body_heading": {
+            "label": "Field: body heading",
+            "placeholder": "Future body heading value."
+          },
+          "body_text": {
+            "label": "Field: body text",
+            "placeholder": "Future body text value."
+          },
+          "private_note": {
+            "label": "Field: private note",
+            "placeholder": "Future private note value."
+          },
+          "related_exhibition": {
+            "label": "Field: related exhibition",
+            "placeholder": "Future related exhibition value."
+          },
+          "source": {
+            "label": "Field: source",
+            "placeholder": "Future source value."
+          },
+          "rights": {
+            "label": "Field: rights",
+            "placeholder": "Future rights value."
+          },
+          "identifier": {
+            "label": "Field: identifier",
+            "placeholder": "Future identifier value."
+          },
+          "format": {
+            "label": "Field: format",
+            "placeholder": "Future format value."
+          },
+          "date_label": {
+            "label": "Field: date label",
+            "placeholder": "Future date label value."
+          },
+          "image": {
+            "label": "Field: image",
+            "placeholder": "Future image value."
+          }
+        }
+      },
+      "types": {
+        "exhibition": "Exhibition",
+        "item": "Item",
+        "record": "Record",
+        "archive_material": "Archive material",
+        "collection": "Collection"
+      },
+      "status": {
+        "published": "Published",
+        "draft": "Draft",
+        "private": "Private",
+        "scheduled": "Scheduled"
+      },
+      "relationship": {
+        "complete": "Complete relationship",
+        "needs_records": "Needs record links",
+        "needs_archive": "Needs material links",
+        "needs_exhibition": "Needs exhibition link",
+        "needs_items": "Needs item links",
+        "review_needed": "Needs review",
+        "gap": "Relationship gap",
+        "warnings": "Relationship warnings"
+      },
+      "content": {
+        "exhibitions": {
+          "title": "Records Where Light Passed",
+          "subtitle": "Current published exhibition and featured exhibition settings are connected."
+        },
+        "items": {
+          "title": "Pale Grid 01",
+          "subtitle": "Object metadata exists, but related records need more support."
+        },
+        "records": {
+          "title": "How to Read the Materials",
+          "subtitle": "The curator note and item relationship are prepared for publication."
+        },
+        "archive_materials": {
+          "title": "Installation Photo Set",
+          "subtitle": "Source and identifier exist, but exhibition relationship needs review."
+        },
+        "collections": {
+          "title": "Project Material Set",
+          "subtitle": "Collection item links are being prepared."
+        }
+      },
+      "related": {
+        "main_exhibition": "Featured exhibition link",
+        "installation_item": "Installation item link",
+        "archive_category": "Material type category",
+        "collection_axis": "Collection axis"
+      },
+      "dates": {
+        "may_02": "Updated May 2, 2026",
+        "may_01": "Updated May 1, 2026",
+        "apr_30": "Updated April 30, 2026",
+        "apr_29": "Updated April 29, 2026",
+        "apr_28": "Updated April 28, 2026"
+      },
+      "actions": {
+        "create_exhibition": "Create exhibition",
+        "create_item": "Create item",
+        "create_record": "Create record",
+        "create_archive_material": "Create material",
+        "review_relationships": "Review relationships",
+        "edit": "Edit"
+      },
+      "filters": {
+        "ready": "Filter-ready structure",
+        "body": "Status, type, relationship completeness, updated date, and publication state are prepared for future API filters.",
+        "status": "Status",
+        "type": "Type",
+        "relationship": "Relationship",
+        "updated": "Updated",
+        "publication": "Publication"
+      },
+      "relationships": {
+        "summary": "Relationship structure summary",
+        "exhibition_items": {
+          "title": "Exhibition to items",
+          "body": "Exhibitions group artworks, documents, and installation materials by section."
+        },
+        "item_records": {
+          "title": "Item to records",
+          "body": "Items gain interpretive context through curator notes and field notes."
+        },
+        "item_archive": {
+          "title": "Item to materials",
+          "body": "Items connect to evidence such as photographs, documents, and lighting records."
+        },
+        "record_archive": {
+          "title": "Record to materials",
+          "body": "Records link back to source materials they cite or explain."
+        },
+        "archive_context": {
+          "title": "Material to exhibition and items",
+          "body": "Archive materials are evidence for exhibitions and items, not standalone files."
+        },
+        "collection_items": {
+          "title": "Collection to items",
+          "body": "Collections regroup items by preservation, research, or project criteria."
+        }
+      },
+      "gaps": {
+        "item_missing_record": {
+          "title": "Item needs more linked records",
+          "body": "The item is nearly ready for publication but only has one related record note.",
+          "action": "Open item edit"
+        },
+        "archive_missing_exhibition": {
+          "title": "Material exhibition context is incomplete",
+          "body": "The archive material has an identifier, but its exhibition link needs review.",
+          "action": "Open material edit"
+        },
+        "collection_missing_items": {
+          "title": "Collection has no confirmed items",
+          "body": "The collection structure exists, but included items are not confirmed yet.",
+          "action": "Open relationship review"
+        }
+      }
+    }
+  },
+  "common": {
+    "search_placeholder": "Search"
+  },
+  "nav": {
+    "home": "Home",
+    "all_boards": "All boards",
+    "popular": "Popular",
+    "qna": "Q&A"
+  },
+  "auth": {
+    "login": "Log in",
+    "register_link": "Register",
+    "logout": "Log out",
+    "roles": {
+      "member": "Member",
+      "admin": "Admin",
+      "curator": "Curator",
+      "moderator": "Moderator",
+      "guest": "Guest"
+    },
+    "menu": {
+      "admin": "Admin",
+      "management_board": "Management Board",
+      "gallery_management": "Gallery Management",
+      "mypage": "My page",
+      "language": "Language",
+      "language_ko": "Korean",
+      "language_en": "English"
+    },
+    "login_page": {
+      "meta_title": "Log in",
+      "kicker": "PUBLIC ARCHIVE ACCESS",
+      "title": "Gallery Bz Beta2",
+      "subtitle": "Log in to continue through the public archive's preservation records and reading paths.",
+      "email": "Email",
+      "email_placeholder": "Email",
+      "password": "Password",
+      "password_placeholder": "Password",
+      "submit": "Log in",
+      "submitting": "Logging in",
+      "back_to_archive": "Back to archive"
+    },
+    "register_page": {
+      "meta_title": "Register",
+      "kicker": "PUBLIC ARCHIVE ACCESS",
+      "title": "Gallery Bz Beta2",
+      "subtitle": "Create a basic account to continue reading the public archive records.",
+      "name": "Name",
+      "name_placeholder": "Name",
+      "email": "Email",
+      "email_placeholder": "Email",
+      "password": "Password",
+      "password_placeholder": "Password",
+      "password_confirmation": "Confirm password",
+      "password_confirmation_placeholder": "Confirm password",
+      "submit": "Register",
+      "submitting": "Registering",
+      "back_to_login": "Back to login"
+    }
+  },
+  "footer": {
+    "community": "Community",
+    "info": "Information",
+    "policy": "Policy",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "refund": "Refund policy",
+    "powered_by": "Powered by GnuBoard7",
+    "all_boards": "All boards"
+  }
+}
