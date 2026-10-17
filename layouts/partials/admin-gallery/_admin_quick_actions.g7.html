@@ -1,0 +1,8 @@
+<partial>
+  <section class="gallery-section gallery-section-tight">
+    <span class="gallery-kicker">$t:gallery.admin.dashboard.quick_actions</span>
+    <div class="gallery-chip-list">
+      <a data-each="action in admin_gallery.quick_actions" href="{{action.href}}" class="gallery-chip gallery-record-link">{{$t(action.label_key)}}</a>
+    </div>
+  </section>
+</partial>

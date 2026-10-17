@@ -1,0 +1,13 @@
+<partial>
+  <a href="{{content.href}}" class="gallery-record gallery-record-link gallery-admin-content-card">
+    <span class="gallery-meta">{{$t("gallery.admin.types." + content.type)}} / {{$t(content.status_key)}}</span>
+    <h2 class="gallery-record-title">{{$t(content.title_key)}}</h2>
+    <p class="gallery-record-body">{{$t(content.subtitle_key)}}</p>
+    <div class="gallery-record-meta-list">
+      <span class="gallery-chip">{{$t(content.related_key)}}</span>
+      <span class="gallery-chip">{{$t(content.relation_key)}}</span>
+      <span class="gallery-chip">{{$t(content.updated_at_key)}}</span>
+      <span class="gallery-chip">$t:gallery.admin.actions.edit</span>
+    </div>
+  </a>
+</partial>

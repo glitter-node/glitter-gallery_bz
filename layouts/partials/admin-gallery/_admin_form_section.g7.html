@@ -1,0 +1,15 @@
+<partial>
+  <section class="gallery-record gallery-admin-form-section">
+    <span class="gallery-meta">{{$t(form_section.kicker_key)}}</span>
+    <div class="gallery-admin-form-body">
+      <h2 class="gallery-record-title">{{$t(form_section.title_key)}}</h2>
+      <p class="gallery-record-body">{{$t(form_section.body_key)}}</p>
+      <div class="gallery-admin-field-grid">
+        <div data-each="field in form_section.fields" class="gallery-admin-field">
+          <span class="gallery-meta">{{$t(field.label_key)}}</span>
+          <p class="gallery-muted">{{$t(field.placeholder_key)}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</partial>

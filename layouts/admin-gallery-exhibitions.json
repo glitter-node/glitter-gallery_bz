@@ -1,0 +1,379 @@
+{
+  "version": "1.0.0",
+  "layout_name": "admin-gallery-exhibitions",
+  "permissions": [],
+  "extends": "_user_base",
+  "data_sources": [
+    {
+      "id": "admin_gallery",
+      "type": "static",
+      "data": {
+        "page": {
+          "kicker_key": "gallery.admin.pages.exhibitions.kicker",
+          "title_key": "gallery.admin.pages.exhibitions.title",
+          "lead_key": "gallery.admin.pages.exhibitions.lead"
+        },
+        "content": [
+          {
+            "id": "exhibitions",
+            "type": "exhibition",
+            "title_key": "gallery.admin.content.exhibitions.title",
+            "subtitle_key": "gallery.admin.content.exhibitions.subtitle",
+            "status_key": "gallery.admin.status.published",
+            "relation_key": "gallery.admin.relationship.complete",
+            "updated_at_key": "gallery.admin.dates.may_02",
+            "href": "/admin/gallery/exhibitions/1/edit",
+            "create_href": "/admin/gallery/exhibitions/create",
+            "related_key": "gallery.admin.related.main_exhibition",
+            "completeness": "complete"
+          },
+          {
+            "id": "items",
+            "type": "item",
+            "title_key": "gallery.admin.content.items.title",
+            "subtitle_key": "gallery.admin.content.items.subtitle",
+            "status_key": "gallery.admin.status.draft",
+            "relation_key": "gallery.admin.relationship.needs_records",
+            "updated_at_key": "gallery.admin.dates.may_01",
+            "href": "/admin/gallery/items/1/edit",
+            "create_href": "/admin/gallery/items/create",
+            "related_key": "gallery.admin.related.main_exhibition",
+            "completeness": "incomplete"
+          },
+          {
+            "id": "records",
+            "type": "record",
+            "title_key": "gallery.admin.content.records.title",
+            "subtitle_key": "gallery.admin.content.records.subtitle",
+            "status_key": "gallery.admin.status.published",
+            "relation_key": "gallery.admin.relationship.needs_archive",
+            "updated_at_key": "gallery.admin.dates.apr_30",
+            "href": "/admin/gallery/records/1/edit",
+            "create_href": "/admin/gallery/records/create",
+            "related_key": "gallery.admin.related.installation_item",
+            "completeness": "review"
+          },
+          {
+            "id": "archive-materials",
+            "type": "archive_material",
+            "title_key": "gallery.admin.content.archive_materials.title",
+            "subtitle_key": "gallery.admin.content.archive_materials.subtitle",
+            "status_key": "gallery.admin.status.private",
+            "relation_key": "gallery.admin.relationship.needs_exhibition",
+            "updated_at_key": "gallery.admin.dates.apr_29",
+            "href": "/admin/gallery/archive-materials/1/edit",
+            "create_href": "/admin/gallery/archive-materials/create",
+            "related_key": "gallery.admin.related.archive_category",
+            "completeness": "incomplete"
+          },
+          {
+            "id": "collections",
+            "type": "collection",
+            "title_key": "gallery.admin.content.collections.title",
+            "subtitle_key": "gallery.admin.content.collections.subtitle",
+            "status_key": "gallery.admin.status.draft",
+            "relation_key": "gallery.admin.relationship.needs_items",
+            "updated_at_key": "gallery.admin.dates.apr_28",
+            "href": "/admin/gallery",
+            "create_href": "/admin/gallery",
+            "related_key": "gallery.admin.related.collection_axis",
+            "completeness": "review"
+          }
+        ],
+        "status_summary": [
+          {
+            "id": "published",
+            "label_key": "gallery.admin.status.published",
+            "count": 8
+          },
+          {
+            "id": "draft",
+            "label_key": "gallery.admin.status.draft",
+            "count": 5
+          },
+          {
+            "id": "private",
+            "label_key": "gallery.admin.status.private",
+            "count": 3
+          },
+          {
+            "id": "scheduled",
+            "label_key": "gallery.admin.status.scheduled",
+            "count": 2
+          }
+        ],
+        "overview_counts": [
+          {
+            "id": "exhibitions",
+            "label_key": "gallery.admin.sections.exhibitions",
+            "count": 4
+          },
+          {
+            "id": "items",
+            "label_key": "gallery.admin.sections.items",
+            "count": 12
+          },
+          {
+            "id": "records",
+            "label_key": "gallery.admin.sections.records",
+            "count": 9
+          },
+          {
+            "id": "archive-materials",
+            "label_key": "gallery.admin.sections.archive_materials",
+            "count": 18
+          },
+          {
+            "id": "collections",
+            "label_key": "gallery.admin.sections.collections",
+            "count": 3
+          },
+          {
+            "id": "taxonomy",
+            "label_key": "gallery.admin.sections.taxonomy",
+            "count": 24
+          },
+          {
+            "id": "relationships",
+            "label_key": "gallery.admin.sections.relationships",
+            "count": 7
+          }
+        ],
+        "filters": [
+          {
+            "id": "status",
+            "label_key": "gallery.admin.filters.status"
+          },
+          {
+            "id": "type",
+            "label_key": "gallery.admin.filters.type"
+          },
+          {
+            "id": "relation",
+            "label_key": "gallery.admin.filters.relationship"
+          },
+          {
+            "id": "updated",
+            "label_key": "gallery.admin.filters.updated"
+          },
+          {
+            "id": "publication",
+            "label_key": "gallery.admin.filters.publication"
+          }
+        ],
+        "quick_actions": [
+          {
+            "id": "create_exhibition",
+            "label_key": "gallery.admin.actions.create_exhibition",
+            "href": "/admin/gallery/exhibitions/create"
+          },
+          {
+            "id": "create_item",
+            "label_key": "gallery.admin.actions.create_item",
+            "href": "/admin/gallery/items/create"
+          },
+          {
+            "id": "create_record",
+            "label_key": "gallery.admin.actions.create_record",
+            "href": "/admin/gallery/records/create"
+          },
+          {
+            "id": "create_archive_material",
+            "label_key": "gallery.admin.actions.create_archive_material",
+            "href": "/admin/gallery/archive-materials/create"
+          },
+          {
+            "id": "review_relationships",
+            "label_key": "gallery.admin.actions.review_relationships",
+            "href": "/admin/gallery/relationships"
+          }
+        ],
+        "relationship_summaries": [
+          {
+            "id": "exhibition_items",
+            "title_key": "gallery.admin.relationships.exhibition_items.title",
+            "body_key": "gallery.admin.relationships.exhibition_items.body",
+            "status_key": "gallery.admin.relationship.complete"
+          },
+          {
+            "id": "item_records",
+            "title_key": "gallery.admin.relationships.item_records.title",
+            "body_key": "gallery.admin.relationships.item_records.body",
+            "status_key": "gallery.admin.relationship.needs_records"
+          },
+          {
+            "id": "item_archive",
+            "title_key": "gallery.admin.relationships.item_archive.title",
+            "body_key": "gallery.admin.relationships.item_archive.body",
+            "status_key": "gallery.admin.relationship.needs_archive"
+          },
+          {
+            "id": "record_archive",
+            "title_key": "gallery.admin.relationships.record_archive.title",
+            "body_key": "gallery.admin.relationships.record_archive.body",
+            "status_key": "gallery.admin.relationship.review_needed"
+          },
+          {
+            "id": "archive_context",
+            "title_key": "gallery.admin.relationships.archive_context.title",
+            "body_key": "gallery.admin.relationships.archive_context.body",
+            "status_key": "gallery.admin.relationship.needs_exhibition"
+          },
+          {
+            "id": "collection_items",
+            "title_key": "gallery.admin.relationships.collection_items.title",
+            "body_key": "gallery.admin.relationships.collection_items.body",
+            "status_key": "gallery.admin.relationship.needs_items"
+          }
+        ],
+        "relationship_gaps": [
+          {
+            "id": "item_missing_record",
+            "title_key": "gallery.admin.gaps.item_missing_record.title",
+            "body_key": "gallery.admin.gaps.item_missing_record.body",
+            "action_key": "gallery.admin.gaps.item_missing_record.action",
+            "href": "/admin/gallery/items/1/edit"
+          },
+          {
+            "id": "archive_missing_exhibition",
+            "title_key": "gallery.admin.gaps.archive_missing_exhibition.title",
+            "body_key": "gallery.admin.gaps.archive_missing_exhibition.body",
+            "action_key": "gallery.admin.gaps.archive_missing_exhibition.action",
+            "href": "/admin/gallery/archive-materials/1/edit"
+          },
+          {
+            "id": "collection_missing_items",
+            "title_key": "gallery.admin.gaps.collection_missing_items.title",
+            "body_key": "gallery.admin.gaps.collection_missing_items.body",
+            "action_key": "gallery.admin.gaps.collection_missing_items.action",
+            "href": "/admin/gallery/relationships"
+          }
+        ],
+        "recent_updates": [
+          {
+            "id": "exhibitions",
+            "type": "exhibition",
+            "title_key": "gallery.admin.content.exhibitions.title",
+            "subtitle_key": "gallery.admin.content.exhibitions.subtitle",
+            "status_key": "gallery.admin.status.published",
+            "relation_key": "gallery.admin.relationship.complete",
+            "updated_at_key": "gallery.admin.dates.may_02",
+            "href": "/admin/gallery/exhibitions/1/edit",
+            "create_href": "/admin/gallery/exhibitions/create",
+            "related_key": "gallery.admin.related.main_exhibition",
+            "completeness": "complete"
+          },
+          {
+            "id": "items",
+            "type": "item",
+            "title_key": "gallery.admin.content.items.title",
+            "subtitle_key": "gallery.admin.content.items.subtitle",
+            "status_key": "gallery.admin.status.draft",
+            "relation_key": "gallery.admin.relationship.needs_records",
+            "updated_at_key": "gallery.admin.dates.may_01",
+            "href": "/admin/gallery/items/1/edit",
+            "create_href": "/admin/gallery/items/create",
+            "related_key": "gallery.admin.related.main_exhibition",
+            "completeness": "incomplete"
+          },
+          {
+            "id": "records",
+            "type": "record",
+            "title_key": "gallery.admin.content.records.title",
+            "subtitle_key": "gallery.admin.content.records.subtitle",
+            "status_key": "gallery.admin.status.published",
+            "relation_key": "gallery.admin.relationship.needs_archive",
+            "updated_at_key": "gallery.admin.dates.apr_30",
+            "href": "/admin/gallery/records/1/edit",
+            "create_href": "/admin/gallery/records/create",
+            "related_key": "gallery.admin.related.installation_item",
+            "completeness": "review"
+          },
+          {
+            "id": "archive-materials",
+            "type": "archive_material",
+            "title_key": "gallery.admin.content.archive_materials.title",
+            "subtitle_key": "gallery.admin.content.archive_materials.subtitle",
+            "status_key": "gallery.admin.status.private",
+            "relation_key": "gallery.admin.relationship.needs_exhibition",
+            "updated_at_key": "gallery.admin.dates.apr_29",
+            "href": "/admin/gallery/archive-materials/1/edit",
+            "create_href": "/admin/gallery/archive-materials/create",
+            "related_key": "gallery.admin.related.archive_category",
+            "completeness": "incomplete"
+          }
+        ],
+        "option_lists": {
+          "content_types": [
+            "exhibition",
+            "item",
+            "record",
+            "archive_material",
+            "collection"
+          ],
+          "publication_states": [
+            "draft",
+            "published",
+            "private",
+            "scheduled"
+          ],
+          "taxonomy_options": [
+            "installation",
+            "field",
+            "document",
+            "research",
+            "light"
+          ],
+          "relationship_targets": [
+            "exhibition",
+            "item",
+            "record",
+            "archive_material",
+            "collection"
+          ]
+        }
+      }
+    }
+  ],
+  "slots": {
+    "content": [
+      {
+        "partial": "partials/admin-gallery/_admin_gallery_hero.json"
+      },
+      {
+        "partial": "partials/admin-gallery/_admin_filter_bar.json"
+      },
+      {
+        "type": "basic",
+        "name": "Section",
+        "props": {
+          "className": "gallery-section gallery-index-list-section"
+        },
+        "children": [
+          {
+            "type": "basic",
+            "name": "Div",
+            "props": {
+              "className": "gallery-list"
+            },
+            "children": [
+              {
+                "type": "basic",
+                "name": "Div",
+                "iteration": {
+                  "source": "admin_gallery.content.filter((entry) => entry.type === exhibition)",
+                  "item_var": "content"
+                },
+                "children": [
+                  {
+                    "partial": "partials/admin-gallery/_admin_content_card.json"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

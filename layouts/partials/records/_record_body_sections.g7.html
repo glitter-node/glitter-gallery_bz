@@ -1,0 +1,12 @@
+<partial>
+  <section class="gallery-section gallery-section-muted gallery-record-body-section">
+    <span class="gallery-kicker">$t:gallery.records.body_kicker</span>
+    <div class="gallery-list gallery-section-list">
+      <div data-each="section in gallery_record_detail.body_sections" class="gallery-record gallery-record-longform">
+        <span class="gallery-meta">{{section.id}}</span>
+        <h2 class="gallery-record-title">{{$t(section.title_key)}}</h2>
+        <p class="gallery-record-body gallery-longform-preview">{{$t(section.body_key)}}</p>
+      </div>
+    </div>
+  </section>
+</partial>

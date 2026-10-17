@@ -1,0 +1,9 @@
+<partial>
+  <section class="gallery-section gallery-filter-panel gallery-admin-filter">
+    <span class="gallery-kicker">$t:gallery.admin.filters.ready</span>
+    <p class="gallery-muted">$t:gallery.admin.filters.body</p>
+    <div class="gallery-chip-list">
+      <span data-each="filter in admin_gallery.filters" class="gallery-chip">{{$t(filter.label_key)}}</span>
+    </div>
+  </section>
+</partial>

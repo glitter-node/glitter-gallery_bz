@@ -1,0 +1,12 @@
+<partial>
+  <section class="gallery-section">
+    <span class="gallery-kicker">$t:gallery.items.related_archive_materials</span>
+    <div class="gallery-grid gallery-grid-2">
+      <a data-each="material in gallery_item_detail.archive_material_items" href='{{material.href ?? "/archive"}}' class="gallery-card gallery-record-link">
+        <span class="gallery-meta">{{material.category}}</span>
+        <h3 class="gallery-card-title">{{$t(material.title_key)}}</h3>
+        <p class="gallery-card-body">{{$t(material.body_key)}}</p>
+      </a>
+    </div>
+  </section>
+</partial>

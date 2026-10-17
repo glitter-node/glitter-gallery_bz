@@ -1,0 +1,14 @@
+<partial>
+  <section class="gallery-page-head gallery-exhibition-detail-hero">
+    <span class="gallery-kicker">$t:gallery.exhibition_detail.kicker</span>
+    <h1 class="gallery-page-title">{{$t(gallery_exhibition_detail.title_key)}}</h1>
+    <p class="gallery-page-lead">{{$t(gallery_exhibition_detail.subtitle_key)}}</p>
+    <div class="gallery-media-frame gallery-media-detail gallery-media-detail-panel gallery-exhibition-detail-cover">
+      <img data-if="{{gallery_exhibition_detail.image_url ?? gallery_exhibition_detail.preview_image ?? gallery_exhibition_detail.cover_image ?? gallery_exhibition_detail.featured_image?.url ?? false}}" src='{{(gallery_exhibition_detail.image_url ?? gallery_exhibition_detail.preview_image ?? gallery_exhibition_detail.cover_image ?? gallery_exhibition_detail.featured_image?.url ?? "")}}' alt="{{gallery_exhibition_detail.title_label ?? $t(gallery_exhibition_detail.title_key ?? 'gallery.media.detail_hero')}}" class="gallery-media-image"/>
+      <div data-if="{{!(gallery_exhibition_detail.image_url ?? gallery_exhibition_detail.preview_image ?? gallery_exhibition_detail.cover_image ?? gallery_exhibition_detail.featured_image?.url ?? false)}}" class="gallery-media-placeholder gallery-media-installation">
+        <span class="gallery-media-placeholder-label">$t:gallery.media.detail_hero</span>
+      </div>
+      <span class="gallery-media-caption">{{gallery_exhibition_detail.media_caption ?? gallery_exhibition_detail.featured_image?.credit ?? $t('gallery.media.preview_caption')}}</span>
+    </div>
+  </section>
+</partial>

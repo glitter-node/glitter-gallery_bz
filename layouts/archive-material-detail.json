@@ -1,0 +1,158 @@
+{
+  "version": "1.0.0",
+  "layout_name": "archive-material-detail",
+  "permissions": [],
+  "extends": "_user_base",
+  "data_sources": [
+    {
+      "id": "gallery_archive_material_detail",
+      "type": "static",
+      "data": {
+        "id": "installation-photo-set",
+        "slug": "installation-photo-set",
+        "category": "material",
+        "type": "installation_photo",
+        "title_key": "gallery.archive_materials.installation_photo_set.title",
+        "subtitle_key": "gallery.archive_materials.installation_photo_set.subtitle",
+        "date_label_key": "gallery.archive_materials.installation_photo_set.date_label",
+        "source_key": "gallery.archive_materials.sources.gallery_records_team",
+        "rights_key": "gallery.archive_materials.rights.gallery_bz",
+        "format_key": "gallery.archive_materials.formats.digital_image_set",
+        "identifier": "GBZ-MAT-2026-001",
+        "image": "",
+        "summary_key": "gallery.archive_materials.installation_photo_set.summary",
+        "description_key": "gallery.archive_materials.installation_photo_set.description",
+        "exhibition_slug": "light-afterimage-record",
+        "item_slugs": [
+          "pale-grid-01",
+          "installation-axis-note"
+        ],
+        "record_slugs": [
+          "field-note",
+          "installation-note"
+        ],
+        "tags": [
+          "installation",
+          "photo",
+          "space"
+        ],
+        "visibility_state": "published",
+        "published_at": "2026-04-04T09:00:00+09:00",
+        "href": "/archive/material/installation-photo-set",
+        "metadata": [
+          {
+            "id": "category",
+            "label_key": "gallery.archive_materials.metadata.category",
+            "value_key": "gallery.archive.categories.material.title"
+          },
+          {
+            "id": "type",
+            "label_key": "gallery.archive_materials.metadata.type",
+            "value_key": "gallery.archive_materials.types.installation_photo"
+          },
+          {
+            "id": "date",
+            "label_key": "gallery.archive_materials.metadata.date_label",
+            "value_key": "gallery.archive_materials.installation_photo_set.date_label"
+          },
+          {
+            "id": "source",
+            "label_key": "gallery.archive_materials.metadata.source",
+            "value_key": "gallery.archive_materials.sources.gallery_records_team"
+          },
+          {
+            "id": "rights",
+            "label_key": "gallery.archive_materials.metadata.rights",
+            "value_key": "gallery.archive_materials.rights.gallery_bz"
+          },
+          {
+            "id": "format",
+            "label_key": "gallery.archive_materials.metadata.format",
+            "value_key": "gallery.archive_materials.formats.digital_image_set"
+          },
+          {
+            "id": "identifier",
+            "label_key": "gallery.archive_materials.metadata.identifier",
+            "value": "GBZ-MAT-2026-001"
+          }
+        ],
+        "related_exhibition": {
+          "slug": "light-afterimage-record",
+          "title_key": "gallery.content.exhibitions.light_afterimage.title",
+          "summary_key": "gallery.content.exhibitions.light_afterimage.curator_summary",
+          "href": "/exhibitions/light-afterimage-record"
+        },
+        "related_items": [
+          {
+            "id": "pale-grid-01",
+            "slug": "pale-grid-01",
+            "type": "artwork",
+            "title_key": "gallery.items.pale_grid.title",
+            "subtitle_key": "gallery.items.pale_grid.subtitle",
+            "artist_name_key": "gallery.items.artists.min_jiwon",
+            "year": "2025",
+            "medium_key": "gallery.items.pale_grid.medium",
+            "href": "/items/pale-grid-01"
+          },
+          {
+            "id": "installation-axis-note",
+            "slug": "installation-axis-note",
+            "type": "installation",
+            "title_key": "gallery.items.installation_axis.title",
+            "subtitle_key": "gallery.items.installation_axis.subtitle",
+            "artist_name_key": "gallery.items.artists.gallery_team",
+            "year": "2026",
+            "medium_key": "gallery.items.installation_axis.medium",
+            "href": "/items/installation-axis-note"
+          }
+        ],
+        "related_records": [
+          {
+            "id": "curator-note",
+            "slug": "curator-note",
+            "type": "curator_note",
+            "title_key": "gallery.records.curator_note.title",
+            "subtitle_key": "gallery.records.curator_note.subtitle",
+            "summary_key": "gallery.records.curator_note.summary",
+            "href": "/records/curator-note"
+          },
+          {
+            "id": "field-note",
+            "slug": "field-note",
+            "type": "field_note",
+            "title_key": "gallery.records.field_note.title",
+            "subtitle_key": "gallery.records.field_note.subtitle",
+            "summary_key": "gallery.records.field_note.summary",
+            "href": "/records/field-note"
+          }
+        ],
+        "category_href": "/archive/material"
+      }
+    }
+  ],
+  "slots": {
+    "content": [
+      {
+        "partial": "partials/archive-materials/_archive_material_hero.json"
+      },
+      {
+        "partial": "partials/archive-materials/_archive_material_visual.json"
+      },
+      {
+        "partial": "partials/archive-materials/_archive_material_metadata.json"
+      },
+      {
+        "partial": "partials/archive-materials/_archive_material_description.json"
+      },
+      {
+        "partial": "partials/archive-materials/_archive_material_exhibition_context.json"
+      },
+      {
+        "partial": "partials/archive-materials/_archive_material_related_items.json"
+      },
+      {
+        "partial": "partials/archive-materials/_archive_material_related_records.json"
+      }
+    ]
+  }
+}

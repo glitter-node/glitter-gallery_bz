@@ -1,0 +1,10 @@
+<partial>
+  <section class="gallery-section gallery-section-tight">
+    <div class="gallery-feature-details gallery-metadata-grid">
+      <p data-each="meta in gallery_exhibition_detail.metadata">{{$t(meta.label_key)}}: {{$t(meta.value_key)}}</p>
+    </div>
+    <div class="gallery-record-meta-list">
+      <span data-each="tag in gallery_exhibition_detail.tags" class="gallery-chip">{{$t("gallery.tags." + tag)}}</span>
+    </div>
+  </section>
+</partial>

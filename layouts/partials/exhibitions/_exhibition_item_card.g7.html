@@ -1,0 +1,20 @@
+<partial>
+  <div class="gallery-item-card">
+    <div class="gallery-media-frame gallery-media-thumbnail gallery-item-thumb">
+      <img data-if="{{item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_image ?? item.media?.url ?? false}}" src='{{(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_image ?? item.media?.url ?? "")}}' alt="{{item.title_label ?? $t(item.title_key ?? 'gallery.media.item_thumbnail')}}" class="gallery-media-image"/>
+      <div data-if="{{!(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_image ?? item.media?.url ?? false)}}" class="gallery-media-placeholder gallery-media-placeholder-small">
+        <span class="gallery-media-placeholder-label">$t:gallery.media.item_thumbnail</span>
+      </div>
+    </div>
+    <div class="gallery-item-card-body">
+      <span class="gallery-meta">{{item.type}} / {{item.year ?? ""}}</span>
+      <h3 class="gallery-record-title">{{$t(item.title_key)}}</h3>
+      <p class="gallery-muted">{{$t(item.artist_name_key)}} / {{$t(item.medium_key)}}</p>
+      <p class="gallery-record-body gallery-longform-preview">{{$t(item.summary_key)}}</p>
+      <div class="gallery-record-meta-list">
+        <span data-each="tag in item.tags" class="gallery-chip">{{$t("gallery.tags." + tag)}}</span>
+      </div>
+      <a href="/items/{{item.slug}}" class="gallery-text-link">$t:gallery.items.view_detail</a>
+    </div>
+  </div>
+</partial>

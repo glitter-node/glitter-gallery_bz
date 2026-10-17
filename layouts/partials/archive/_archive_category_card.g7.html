@@ -1,0 +1,14 @@
+<partial>
+  <a data-each="category in gallery_archive_index.categories" href='{{category.href ?? "/archive"}}' class="{{category.card_class ?? 'gallery-card'}} gallery-record-link gallery-index-card">
+    <span class="gallery-meta">{{$t(category.meta_key)}}</span>
+    <h2 class="gallery-card-title">{{$t(category.title_key)}}</h2>
+    <p class="gallery-card-body">{{$t(category.body_key)}}</p>
+    <div data-if="{{(category.relationship_meta ?? []).length > 0}}" class="gallery-relationship-row">
+      <span data-each="meta in category.relationship_meta">{{meta.value !== undefined ? $t(meta.label_key) + ' ' + meta.value : $t(meta.label_key)}}</span>
+    </div>
+    <div class="gallery-record-meta-list">
+      <span class="gallery-chip">{{$t("gallery.archive.index.material_count")}} {{category.material_count ?? 0}}</span>
+      <span data-each="type in category.type_summary" class="gallery-chip">{{$t("gallery.archive_materials.types." + type)}}</span>
+    </div>
+  </a>
+</partial>

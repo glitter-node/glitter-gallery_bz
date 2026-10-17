@@ -1,0 +1,14 @@
+<partial>
+  <section class="gallery-section gallery-section-tight">
+    <div class="gallery-archive-visual-panel">
+      <div class="gallery-media-frame gallery-media-detail gallery-media-detail-panel gallery-media-scan gallery-archive-detail-image">
+        <img data-if="{{gallery_archive_material_detail.preview_image ?? gallery_archive_material_detail.image_url ?? gallery_archive_material_detail.image ?? gallery_archive_material_detail.media?.url ?? false}}" src='{{(gallery_archive_material_detail.preview_image ?? gallery_archive_material_detail.image_url ?? gallery_archive_material_detail.image ?? gallery_archive_material_detail.media?.url ?? "")}}' alt="{{gallery_archive_material_detail.title_label ?? $t(gallery_archive_material_detail.title_key ?? 'gallery.media.archive_material')}}" class="gallery-media-image"/>
+        <div data-if="{{!(gallery_archive_material_detail.preview_image ?? gallery_archive_material_detail.image_url ?? gallery_archive_material_detail.image ?? gallery_archive_material_detail.media?.url ?? false)}}" class="gallery-media-placeholder gallery-media-document">
+          <span class="gallery-media-placeholder-label">$t:gallery.media.document_scan</span>
+        </div>
+        <span class="gallery-media-caption">{{gallery_archive_material_detail.media_caption ?? gallery_archive_material_detail.media?.credit ?? $t('gallery.media.preview_caption')}}</span>
+      </div>
+      <p class="gallery-muted">{{$t(gallery_archive_material_detail.rights_key)}} / {{gallery_archive_material_detail.identifier ?? ""}}</p>
+    </div>
+  </section>
+</partial>

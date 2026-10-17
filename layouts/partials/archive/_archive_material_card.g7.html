@@ -1,0 +1,23 @@
+<partial>
+  <a data-each="material in gallery_archive_category_detail.materials" href='{{material.href ?? "/archive"}}' class="gallery-record gallery-record-link gallery-index-card">
+    <div class="gallery-media-frame gallery-media-archive-preview gallery-media-scan">
+      <img data-if="{{!!(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.image ?? material.media?.url ?? '') &amp;&amp; !(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.image ?? material.media?.url ?? '').startsWith('/images/gallery/') &amp;&amp; !(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.image ?? material.media?.url ?? '').startsWith('images/gallery/') &amp;&amp; !(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.image ?? material.media?.url ?? '').startsWith('/api/templates/assets/glitter-gallery_bz/images/gallery/')}}" src='{{(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.image ?? material.media?.url ?? "")}}' alt="{{material.title_label ?? $t(material.title_key ?? 'gallery.media.archive_material')}}" class="gallery-media-image" loading="lazy" decoding="async" :width="1000" :height="1300"/>
+      <div data-if="{{!(!!(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.image ?? material.media?.url ?? '') &amp;&amp; !(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.image ?? material.media?.url ?? '').startsWith('/images/gallery/') &amp;&amp; !(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.image ?? material.media?.url ?? '').startsWith('images/gallery/') &amp;&amp; !(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.image ?? material.media?.url ?? '').startsWith('/api/templates/assets/glitter-gallery_bz/images/gallery/'))}}" class="gallery-media-placeholder gallery-media-document">
+        <span class="gallery-media-placeholder-label">$t:gallery.media.archive_material</span>
+      </div>
+    </div>
+    <span class="gallery-meta">{{$t("gallery.archive_materials.types." + material.type)}} / {{$t(material.date_label_key)}}</span>
+    <h2 class="gallery-record-title">{{$t(material.title_key)}}</h2>
+    <p class="gallery-record-body">{{$t(material.summary_key)}}</p>
+    <div data-if="{{(material.relationship_meta ?? []).length > 0}}" class="gallery-relationship-row">
+      <span data-each="meta in material.relationship_meta">{{meta.value !== undefined ? $t(meta.label_key) + ' ' + meta.value : $t(meta.label_key)}}</span>
+    </div>
+    <div class="gallery-record-meta-list">
+      <span class="gallery-chip">{{$t(material.source_key)}}</span>
+      <span class="gallery-chip">{{material.identifier ?? ""}}</span>
+      <span class="gallery-chip">{{$t(material.exhibition_title_key)}}</span>
+      <span class="gallery-chip">{{$t("gallery.archive.index.related_records_prefix")}} {{material.record_slugs?.length ?? 0}}</span>
+      <span data-each="tag in material.tags" class="gallery-chip">{{$t("gallery.tags." + tag)}}</span>
+    </div>
+  </a>
+</partial>

@@ -1,0 +1,8 @@
+<partial>
+  <section class="gallery-section">
+    <span class="gallery-kicker">$t:gallery.items.exhibition_context</span>
+    <h2 class="gallery-section-title">{{$t(gallery_item_detail.exhibition_title_key)}}</h2>
+    <p class="gallery-muted">{{$t(gallery_item_detail.section_title_key)}} / {{$t(gallery_item_detail.archive_category_title_key)}}</p>
+    <a href='{{gallery_item_detail.exhibition_href ?? "/exhibitions"}}' class="gallery-text-link">$t:gallery.items.back_to_exhibition</a>
+  </section>
+</partial>

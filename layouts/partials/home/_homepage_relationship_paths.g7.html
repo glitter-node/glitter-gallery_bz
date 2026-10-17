@@ -1,0 +1,42 @@
+<partial>
+  <section class="gallery-section gallery-section-muted gallery-home-section">
+    <div class="gallery-home-section-inner">
+      <span class="gallery-kicker">$t:gallery.home.relationship_paths.kicker</span>
+      <h2 class="gallery-section-title">$t:gallery.home.relationship_paths.title</h2>
+      <div class="gallery-home-path-grid">
+        <a data-each="path in {{((gallery_home.data?.relationship_paths ?? gallery_home.relationship_paths ?? []).length > 0 ? (gallery_home.data?.relationship_paths ?? gallery_home.relationship_paths ?? []) : (gallery_home_relationship_paths ?? [])).slice(0, 3)}}" href='{{path.href ?? "/archive"}}' class="gallery-home-path-card">
+          <div class="gallery-media-frame gallery-media-relationship gallery-home-media-standard">
+            <img data-if="{{!!(path.preview_image ?? path.image_url ?? path.target?.preview_image ?? path.target?.image_url ?? '') &amp;&amp; !(path.preview_image ?? path.image_url ?? path.target?.preview_image ?? path.target?.image_url ?? '').startsWith('/images/gallery/') &amp;&amp; !(path.preview_image ?? path.image_url ?? path.target?.preview_image ?? path.target?.image_url ?? '').startsWith('images/gallery/') &amp;&amp; !(path.preview_image ?? path.image_url ?? path.target?.preview_image ?? path.target?.image_url ?? '').startsWith('/api/templates/assets/glitter-gallery_bz/images/gallery/')}}" src="{{(path.preview_image ?? path.image_url ?? path.target?.preview_image ?? path.target?.image_url ?? '')}}" alt="{{path.title_label ?? $t(path.title_key ?? 'gallery.home.relationship_paths.title')}}" class="gallery-media-image"/>
+            <div data-if="{{!(!!(path.preview_image ?? path.image_url ?? path.target?.preview_image ?? path.target?.image_url ?? '') &amp;&amp; !(path.preview_image ?? path.image_url ?? path.target?.preview_image ?? path.target?.image_url ?? '').startsWith('/images/gallery/') &amp;&amp; !(path.preview_image ?? path.image_url ?? path.target?.preview_image ?? path.target?.image_url ?? '').startsWith('images/gallery/') &amp;&amp; !(path.preview_image ?? path.image_url ?? path.target?.preview_image ?? path.target?.image_url ?? '').startsWith('/api/templates/assets/glitter-gallery_bz/images/gallery/'))}}" class="gallery-media-placeholder gallery-media-relationship-placeholder">
+              <span class="gallery-media-placeholder-label">$t:gallery.media.relationship</span>
+            </div>
+          </div>
+          <span class="gallery-collection-index">{{path.index ?? ''}}</span>
+          <div class="gallery-relationship-type-row">
+            <span class="gallery-quiet-label">$t:gallery.home.relationship_paths.labels.relationship_type</span>
+            <span class="gallery-quiet-value">{{path.role_label ?? $t(path.role_key ?? ('gallery.home.relationship_paths.roles.' + (path.role ?? 'connected_record')))}}</span>
+          </div>
+          <h3 class="gallery-card-title">{{path.title_label ?? $t(path.title_key ?? 'gallery.home.relationship_paths.title')}}</h3>
+          <p class="gallery-card-body">{{path.body_label ?? $t(path.body_key ?? 'gallery.home.relationship_paths.title')}}</p>
+          <div data-if="{{(path.relationship_meta ?? []).length > 0}}" class="gallery-relationship-row">
+            <span data-each="meta in path.relationship_meta">{{meta.value !== undefined ? $t(meta.label_key) + ' ' + meta.value : $t(meta.label_key)}}</span>
+          </div>
+          <p class="gallery-muted">{{path.from_label ?? path.source?.label ?? $t(path.from_key ?? 'gallery.home.relationship_paths.title')}} → {{path.mid_label ?? $t(path.mid_key ?? 'gallery.home.relationship_paths.bridge.connected_record')}} → {{path.to_label ?? path.target?.label ?? $t(path.to_key ?? 'gallery.home.relationship_paths.title')}}</p>
+          <div class="gallery-relationship-chain">
+            <span class="gallery-relationship-node">{{path.from_label ?? path.source?.label ?? $t(path.from_key ?? 'gallery.home.relationship_paths.node_types.exhibition')}}</span>
+            <span class="gallery-relationship-arrow">$t:gallery.home.relationship_paths.arrow</span>
+            <span class="gallery-relationship-node">{{path.mid_label ?? $t(path.mid_key ?? 'gallery.home.relationship_paths.bridge.connected_record')}}</span>
+            <span class="gallery-relationship-arrow">$t:gallery.home.relationship_paths.arrow</span>
+            <span class="gallery-relationship-node">{{path.to_label ?? path.target?.label ?? $t(path.to_key ?? 'gallery.home.relationship_paths.node_types.archive_material')}}</span>
+          </div>
+          <div class="gallery-home-path-continuity">
+            <span class="gallery-quiet-label">$t:gallery.home.relationship_paths.labels.timeline</span>
+            <span class="gallery-quiet-value">{{path.timeline_label ?? $t(path.timeline_key ?? 'gallery.home.relationship_paths.timeline.linked_after_record')}}</span>
+            <span class="gallery-quiet-label">$t:gallery.home.relationship_paths.labels.next</span>
+            <span class="gallery-quiet-value">{{path.continuity_label ?? $t(path.continuity_key ?? 'gallery.home.relationship_paths.continuity.follow_target')}}</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</partial>

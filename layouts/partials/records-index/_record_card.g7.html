@@ -1,0 +1,22 @@
+<partial>
+  <a href='{{record.href ?? "/records"}}' class="gallery-record gallery-record-link gallery-index-card">
+    <div class="gallery-media-frame gallery-media-record-note">
+      <img data-if="{{record.preview_image ?? record.thumbnail_url ?? record.image_url ?? record.media?.url ?? false}}" src='{{(record.preview_image ?? record.thumbnail_url ?? record.image_url ?? record.media?.url ?? "")}}' alt="{{record.title_label ?? $t(record.title_key ?? 'gallery.media.record_note')}}" class="gallery-media-image"/>
+      <div data-if="{{!(record.preview_image ?? record.thumbnail_url ?? record.image_url ?? record.media?.url ?? false)}}" class="gallery-media-placeholder gallery-media-placeholder-small">
+        <span class="gallery-media-placeholder-label">$t:gallery.media.record_note</span>
+      </div>
+    </div>
+    <span class="gallery-meta">{{$t("gallery.records.types." + record.type)}} / {{$t(record.recorded_at_key)}}</span>
+    <h2 class="gallery-record-title">{{$t(record.title_key)}}</h2>
+    <p class="gallery-record-body">{{$t(record.summary_key)}}</p>
+    <div data-if="{{(record.relationship_meta ?? []).length > 0}}" class="gallery-relationship-row">
+      <span data-each="meta in record.relationship_meta">{{meta.value !== undefined ? $t(meta.label_key) + ' ' + meta.value : $t(meta.label_key)}}</span>
+    </div>
+    <div class="gallery-record-meta-list">
+      <span class="gallery-chip">{{$t(record.author_name_key)}}</span>
+      <span class="gallery-chip">{{$t(record.exhibition_title_key)}}</span>
+      <span class="gallery-chip">{{$t("gallery.records.index.related_items_prefix")}} {{record.item_slugs?.length ?? 0}}</span>
+      <span data-each="tag in record.tags" class="gallery-chip">{{$t("gallery.tags." + tag)}}</span>
+    </div>
+  </a>
+</partial>

@@ -1,0 +1,8 @@
+<partial>
+  <section class="gallery-page-head gallery-item-detail-hero">
+    <span class="gallery-kicker">{{gallery_item_detail.type}}</span>
+    <h1 class="gallery-page-title">{{$t(gallery_item_detail.title_key)}}</h1>
+    <p class="gallery-page-lead">{{$t(gallery_item_detail.subtitle_key)}}</p>
+    <a href='{{gallery_item_detail.exhibition_href ?? "/exhibitions"}}' class="gallery-text-link">$t:gallery.items.back_to_exhibition</a>
+  </section>
+</partial>

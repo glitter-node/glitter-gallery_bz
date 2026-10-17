@@ -1,0 +1,170 @@
+{
+  "version": "1.0.0",
+  "layout_name": "stories",
+  "permissions": [],
+  "extends": "_user_base",
+  "data_sources": [
+    {
+      "id": "gallery_record_notes",
+      "type": "static",
+      "data": [
+        {
+          "id": "curator-note",
+          "type": "curator-note",
+          "visibility": "published",
+          "published_at": "2026-04-01T09:00:00+09:00",
+          "title_key": "gallery.notes.types.curator.title",
+          "body_key": "gallery.notes.types.curator.body",
+          "meta_key": "gallery.notes.types.curator.meta",
+          "tags": [
+            "curatorial",
+            "essay"
+          ]
+        },
+        {
+          "id": "field-note",
+          "type": "field-note",
+          "visibility": "published",
+          "published_at": "2026-04-02T09:00:00+09:00",
+          "title_key": "gallery.notes.types.field.title",
+          "body_key": "gallery.notes.types.field.body",
+          "meta_key": "gallery.notes.types.field.meta",
+          "tags": [
+            "field",
+            "record"
+          ]
+        },
+        {
+          "id": "installation-note",
+          "type": "installation-note",
+          "visibility": "draft-ready",
+          "published_at": null,
+          "title_key": "gallery.notes.types.installation.title",
+          "body_key": "gallery.notes.types.installation.body",
+          "meta_key": "gallery.notes.types.installation.meta",
+          "tags": [
+            "installation",
+            "space"
+          ]
+        },
+        {
+          "id": "process-note",
+          "type": "process-note",
+          "visibility": "draft-ready",
+          "published_at": null,
+          "title_key": "gallery.notes.types.process.title",
+          "body_key": "gallery.notes.types.process.body",
+          "meta_key": "gallery.notes.types.process.meta",
+          "tags": [
+            "process",
+            "research"
+          ]
+        }
+      ]
+    }
+  ],
+  "slots": {
+    "content": [
+      {
+        "type": "basic",
+        "name": "Section",
+        "props": {
+          "className": "gallery-page-head"
+        },
+        "children": [
+          {
+            "type": "basic",
+            "name": "Span",
+            "props": {
+              "className": "gallery-kicker"
+            },
+            "text": "$t:gallery.stories.kicker"
+          },
+          {
+            "type": "basic",
+            "name": "H1",
+            "props": {
+              "className": "gallery-page-title"
+            },
+            "text": "$t:gallery.stories.title"
+          },
+          {
+            "type": "basic",
+            "name": "P",
+            "props": {
+              "className": "gallery-page-lead"
+            },
+            "text": "$t:gallery.stories.lead"
+          }
+        ]
+      },
+      {
+        "type": "basic",
+        "name": "Section",
+        "props": {
+          "className": "gallery-list gallery-note-archive"
+        },
+        "children": [
+          {
+            "type": "basic",
+            "name": "Div",
+            "props": {
+              "className": "gallery-record gallery-record-structured"
+            },
+            "iteration": {
+              "source": "gallery_record_notes",
+              "item_var": "note"
+            },
+            "children": [
+              {
+                "type": "basic",
+                "name": "Span",
+                "props": {
+                  "className": "gallery-meta"
+                },
+                "text": "{{$t(note.meta_key)}}"
+              },
+              {
+                "type": "basic",
+                "name": "H2",
+                "props": {
+                  "className": "gallery-record-title"
+                },
+                "text": "{{$t(note.title_key)}}"
+              },
+              {
+                "type": "basic",
+                "name": "P",
+                "props": {
+                  "className": "gallery-record-body gallery-longform-preview"
+                },
+                "text": "{{$t(note.body_key)}}"
+              },
+              {
+                "type": "basic",
+                "name": "Div",
+                "props": {
+                  "className": "gallery-record-meta-list"
+                },
+                "children": [
+                  {
+                    "type": "basic",
+                    "name": "Span",
+                    "props": {
+                      "className": "gallery-chip"
+                    },
+                    "iteration": {
+                      "source": "note.tags",
+                      "item_var": "tag"
+                    },
+                    "text": "{{$t(\"gallery.tags.\" + tag)}}"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

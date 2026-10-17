@@ -1,0 +1,12 @@
+<partial>
+  <section class="gallery-section gallery-section-tight">
+    <span class="gallery-kicker">$t:gallery.admin.relationships.summary</span>
+    <div class="gallery-list">
+      <div data-each="relationship in admin_gallery.relationship_summaries" class="gallery-record gallery-admin-relationship-card">
+        <span class="gallery-meta">{{$t(relationship.status_key)}}</span>
+        <h2 class="gallery-record-title">{{$t(relationship.title_key)}}</h2>
+        <p class="gallery-record-body">{{$t(relationship.body_key)}}</p>
+      </div>
+    </div>
+  </section>
+</partial>

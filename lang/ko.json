@@ -1,0 +1,1305 @@
+{
+  "gallery": {
+    "brand": {
+      "name": "Glitter Gallery Bz"
+    },
+    "meta": {
+      "base_title": "Glitter Gallery Bz"
+    },
+    "nav": {
+      "home": "홈",
+      "current_exhibition": "현재 전시",
+      "exhibitions": "전시",
+      "archive": "아카이브",
+      "collections": "컬렉션",
+      "records": "기록",
+      "stories": "기록 노트",
+      "about": "소개"
+    },
+    "header": {
+      "subtitle": "전시 아카이브와 기록 색인",
+      "status_label": "OPEN CATALOG",
+      "status_value": "전시와 기록을 연결해 읽는 공개 색인",
+      "mobile_menu_open": "모바일 메뉴 열기",
+      "mobile_menu_close": "모바일 메뉴 닫기",
+      "mobile_menu_label": "모바일 내비게이션",
+      "mobile_menu_title": "메뉴"
+    },
+    "footer": {
+      "summary": "전시, 아카이브, 컬렉션, 기록 노트를 중심으로 구성한 그누보드7 사용자 템플릿 예시입니다.",
+      "mission": "전시, 작품, 문서, 현장 기록과 그 관계를 계속 읽을 수 있도록 정리한 기관형 색인입니다.",
+      "metadata": "공개 카탈로그 구조 · 전시 아카이브 · 기록 노트",
+      "sections_heading": "섹션",
+      "archive_heading": "아카이브 경로",
+      "context_heading": "기록 맥락"
+    },
+    "media": {
+      "featured_exhibition": "전시 이미지 자리",
+      "item_thumbnail": "항목 썸네일 자리",
+      "archive_material": "아카이브 자료 미리보기",
+      "record_note": "기록 노트 시각 영역",
+      "relationship": "관계 미리보기",
+      "detail_hero": "상세 대표 이미지",
+      "installation": "설치 기록 이미지",
+      "document_scan": "문서 스캔 자리",
+      "preview_caption": "이미지와 자료 설명은 공개 준비 시 표시됩니다."
+    },
+    "mode_control": {
+      "aria_label": "표시 모드 선택",
+      "title": "표시 모드 선택",
+      "system": "시스템",
+      "light": "라이트",
+      "dark": "다크"
+    },
+    "relationship_meta": {
+      "related_records": "관련 기록",
+      "linked_documents": "참조 문서",
+      "connected_exhibitions": "연결 전시",
+      "installation_phase": "설치 단계",
+      "revision_history": "수정 기록 있음",
+      "curator_notes": "큐레이터 노트",
+      "archive_references": "아카이브 참조",
+      "preservation_note": "보존 메모 포함",
+      "installation_week": "설치 주차",
+      "linked_artists": "연결 작가"
+    },
+    "home": {
+      "seo_title": "Glitter Gallery Bz",
+      "seo_description": "전시, 아카이브, 기록 중심 웹사이트를 빠르게 구축하기 위한 사용자 템플릿입니다.",
+      "kicker": "Gallery / Archive / Record",
+      "title": "전시와 기록을 한 흐름으로 묶는 갤러리 템플릿",
+      "lead": "작품, 전시, 아카이브, 글을 차분하게 탐색할 수 있도록 설계된 공개 사이트 예시입니다.",
+      "primary_action": "전시 보기",
+      "secondary_action": "아카이브 탐색",
+      "stat_exhibitions_value": "06",
+      "stat_exhibitions_label": "전시 섹션",
+      "stat_archive_value": "18",
+      "stat_archive_label": "아카이브 분류",
+      "stat_notes_value": "32",
+      "stat_notes_label": "기록 노트",
+      "featured_kicker": "대표 전시",
+      "featured_title": "빛이 지나간 자리의 기록",
+      "featured_body": "대표 전시는 전시명, 기간, 공간, 큐레이션 관점을 한 화면에서 읽도록 구성했습니다. 방문자는 이미지 목록보다 먼저 전시의 맥락과 열람 방향을 파악할 수 있습니다.",
+      "featured_period": "기간: 2026년 봄 시즌",
+      "featured_location": "공간: 메인 갤러리와 온라인 아카이브",
+      "featured_format": "형식: 작품 소개, 설치 기록, 작가 노트",
+      "archive_kicker": "아카이브 분류",
+      "archive_title": "운영자가 바로 확장할 수 있는 아카이브 분류",
+      "archive_one_meta": "전시",
+      "archive_one_title": "전시별 기록",
+      "archive_one_body": "전시 단위로 작품, 설치 사진, 보도자료, 큐레이터 노트를 묶어 지난 전시를 다시 찾기 쉽게 정리합니다.",
+      "archive_two_meta": "작가",
+      "archive_two_title": "작가별 기록",
+      "archive_two_body": "작가 프로필, 참여 이력, 작품 목록, 인터뷰를 한 흐름으로 연결해 탐색 깊이를 만듭니다.",
+      "archive_three_meta": "자료",
+      "archive_three_title": "문서 유형별 기록",
+      "archive_three_body": "이미지, 원고, 링크, 보존 메모처럼 관리 방식이 다른 자료를 분리해 운영 부담을 줄입니다.",
+      "collections_kicker": "컬렉션",
+      "collections_title": "컬렉션 카드",
+      "collection_one_index": "01",
+      "collection_one_title": "소장 작품",
+      "collection_one_body": "대표 이미지와 작품 설명을 함께 보여주며, 작품군의 배경과 수집 기준을 짧게 설명합니다.",
+      "collection_two_index": "02",
+      "collection_two_title": "프로젝트 자료",
+      "collection_two_body": "전시 준비 과정에서 생성된 문서, 설치 사진, 협업 기록을 하나의 묶음으로 소개합니다.",
+      "collection_three_index": "03",
+      "collection_three_title": "연구 노트",
+      "collection_three_body": "공개 가능한 조사 메모, 링크, 참고 자료를 읽기 좋은 보조 기록으로 배치합니다.",
+      "notes_kicker": "기록 노트",
+      "notes_title": "전시가 끝난 뒤에도 남는 문장",
+      "notes_body": "기록 노트 영역은 큐레이터 글, 현장 메모, 보존 기록처럼 긴 생명력을 가진 텍스트를 위한 홈 진입점입니다.",
+      "note_one_meta": "큐레이터 노트",
+      "note_one_body": "전시를 여는 문장과 작품을 읽는 기준을 짧은 글로 남겨 방문자가 다시 돌아올 이유를 만듭니다.",
+      "note_two_meta": "현장 기록",
+      "note_two_body": "설치, 촬영, 철수 과정에서 생긴 현장 정보를 기록 콘텐츠로 전환합니다.",
+      "about_kicker": "소개",
+      "about_title": "작은 갤러리와 아카이브 프로젝트를 위한 시작 화면",
+      "about_body": "이 홈 레이아웃은 정적 소개만으로도 전시, 아카이브, 컬렉션, 노트를 한 번에 보여주며 이후 게시판과 페이지 데이터로 확장할 수 있습니다.",
+      "about_action": "템플릿 소개 보기",
+      "stats": {
+        "exhibitions": "전시 구조",
+        "archive": "아카이브 분류",
+        "notes": "기록 노트"
+      },
+      "current_exhibition_kicker": "현재 전시",
+      "featured_empty_title": "준비 중인 전시",
+      "featured_empty_subtitle": "공개 전시 데이터가 준비되면 이 영역에 표시됩니다.",
+      "featured_empty_body": "현재 열람 가능한 전시가 없지만 아카이브와 기록 노트는 계속 탐색할 수 있습니다.",
+      "explore_current_exhibition": "현재 전시 보기",
+      "explore_archive": "아카이브로 이동",
+      "visual_placeholder": "전시 이미지 자리",
+      "publication_signal": "공개 전시 · 아카이브 연결 열람 가능",
+      "item_highlights": {
+        "kicker": "선별 항목",
+        "title": "전시에서 먼저 읽을 항목",
+        "empty": "아직 전시에 연결된 항목이 없습니다.",
+        "empty_title": "연결 항목 준비 중",
+        "empty_meta": "자료 정보",
+        "empty_relation": "전시 항목 관계가 준비되면 표시됩니다.",
+        "labels": {
+          "artwork": "작품",
+          "installation": "설치 기록",
+          "document": "아카이브 오브젝트"
+        },
+        "relations": {
+          "entry_work": "현재 전시의 첫 번째 작품 기록",
+          "installation": "전시장 동선과 설치 판단을 잇는 자료",
+          "document": "전시 언어가 남은 문서 기록"
+        }
+      },
+      "records": {
+        "kicker": "최근 기록",
+        "title": "최근 열린 기록 노트",
+        "body": "큐레이터 노트와 현장 기록은 작품 목록 뒤가 아니라 전시를 읽는 초입에서 함께 열립니다.",
+        "empty": "아직 공개된 기록 노트가 없습니다.",
+        "empty_date": "기록일 준비 중",
+        "empty_type": "기록 노트",
+        "empty_title": "기록 노트 준비 중",
+        "empty_summary": "공개 기록이 준비되면 요약이 표시됩니다.",
+        "empty_related": "연결 전시 준비 중",
+        "labels": {
+          "record_type": "기록 유형",
+          "relationship": "관계",
+          "chronology": "시점",
+          "continue": "다음 탐색"
+        },
+        "related_current_exhibition": "관련 전시: 빛이 지나간 자리의 기록",
+        "related_installation": "관련 자료: 설치 사진 묶음",
+        "related_item": "관련 항목: 희미한 격자 01",
+        "relationships": {
+          "connected_record": "연결 기록",
+          "curatorial_context": "큐레이터 노트가 전시 읽기 순서를 설명",
+          "installation_context": "설치 맥락과 현장 자료가 연결됨",
+          "same_session": "같은 설치 세션에서 파생된 기록"
+        },
+        "chronology": {
+          "recorded_during": "전시 기간 중 기록",
+          "after_opening": "공개 이후 정리된 해설 기록",
+          "install_week": "설치 주간에 남긴 현장 기록",
+          "after_install": "설치 이후 검토된 배치 기록"
+        },
+        "continuity": {
+          "same_exhibition": "같은 전시의 연결 기록으로 이동",
+          "to_field_note": "현장 노트에서 설치 판단 확인",
+          "to_archive_material": "설치 사진 자료로 이어 보기",
+          "to_item_record": "작품 기록과 배치 맥락 함께 읽기"
+        }
+      },
+      "archive_materials": {
+        "kicker": "최근 아카이브 자료",
+        "title": "최근 정리된 아카이브 자료",
+        "empty": "아직 공개된 아카이브 분류가 없습니다."
+      },
+      "relationship_paths": {
+        "kicker": "관계 경로",
+        "title": "관계로 이어지는 탐색 경로",
+        "arrow": "→",
+        "labels": {
+          "relationship_type": "관계 유형",
+          "timeline": "아카이브 시점",
+          "next": "이어 보기"
+        },
+        "roles": {
+          "connected_record": "연결 기록",
+          "featured_item": "대표 항목",
+          "curatorial_context": "큐레이션 맥락",
+          "visual_reference": "시각 참조",
+          "installation_context": "설치 맥락"
+        },
+        "bridge": {
+          "connected_record": "연결 기록"
+        },
+        "node_types": {
+          "exhibition": "전시",
+          "item": "항목",
+          "record": "기록 노트",
+          "archive_material": "아카이브 자료"
+        },
+        "timeline": {
+          "linked_after_record": "기록 이후 연결됨",
+          "install_week": "설치 주간의 관찰에서 자료로 확장",
+          "recorded_after_install": "설치 이후 자료와 노트가 함께 정리됨",
+          "research_to_work": "연구 메모가 작품 기록으로 되돌아감"
+        },
+        "continuity": {
+          "follow_target": "대상 기록으로 계속 탐색",
+          "open_archive_material": "연결된 아카이브 자료 열람",
+          "open_field_note": "현장 노트로 맥락 확인",
+          "open_item_record": "작품 기록으로 돌아가기"
+        },
+        "exhibition_to_field_note": {
+          "title": "전시에서 현장 노트로",
+          "body": "전시 개요에서 설치 주간의 관찰 기록으로 이동합니다."
+        },
+        "installation_records": {
+          "title": "설치 기록과 작품 사이",
+          "body": "작품 표면과 전시장 배치 자료를 함께 읽습니다."
+        },
+        "research_connected_work": {
+          "title": "연구 자료가 연결한 작품",
+          "body": "분류가 아니라 관계를 따라 작품 기록으로 돌아갑니다."
+        }
+      },
+      "archive_categories_compact": {
+        "kicker": "아카이브 분류",
+        "title": "분류로 빠르게 들어가기",
+        "empty": "아카이브 분류가 준비되면 이곳에 표시됩니다."
+      },
+      "about_compact": {
+        "kicker": "소개",
+        "title": "전시 이후에도 남는 기록 구조",
+        "body": "이 화면은 플랫폼 설명보다 현재 전시, 노트, 자료의 관계를 먼저 보여주는 공개 아카이브 입구입니다.",
+        "action": "아카이브 소개 보기"
+      }
+    },
+    "exhibitions": {
+      "kicker": "전시 기록",
+      "title": "전시 기록",
+      "lead": "현재 전시, 예정 전시, 지난 전시를 같은 형식의 기록 카드로 정리합니다.",
+      "record_one_meta": "Current / Main Hall",
+      "record_one_title": "기억의 표면을 수집하는 전시",
+      "record_one_body": "작품 이미지보다 전시의 주제, 기간, 참여 작가, 관람 동선을 먼저 전달하는 기록형 전시 소개입니다.",
+      "record_two_meta": "Archive / Project Room",
+      "record_two_title": "작업실에서 남겨진 문서들",
+      "record_two_body": "드로잉, 사진, 작가 노트, 설치 기록을 함께 묶어 하나의 전시 아카이브로 읽히게 구성합니다.",
+      "featured_kicker": "주요 전시",
+      "read_record": "전시 기록 보기",
+      "filters": {
+        "all": "전체",
+        "current": "현재",
+        "upcoming": "예정",
+        "past": "지난 전시"
+      },
+      "status": {
+        "current": "현재 전시",
+        "upcoming": "예정 전시",
+        "past": "지난 전시"
+      },
+      "visibility": {
+        "published": "공개 기록",
+        "scheduled": "공개 예정"
+      },
+      "groups": {
+        "current": {
+          "title": "현재 전시",
+          "description": "지금 열람 흐름의 중심이 되는 전시 기록입니다."
+        },
+        "upcoming": {
+          "title": "예정 전시",
+          "description": "조사와 준비 단계의 기록을 미리 연결할 수 있는 전시 구조입니다."
+        },
+        "past": {
+          "title": "지난 전시",
+          "description": "종료 이후에도 다시 읽히는 전시와 자료의 연결입니다."
+        }
+      }
+    },
+    "archive": {
+      "kicker": "Archive",
+      "title": "아카이브 탐색",
+      "lead": "작품과 문서를 분류하고 다시 찾을 수 있도록 기록의 기준을 명확히 보여줍니다.",
+      "category_one_title": "전시별 기록",
+      "category_one_body": "전시 단위로 작품, 설치 사진, 보도자료, 큐레이터 노트를 묶습니다.",
+      "category_two_title": "작가별 기록",
+      "category_two_body": "작가 프로필, 작품 목록, 인터뷰, 참여 이력을 한 축으로 정리합니다.",
+      "category_three_title": "문서 유형별 기록",
+      "category_three_body": "이미지, 텍스트, 링크, 보존 메모처럼 운영자가 관리하기 쉬운 문서 유형을 분리합니다.",
+      "categories": {
+        "exhibition": {
+          "meta": "전시",
+          "title": "전시별 기록",
+          "body": "전시 단위로 작품, 설치 사진, 보도자료, 큐레이터 노트를 묶어 지난 전시를 다시 찾기 쉽게 정리합니다."
+        },
+        "artist": {
+          "meta": "작가",
+          "title": "작가별 기록",
+          "body": "작가 프로필, 참여 이력, 작품 목록, 인터뷰를 한 흐름으로 연결해 탐색 깊이를 만듭니다."
+        },
+        "material": {
+          "meta": "자료",
+          "title": "자료 유형별 기록",
+          "body": "이미지, 원고, 링크, 보존 메모처럼 관리 방식이 다른 자료를 분리해 운영 부담을 줄입니다."
+        },
+        "document": {
+          "meta": "문서",
+          "title": "문서 아카이브",
+          "body": "보도자료, 계약 외 공개 문서, 리플릿, 설명문을 문서 단위로 찾아볼 수 있게 준비합니다."
+        },
+        "research": {
+          "meta": "연구",
+          "title": "연구 자료",
+          "body": "공개 가능한 조사 메모, 참고 링크, 리서치 흐름을 전시와 작품 기록에 연결합니다."
+        },
+        "field_record": {
+          "meta": "현장 기록",
+          "title": "현장 기록",
+          "body": "설치, 촬영, 철수, 보존 이슈처럼 현장에서만 남는 정보를 별도 기록 축으로 보존합니다."
+        }
+      },
+      "category_meta_title": "아카이브 분류",
+      "index": {
+        "filter_ready_body": "분류, 자료 유형, 태그, 전시 관계, 출처, 날짜 정렬을 위한 기준을 색인 화면에서 먼저 확인할 수 있게 둡니다.",
+        "material_count": "자료 수",
+        "related_records_prefix": "관련 기록"
+      },
+      "category_kicker": "Archive Category"
+    },
+    "collections": {
+      "kicker": "컬렉션 구성",
+      "title": "컬렉션 구성",
+      "lead": "소장 작품, 프로젝트 자료, 연구용 문서를 묶음 단위로 소개합니다.",
+      "feature_title": "작품군과 문서 묶음을 함께 보여주는 페이지",
+      "feature_body": "컬렉션은 단일 작품 목록을 넘어 작품군의 배경, 수집 기준, 열람 가능한 기록을 함께 설명하는 영역입니다.",
+      "index_one": "01 / 소장 작품과 대표 이미지",
+      "index_two": "02 / 프로젝트 문서와 설치 기록",
+      "index_three": "03 / 연구 노트와 공개 링크",
+      "items": {
+        "held_works": {
+          "title": "소장 작품",
+          "body": "대표 이미지와 작품 설명을 함께 보여주며, 작품군의 배경과 수집 기준을 짧게 설명합니다."
+        },
+        "project_records": {
+          "title": "프로젝트 자료",
+          "body": "전시 준비 과정에서 생성된 문서, 설치 사진, 협업 기록을 하나의 묶음으로 소개합니다."
+        },
+        "research_notes": {
+          "title": "연구 노트",
+          "body": "공개 가능한 조사 메모, 링크, 참고 자료를 읽기 좋은 보조 기록으로 배치합니다."
+        }
+      }
+    },
+    "stories": {
+      "kicker": "Stories / Notes",
+      "title": "기록 노트",
+      "lead": "전시가 끝난 뒤에도 남아야 할 문장, 인터뷰, 현장 메모를 모읍니다.",
+      "note_one_meta": "Curatorial Note",
+      "note_one_title": "전시를 설명하는 짧은 문장들",
+      "note_one_body": "작품을 소개하는 글과 전시의 기준을 기록해 방문자가 다시 읽을 수 있는 텍스트 흐름을 만듭니다.",
+      "note_two_meta": "Field Record",
+      "note_two_title": "설치와 철수 사이의 기록",
+      "note_two_body": "설치 과정, 공간 조건, 보존 이슈처럼 현장에서만 남는 정보를 기록 콘텐츠로 전환합니다."
+    },
+    "about": {
+      "kicker": "소개",
+      "title": "기록 중심 갤러리 사이트를 위한 출발점",
+      "lead": "이 템플릿은 작은 전시 공간, 아카이브 프로젝트, 독립 큐레이션 팀이 그누보드7 위에서 공개 사이트를 빠르게 구성할 수 있도록 설계되었습니다.",
+      "card_one_title": "편집형 정보 구조",
+      "card_one_body": "첫 화면에서 전시, 아카이브, 컬렉션, 노트로 이어지는 주요 탐색 경로를 분명히 제시합니다.",
+      "card_two_title": "확장 가능한 기록 모델",
+      "card_two_body": "정적 소개 페이지로 시작해 게시판, 페이지, 모듈 데이터를 연결하는 방식으로 점진적으로 확장할 수 있습니다."
+    },
+    "errors": {
+      "unauthorized_code": "401",
+      "unauthorized_title": "로그인이 필요한 기록입니다",
+      "unauthorized_body": "접근 권한이 필요한 페이지입니다.",
+      "forbidden_code": "403",
+      "forbidden_title": "열람 권한이 없습니다",
+      "forbidden_body": "현재 계정으로는 이 기록을 볼 수 없습니다.",
+      "not_found_code": "404",
+      "not_found_title": "기록을 찾을 수 없습니다",
+      "not_found_body": "요청한 페이지가 이동되었거나 아직 공개되지 않았습니다.",
+      "server_error_code": "500",
+      "server_error_title": "기록을 불러오지 못했습니다",
+      "server_error_body": "잠시 후 다시 시도해 주세요.",
+      "unavailable_code": "503",
+      "unavailable_title": "잠시 정리 중입니다",
+      "unavailable_body": "사이트 점검 또는 배포 중입니다.",
+      "maintenance_code": "MAINTENANCE",
+      "maintenance_title": "아카이브를 정리하고 있습니다",
+      "maintenance_body": "더 나은 열람 경험을 위해 잠시 점검 중입니다."
+    },
+    "content": {
+      "metadata": {
+        "period": "기간",
+        "location": "공간",
+        "format": "형식",
+        "status": "상태",
+        "visibility": "공개 범위"
+      },
+      "exhibitions": {
+        "light_afterimage": {
+          "title": "빛이 지나간 자리의 기록",
+          "subtitle": "전시와 설치 기록을 함께 읽는 대표 전시",
+          "period": "2026년 봄 시즌",
+          "location": "메인 갤러리와 온라인 아카이브",
+          "format": "작품 소개, 설치 기록, 작가 노트",
+          "curator_note": "대표 전시는 전시명, 기간, 공간, 큐레이션 관점을 한 화면에서 읽도록 구성했습니다. 방문자는 이미지 목록보다 먼저 전시의 맥락과 열람 방향을 파악할 수 있습니다.",
+          "curator_summary": "빛, 설치, 문서 기록이 한 전시 안에서 어떻게 서로를 설명하는지 보여주는 현재 전시입니다."
+        },
+        "studio_documents": {
+          "title": "작업실에서 남겨진 문서들",
+          "subtitle": "제작 과정의 자료를 전시 아카이브로 연결하는 기록",
+          "period": "2026년 겨울 시즌",
+          "location": "프로젝트 룸",
+          "curator_note": "드로잉, 사진, 작가 노트, 설치 기록을 함께 묶어 하나의 전시 아카이브로 읽히게 구성합니다.",
+          "curator_summary": "작업실에서 생성된 문서와 이미지를 전시 이후에도 다시 읽을 수 있는 자료 구조로 정리합니다."
+        },
+        "threshold_study": {
+          "title": "문턱에 대한 연구",
+          "subtitle": "현장 조사와 시간 기록을 중심으로 준비 중인 전시",
+          "period": "2026년 여름 예정",
+          "location": "리서치 룸",
+          "curator_note": "공간의 입구와 경계에서 생기는 이동, 대기, 관찰의 감각을 기록하는 전시로 준비합니다.",
+          "curator_summary": "공간의 문턱과 이동 경험을 현장 기록, 조사 노트, 시간 자료로 엮는 예정 전시입니다."
+        }
+      },
+      "exhibition_sections": {
+        "context": {
+          "title": "전시 맥락",
+          "body": "전시의 주제, 기간, 참여 작가, 관람 동선을 먼저 읽을 수 있도록 기록합니다."
+        },
+        "records": {
+          "title": "기록 묶음",
+          "body": "작품 이미지, 설치 사진, 보도자료, 큐레이터 노트를 전시 단위로 연결합니다."
+        },
+        "materials": {
+          "title": "자료 구성",
+          "body": "원고, 사진, 링크, 보존 메모처럼 성격이 다른 자료를 분리해 관리합니다."
+        },
+        "artwork_insertion": {
+          "title": "작품 삽입 영역",
+          "body": "작품 상세 데이터가 연결되면 이 전시 섹션 아래에서 작품 목록과 개별 작품 기록으로 이어집니다."
+        },
+        "research": {
+          "title": "조사 흐름",
+          "body": "현장 조사, 인터뷰, 자료 검토 과정을 전시 준비 단계부터 연결합니다."
+        }
+      }
+    },
+    "notes": {
+      "types": {
+        "curator": {
+          "meta": "Curatorial Note",
+          "title": "큐레이터 노트",
+          "body": "전시를 여는 문장과 작품을 읽는 기준을 긴 글로 남겨 방문자가 다시 돌아올 이유를 만듭니다."
+        },
+        "field": {
+          "meta": "Field Note",
+          "title": "현장 노트",
+          "body": "설치, 촬영, 철수 과정에서 생긴 현장 정보를 기록 콘텐츠로 전환합니다."
+        },
+        "installation": {
+          "meta": "Installation Note",
+          "title": "설치 노트",
+          "body": "공간 조건, 작품 배치, 조명과 동선처럼 다음 전시에 참고할 설치 정보를 축적합니다."
+        },
+        "process": {
+          "meta": "Process Note",
+          "title": "과정 노트",
+          "body": "기획, 리서치, 협업 과정에서 생성된 판단과 변경 이력을 장기 기록으로 남깁니다."
+        }
+      }
+    },
+    "future": {
+      "artist_profiles": "작가 프로필",
+      "artwork_detail_pages": "작품 상세 페이지",
+      "timeline_view": "타임라인 보기",
+      "archive_filtering": "아카이브 필터링",
+      "multilingual_exhibitions": "다국어 전시",
+      "private_archives": "비공개 아카이브",
+      "guest_curator_pages": "게스트 큐레이터 페이지"
+    },
+    "exhibition_detail": {
+      "meta_title": "전시 상세",
+      "kicker": "Exhibition Record",
+      "curator_note": "Curator Note",
+      "related_records": "Related Records",
+      "related_records_title": "전시를 따라 읽는 기록",
+      "field_notes": {
+        "install_observation": {
+          "title": "설치 관찰 기록",
+          "body": "작품 사이의 거리, 관람 동선, 조명 변화처럼 전시장에서만 확인되는 조건을 남깁니다."
+        },
+        "space_condition": {
+          "title": "공간 조건 메모",
+          "body": "벽면, 바닥, 자연광, 소리처럼 다음 전시와 보존 판단에 필요한 환경 정보를 기록합니다."
+        }
+      },
+      "archive_materials": {
+        "installation_photo_set": {
+          "title": "설치 사진 묶음",
+          "body": "전시장 구성과 작품 배치를 확인할 수 있는 사진 자료입니다."
+        },
+        "press_release": {
+          "title": "보도자료 원문",
+          "body": "공개 문서로 남겨진 전시 설명과 기본 정보를 연결합니다."
+        },
+        "lighting_plan": {
+          "title": "조명 계획 기록",
+          "body": "작품별 조도와 방향을 다시 확인할 수 있는 현장 자료입니다."
+        }
+      },
+      "archive_materials_title": "전시를 구성한 자료",
+      "timeline_references": "Timeline References",
+      "timeline_references_title": "조사에서 공개까지",
+      "related_collections": "Related Collections",
+      "artwork_slot_kicker": "Artwork Insertion Point",
+      "artwork_slot_body": "작품 상세 데이터가 준비되면 이 위치에 전시별 작품 목록과 작품 상세 이동 흐름을 삽입합니다.",
+      "timeline": {
+        "research_start": {
+          "date": "2026.01",
+          "title": "리서치 시작",
+          "body": "전시 주제와 자료 범위를 정하고 작가 기록을 수집하기 시작했습니다."
+        },
+        "install_week": {
+          "date": "2026.03",
+          "title": "설치 주간",
+          "body": "공간 조건과 작품 배치를 조정하며 현장 노트를 축적했습니다."
+        },
+        "public_opening": {
+          "date": "2026.04",
+          "title": "공개 열람",
+          "body": "전시 공개와 함께 기록 노트, 자료 묶음, 컬렉션 관계를 연결했습니다."
+        }
+      },
+      "field_notes_kicker": "Field Notes",
+      "archive_materials_kicker": "Archive Materials"
+    },
+    "records": {
+      "meta_title": "기록 상세",
+      "related_exhibition": "Related Exhibition",
+      "back_to_context": "상위 맥락으로 돌아가기",
+      "metadata_kicker": "Record Metadata",
+      "body_kicker": "Record Body",
+      "related_items": "Related Items",
+      "archive_materials": "Archive Materials",
+      "types": {
+        "curator_note": "큐레이터 노트",
+        "field_note": "현장 노트",
+        "installation_note": "설치 노트",
+        "process_note": "과정 노트",
+        "research_note": "연구 노트"
+      },
+      "authors": {
+        "chief_curator": "수석 큐레이터",
+        "field_archivist": "현장 기록자",
+        "archive_editor": "아카이브 에디터"
+      },
+      "metadata": {
+        "type": "기록 유형",
+        "author": "작성자",
+        "recorded_at": "기록일",
+        "visibility_state": "공개 상태"
+      },
+      "curator_note": {
+        "title": "빛이 지나간 자리의 큐레이터 노트",
+        "subtitle": "전시의 읽기 순서와 자료의 위치를 설명하는 장문 기록",
+        "recorded_at": "2026.04.01",
+        "summary": "작품, 문서, 설치 기록을 하나의 전시 맥락 안에서 읽기 위해 작성한 큐레이터 노트입니다.",
+        "sections": {
+          "opening_frame": {
+            "title": "전시를 여는 기준",
+            "body": "이 전시는 빛의 장면보다 빛이 지나간 뒤 남는 표면과 자료를 중심에 둡니다. 관람은 작품 앞에서 끝나지 않고 문서와 설치 기록으로 천천히 이어집니다."
+          },
+          "material_reading": {
+            "title": "자료를 읽는 방식",
+            "body": "작품 기록과 아카이브 자료는 서로를 설명하는 증거로 배치됩니다. 하나의 항목은 독립된 대상이면서 동시에 전시 전체를 다시 읽게 하는 단서입니다."
+          },
+          "archive_afterlife": {
+            "title": "전시 이후의 기록",
+            "body": "전시가 종료된 뒤에도 남는 것은 작품 목록만이 아니라 현장 판단, 조명 기록, 문장과 보존 메모입니다. 이 노트는 그 관계를 다음 열람자에게 넘기기 위한 장치입니다."
+          }
+        }
+      },
+      "field_note": {
+        "title": "설치 주간 현장 노트",
+        "subtitle": "공간 조건과 작품 배치를 기록한 현장 문서",
+        "summary": "설치 과정에서 확인한 거리, 조명, 동선의 변화를 남긴 기록입니다.",
+        "recorded_at": "2026년 4월 2일"
+      },
+      "index": {
+        "kicker": "기록 노트",
+        "title": "기록 노트 인덱스",
+        "lead": "큐레이터 글, 현장 메모, 설치 기록, 과정 노트, 연구 노트를 전시와 자료 관계 안에서 찾아볼 수 있게 정리합니다.",
+        "type_summary": "기록 유형 요약",
+        "filter_ready_body": "유형, 태그, 작성자, 전시 관계, 날짜 정렬을 위한 데이터 구조를 먼저 드러냅니다.",
+        "related_items_prefix": "관련 항목"
+      },
+      "installation_note": {
+        "title": "조명과 이동 동선에 대한 설치 노트",
+        "subtitle": "공간 조건과 작품 간 거리를 남긴 설치 기록",
+        "recorded_at": "2026년 4월 3일",
+        "summary": "조명 각도, 관람자 이동, 벽면 간격처럼 재설치에 필요한 정보를 전시 맥락과 함께 보존합니다."
+      },
+      "process_note": {
+        "title": "보도자료 편집 과정 기록",
+        "subtitle": "공개 문서가 전시 기록으로 정리되는 방식",
+        "recorded_at": "2026년 4월 4일",
+        "summary": "보도자료와 작품 설명 사이에서 남겨야 할 문장과 삭제해야 할 홍보 문장을 구분한 편집 기록입니다."
+      },
+      "research_note": {
+        "title": "문턱 연구를 위한 현장 색인",
+        "subtitle": "예정 전시와 연결되는 조사 노트",
+        "recorded_at": "2026년 5월 1일",
+        "summary": "다음 전시의 장소 조사, 관찰 단어, 참고 자료를 미리 묶어 이후 전시와 아카이브가 연결될 수 있게 준비합니다."
+      }
+    },
+    "items": {
+      "meta_title": "작품 및 자료 상세",
+      "section_kicker": "Artwork / Materials",
+      "section_title": "전시 안의 작품과 자료",
+      "section_description": "작품, 문서, 설치 기록을 같은 목록 안에서 읽되 각 항목의 성격과 맥락을 분명히 남깁니다.",
+      "view_detail": "항목 기록 보기",
+      "back_to_exhibition": "전시 기록으로 돌아가기",
+      "metadata_kicker": "Item Metadata",
+      "curator_note": "Item Curator Note",
+      "exhibition_context": "Exhibition Context",
+      "related_records": "Related Records",
+      "related_archive_materials": "Archive Materials",
+      "types": {
+        "artwork": "작품",
+        "document": "문서",
+        "installation": "설치 기록",
+        "photo": "사진",
+        "object": "오브젝트",
+        "note": "노트"
+      },
+      "artists": {
+        "min_jiwon": "민지원",
+        "gallery_team": "갤러리 기록팀",
+        "archive_editor": "아카이브 에디터"
+      },
+      "metadata": {
+        "artist": "작가",
+        "year": "연도",
+        "medium": "매체",
+        "dimensions": "크기",
+        "collection": "컬렉션",
+        "credit_line": "크레딧",
+        "visibility_state": "공개 상태"
+      },
+      "visibility": {
+        "published": "공개 기록"
+      },
+      "pale_grid": {
+        "title": "희미한 격자 01",
+        "subtitle": "빛의 잔상과 종이 표면을 기록한 작품",
+        "medium": "한지에 안료, 아카이벌 프린트",
+        "dimensions": "72 x 54 cm",
+        "credit_line": "작가 및 Glitter Gallery Bz 제공",
+        "summary": "전시의 첫 구간에서 빛이 사라진 뒤 남는 표면의 층을 보여주는 작품 기록입니다.",
+        "curator_note": "이 작품은 전시장 입구에서 관람자가 처음 마주하는 밝기와 종이의 밀도를 조절하는 기준점입니다.",
+        "material_description": "섬유가 드러나는 종이 위에 얇은 안료층과 프린트 이미지를 겹쳐 빛의 방향과 표면의 시간을 함께 남깁니다."
+      },
+      "installation_axis": {
+        "title": "설치 축 기록",
+        "subtitle": "작품 배치와 동선을 남긴 설치 자료",
+        "medium": "설치 사진, 배치 메모, 조명 기록",
+        "dimensions": "가변 크기",
+        "credit_line": "Glitter Gallery Bz 기록팀",
+        "summary": "작품 사이의 거리와 시선의 이동을 확인하기 위해 남긴 현장 기록입니다.",
+        "curator_note": "이 자료는 작품 자체보다 전시가 만들어낸 이동과 간격을 보존하기 위한 설치 기록입니다."
+      },
+      "press_fragment": {
+        "title": "보도자료 단편 A",
+        "subtitle": "전시 문장을 다시 읽기 위한 문서 자료",
+        "medium": "텍스트 문서, PDF 스캔",
+        "dimensions": "A4 2쪽",
+        "credit_line": "Glitter Gallery Bz 아카이브",
+        "summary": "전시 공개 시점의 언어와 이후 아카이브 문장을 비교하기 위해 보존한 문서입니다.",
+        "curator_note": "보도자료는 전시가 처음 외부에 설명된 방식과 이후 기록 언어 사이의 차이를 보여줍니다."
+      }
+    },
+    "archive_materials": {
+      "meta_title": "아카이브 자료 상세",
+      "back_to_category": "아카이브 분류로 돌아가기",
+      "metadata_kicker": "Archive Metadata",
+      "description_kicker": "Descriptive Note",
+      "related_exhibition": "Related Exhibition",
+      "related_items": "Related Items",
+      "related_records": "Related Records",
+      "types": {
+        "image": "이미지",
+        "document": "문서",
+        "note": "노트",
+        "installation_photo": "설치 사진",
+        "interview": "인터뷰",
+        "press": "보도자료",
+        "object_reference": "오브젝트 참조"
+      },
+      "metadata": {
+        "category": "분류",
+        "type": "자료 유형",
+        "date_label": "날짜",
+        "source": "출처",
+        "rights": "권리",
+        "format": "형식",
+        "identifier": "식별자"
+      },
+      "sources": {
+        "gallery_records_team": "Glitter Gallery Bz 기록팀",
+        "installation_team": "설치팀",
+        "archive_editor": "아카이브 에디터"
+      },
+      "rights": {
+        "gallery_bz": "Glitter Gallery Bz 제공"
+      },
+      "formats": {
+        "digital_image_set": "디지털 이미지 묶음",
+        "field_note_scan": "현장 노트 스캔",
+        "pdf_document": "PDF 문서"
+      },
+      "installation_photo_set": {
+        "title": "설치 사진 묶음",
+        "subtitle": "전시장 구조와 작품 배치를 확인하는 이미지 자료",
+        "date_label": "2026.03 설치 주간",
+        "summary": "전시 공간의 구성과 작품 사이의 관계를 확인할 수 있는 설치 사진 자료입니다.",
+        "description": "이 사진 묶음은 작품의 정면 이미지보다 전시장 안에서 작품이 서로 어떤 거리와 방향을 갖는지 보여줍니다. 이후 재설치와 연구 열람을 위한 기준 자료로 보존됩니다."
+      },
+      "lighting_plan": {
+        "title": "조명 계획 기록",
+        "subtitle": "작품별 조도와 방향을 남긴 현장 기록",
+        "date_label": "2026.03.28",
+        "summary": "작품별 조명 방향과 밝기를 다시 확인할 수 있는 현장 메모입니다.",
+        "description": "조명 기록은 작품 표면의 반응과 관람 동선을 함께 설명합니다. 이 자료는 설치 판단을 복원하기 위한 현장 증거로 사용됩니다."
+      },
+      "press_release": {
+        "title": "보도자료 원문",
+        "subtitle": "전시 공개 시점의 설명 문서",
+        "date_label": "2026.04.01",
+        "summary": "전시가 처음 외부에 설명된 방식을 확인할 수 있는 공개 문서입니다.",
+        "description": "보도자료는 전시 언어가 공개되는 첫 문서입니다. 이후 큐레이터 노트와 기록 문장 사이의 차이를 읽기 위한 기준점으로 보존됩니다."
+      }
+    },
+    "filters": {
+      "ready_kicker": "필터 구조",
+      "sort_label": "정렬 기준",
+      "sort": {
+        "date_desc": "최신 기록순",
+        "date_asc": "오래된 기록순",
+        "title": "제목순"
+      }
+    },
+    "tags": {
+      "light": "빛",
+      "curatorial": "큐레이션",
+      "essay": "에세이",
+      "exhibition-context": "전시 맥락",
+      "field": "현장",
+      "installation": "설치",
+      "space": "공간",
+      "lighting": "조명",
+      "movement": "동선",
+      "process": "과정",
+      "document": "문서",
+      "studio": "작업실",
+      "editing": "편집",
+      "research": "연구",
+      "future-exhibition": "예정 전시",
+      "timeline": "타임라인",
+      "photo": "사진",
+      "field-record": "현장 기록",
+      "archive": "아카이브",
+      "press": "보도자료",
+      "context": "맥락"
+    },
+    "admin": {
+      "dashboard": {
+        "kicker": "Gallery Admin",
+        "title": "갤러리 콘텐츠 운영",
+        "lead": "전시, 항목, 기록, 자료, 컬렉션의 작성 상태와 관계 완성도를 함께 점검하는 운영 구조입니다.",
+        "content_overview": "콘텐츠 개요",
+        "status_summary": "공개 상태 요약",
+        "quick_actions": "빠른 작성 링크"
+      },
+      "sections": {
+        "exhibitions": "전시",
+        "items": "전시 항목",
+        "records": "기록 노트",
+        "archive_materials": "아카이브 자료",
+        "collections": "컬렉션",
+        "taxonomy": "분류와 태그",
+        "relationships": "관계"
+      },
+      "pages": {
+        "exhibitions": {
+          "kicker": "Exhibitions",
+          "title": "전시 관리",
+          "lead": "전시의 신원, 기간, 큐레이터 노트, 공개 상태와 관련 자료를 준비합니다."
+        },
+        "items": {
+          "kicker": "Items",
+          "title": "전시 항목 관리",
+          "lead": "작품, 문서, 설치 자료, 사진, 오브젝트를 전시 맥락 안에서 관리합니다."
+        },
+        "records": {
+          "kicker": "Record Notes",
+          "title": "기록 노트 관리",
+          "lead": "큐레이터 노트, 현장 노트, 설치 노트, 과정 노트, 연구 노트를 작성합니다."
+        },
+        "archive_materials": {
+          "kicker": "Archive Materials",
+          "title": "아카이브 자료 관리",
+          "lead": "이미지, 문서, 인터뷰, 보도자료, 현장 자료를 출처와 권리 정보와 함께 정리합니다."
+        },
+        "relationships": {
+          "kicker": "Relationships",
+          "title": "관계 검토",
+          "lead": "전시와 항목, 기록, 자료, 컬렉션 사이의 누락된 연결을 점검합니다."
+        }
+      },
+      "forms": {
+        "exhibition": {
+          "kicker": "Exhibition Form",
+          "title": "전시 작성 구조",
+          "lead": "전시 공개를 위한 기본 정보와 관계 설정을 나누어 준비합니다."
+        },
+        "item": {
+          "kicker": "Item Form",
+          "title": "전시 항목 작성 구조",
+          "lead": "작품과 자료의 물성, 이미지, 전시 맥락, 관련 기록을 함께 준비합니다."
+        },
+        "record": {
+          "kicker": "Record Form",
+          "title": "기록 노트 작성 구조",
+          "lead": "장문 기록과 관계 정보를 분리해 이후 API 저장 구조로 옮기기 쉽게 준비합니다."
+        },
+        "archive_material": {
+          "kicker": "Archive Material Form",
+          "title": "아카이브 자료 작성 구조",
+          "lead": "자료의 출처, 권리, 식별자, 관련 전시와 기록을 함께 입력하는 구조입니다."
+        },
+        "sections": {
+          "identity": {
+            "kicker": "Identity",
+            "title": "기본 식별 정보",
+            "body": "제목, 부제, 슬러그처럼 모든 콘텐츠 유형이 공유하는 기본 식별자를 준비합니다."
+          },
+          "period_location": {
+            "kicker": "Period / Location",
+            "title": "기간과 장소",
+            "body": "전시 기간, 공간, 공개 예정일을 분리해 향후 일정과 타임라인에 연결합니다."
+          },
+          "curator_note": {
+            "kicker": "Curator Note",
+            "title": "큐레이터 노트",
+            "body": "전시를 읽는 관점과 요약을 별도 기록으로 보존합니다."
+          },
+          "sections": {
+            "kicker": "Sections",
+            "title": "전시 섹션",
+            "body": "전시장 흐름과 향후 작품 삽입 위치를 섹션 단위로 관리합니다."
+          },
+          "publication": {
+            "kicker": "Publication",
+            "title": "공개 설정",
+            "body": "초안, 공개, 비공개, 예약 공개 상태와 태그를 관리합니다."
+          },
+          "relationships": {
+            "kicker": "Relationships",
+            "title": "관련 콘텐츠",
+            "body": "항목, 기록, 아카이브 자료와의 연결을 전시 단위로 준비합니다."
+          },
+          "object_metadata": {
+            "kicker": "Object Metadata",
+            "title": "작가와 물성 정보",
+            "body": "작가명, 제작연도, 재료, 크기 같은 카탈로그 정보를 분리합니다."
+          },
+          "media_visual": {
+            "kicker": "Media",
+            "title": "이미지와 크레딧",
+            "body": "썸네일, 상세 이미지, 크레딧을 이후 파일 저장 구조와 연결할 수 있게 둡니다."
+          },
+          "exhibition_context": {
+            "kicker": "Exhibition Context",
+            "title": "전시 맥락",
+            "body": "소속 전시, 섹션, 컬렉션 기준을 항목 정보와 함께 관리합니다."
+          },
+          "archive_relationships": {
+            "kicker": "Archive Relationships",
+            "title": "기록과 자료 연결",
+            "body": "항목이 참조하는 기록 노트와 아카이브 자료를 준비합니다."
+          },
+          "author_date": {
+            "kicker": "Author / Date",
+            "title": "작성자와 기록일",
+            "body": "작성자, 기록일, 공개일을 장문 기록의 메타데이터로 분리합니다."
+          },
+          "body_sections": {
+            "kicker": "Body Sections",
+            "title": "본문 섹션",
+            "body": "긴 기록을 제목과 본문 단락의 반복 구조로 준비합니다."
+          },
+          "record_relationships": {
+            "kicker": "Record Relationships",
+            "title": "기록 관계",
+            "body": "기록이 설명하는 전시, 항목, 자료를 연결합니다."
+          },
+          "source_rights": {
+            "kicker": "Source / Rights",
+            "title": "출처와 권리",
+            "body": "자료의 출처, 권리, 식별자를 보존 메타데이터로 관리합니다."
+          },
+          "document_metadata": {
+            "kicker": "Document Metadata",
+            "title": "자료 형식",
+            "body": "자료 형식, 날짜 표기, 이미지 또는 문서 위치를 분리합니다."
+          },
+          "material_relationships": {
+            "kicker": "Material Relationships",
+            "title": "자료 관계",
+            "body": "자료가 연결되는 전시, 항목, 기록을 함께 검토합니다."
+          }
+        },
+        "fields": {
+          "title": {
+            "label": "필드: title",
+            "placeholder": "향후 title 값을 입력합니다."
+          },
+          "subtitle": {
+            "label": "필드: subtitle",
+            "placeholder": "향후 subtitle 값을 입력합니다."
+          },
+          "slug": {
+            "label": "필드: slug",
+            "placeholder": "향후 slug 값을 입력합니다."
+          },
+          "period": {
+            "label": "필드: period",
+            "placeholder": "향후 period 값을 입력합니다."
+          },
+          "location": {
+            "label": "필드: location",
+            "placeholder": "향후 location 값을 입력합니다."
+          },
+          "published_at": {
+            "label": "필드: published at",
+            "placeholder": "향후 published at 값을 입력합니다."
+          },
+          "curator_summary": {
+            "label": "필드: curator summary",
+            "placeholder": "향후 curator summary 값을 입력합니다."
+          },
+          "curator_note": {
+            "label": "필드: curator note",
+            "placeholder": "향후 curator note 값을 입력합니다."
+          },
+          "section_title": {
+            "label": "필드: section title",
+            "placeholder": "향후 section title 값을 입력합니다."
+          },
+          "section_body": {
+            "label": "필드: section body",
+            "placeholder": "향후 section body 값을 입력합니다."
+          },
+          "section_order": {
+            "label": "필드: section order",
+            "placeholder": "향후 section order 값을 입력합니다."
+          },
+          "featured": {
+            "label": "필드: featured",
+            "placeholder": "향후 featured 값을 입력합니다."
+          },
+          "visibility_state": {
+            "label": "필드: visibility state",
+            "placeholder": "향후 visibility state 값을 입력합니다."
+          },
+          "tags": {
+            "label": "필드: tags",
+            "placeholder": "향후 tags 값을 입력합니다."
+          },
+          "related_items": {
+            "label": "필드: related items",
+            "placeholder": "향후 related items 값을 입력합니다."
+          },
+          "related_records": {
+            "label": "필드: related records",
+            "placeholder": "향후 related records 값을 입력합니다."
+          },
+          "related_archive_materials": {
+            "label": "필드: related archive materials",
+            "placeholder": "향후 related archive materials 값을 입력합니다."
+          },
+          "artist_name": {
+            "label": "필드: artist name",
+            "placeholder": "향후 artist name 값을 입력합니다."
+          },
+          "year": {
+            "label": "필드: year",
+            "placeholder": "향후 year 값을 입력합니다."
+          },
+          "medium": {
+            "label": "필드: medium",
+            "placeholder": "향후 medium 값을 입력합니다."
+          },
+          "dimensions": {
+            "label": "필드: dimensions",
+            "placeholder": "향후 dimensions 값을 입력합니다."
+          },
+          "thumbnail_image": {
+            "label": "필드: thumbnail image",
+            "placeholder": "향후 thumbnail image 값을 입력합니다."
+          },
+          "detail_image": {
+            "label": "필드: detail image",
+            "placeholder": "향후 detail image 값을 입력합니다."
+          },
+          "credit_line": {
+            "label": "필드: credit line",
+            "placeholder": "향후 credit line 값을 입력합니다."
+          },
+          "exhibition_slug": {
+            "label": "필드: exhibition slug",
+            "placeholder": "향후 exhibition slug 값을 입력합니다."
+          },
+          "section_id": {
+            "label": "필드: section id",
+            "placeholder": "향후 section id 값을 입력합니다."
+          },
+          "collection_name": {
+            "label": "필드: collection name",
+            "placeholder": "향후 collection name 값을 입력합니다."
+          },
+          "archive_category": {
+            "label": "필드: archive category",
+            "placeholder": "향후 archive category 값을 입력합니다."
+          },
+          "record_type": {
+            "label": "필드: record type",
+            "placeholder": "향후 record type 값을 입력합니다."
+          },
+          "author_name": {
+            "label": "필드: author name",
+            "placeholder": "향후 author name 값을 입력합니다."
+          },
+          "recorded_at": {
+            "label": "필드: recorded at",
+            "placeholder": "향후 recorded at 값을 입력합니다."
+          },
+          "body_heading": {
+            "label": "필드: body heading",
+            "placeholder": "향후 body heading 값을 입력합니다."
+          },
+          "body_text": {
+            "label": "필드: body text",
+            "placeholder": "향후 body text 값을 입력합니다."
+          },
+          "private_note": {
+            "label": "필드: private note",
+            "placeholder": "향후 private note 값을 입력합니다."
+          },
+          "related_exhibition": {
+            "label": "필드: related exhibition",
+            "placeholder": "향후 related exhibition 값을 입력합니다."
+          },
+          "source": {
+            "label": "필드: source",
+            "placeholder": "향후 source 값을 입력합니다."
+          },
+          "rights": {
+            "label": "필드: rights",
+            "placeholder": "향후 rights 값을 입력합니다."
+          },
+          "identifier": {
+            "label": "필드: identifier",
+            "placeholder": "향후 identifier 값을 입력합니다."
+          },
+          "format": {
+            "label": "필드: format",
+            "placeholder": "향후 format 값을 입력합니다."
+          },
+          "date_label": {
+            "label": "필드: date label",
+            "placeholder": "향후 date label 값을 입력합니다."
+          },
+          "image": {
+            "label": "필드: image",
+            "placeholder": "향후 image 값을 입력합니다."
+          }
+        }
+      },
+      "types": {
+        "exhibition": "전시",
+        "item": "항목",
+        "record": "기록",
+        "archive_material": "아카이브 자료",
+        "collection": "컬렉션"
+      },
+      "status": {
+        "published": "공개",
+        "draft": "초안",
+        "private": "비공개",
+        "scheduled": "예약 공개"
+      },
+      "relationship": {
+        "complete": "관계 완성",
+        "needs_records": "기록 연결 필요",
+        "needs_archive": "자료 연결 필요",
+        "needs_exhibition": "전시 연결 필요",
+        "needs_items": "항목 연결 필요",
+        "review_needed": "검토 필요",
+        "gap": "관계 누락",
+        "warnings": "관계 경고"
+      },
+      "content": {
+        "exhibitions": {
+          "title": "빛이 지나간 자리의 기록",
+          "subtitle": "현재 공개 전시와 대표 전시 설정이 연결되어 있습니다."
+        },
+        "items": {
+          "title": "희미한 격자 01",
+          "subtitle": "작품 메타데이터는 있으나 연결 기록 보강이 필요합니다."
+        },
+        "records": {
+          "title": "자료를 읽는 방식",
+          "subtitle": "큐레이터 노트와 항목 관계가 공개 상태로 준비되었습니다."
+        },
+        "archive_materials": {
+          "title": "설치 사진 묶음",
+          "subtitle": "출처와 식별자는 있으나 전시 관계 검토가 필요합니다."
+        },
+        "collections": {
+          "title": "프로젝트 자료 묶음",
+          "subtitle": "컬렉션 항목 연결을 준비 중입니다."
+        }
+      },
+      "related": {
+        "main_exhibition": "대표 전시 연결",
+        "installation_item": "설치 항목 연결",
+        "archive_category": "자료 유형 분류",
+        "collection_axis": "컬렉션 축"
+      },
+      "dates": {
+        "may_02": "2026년 5월 2일 수정",
+        "may_01": "2026년 5월 1일 수정",
+        "apr_30": "2026년 4월 30일 수정",
+        "apr_29": "2026년 4월 29일 수정",
+        "apr_28": "2026년 4월 28일 수정"
+      },
+      "actions": {
+        "create_exhibition": "전시 작성",
+        "create_item": "항목 작성",
+        "create_record": "기록 작성",
+        "create_archive_material": "자료 작성",
+        "review_relationships": "관계 검토",
+        "edit": "편집"
+      },
+      "filters": {
+        "ready": "필터 준비 구조",
+        "body": "상태, 유형, 관계 완성도, 수정일, 공개 상태 기준을 이후 API 필터로 옮길 수 있게 둡니다.",
+        "status": "상태",
+        "type": "유형",
+        "relationship": "관계",
+        "updated": "수정일",
+        "publication": "공개 설정"
+      },
+      "relationships": {
+        "summary": "관계 구조 요약",
+        "exhibition_items": {
+          "title": "전시에서 항목으로",
+          "body": "전시는 작품과 문서, 설치 자료를 섹션 단위로 묶습니다."
+        },
+        "item_records": {
+          "title": "항목에서 기록으로",
+          "body": "항목은 큐레이터 노트와 현장 노트를 통해 해석 맥락을 얻습니다."
+        },
+        "item_archive": {
+          "title": "항목에서 자료로",
+          "body": "항목은 사진, 문서, 조명 기록 같은 증거 자료와 연결됩니다."
+        },
+        "record_archive": {
+          "title": "기록에서 자료로",
+          "body": "기록은 인용하거나 설명하는 원자료와 다시 연결됩니다."
+        },
+        "archive_context": {
+          "title": "자료에서 전시와 항목으로",
+          "body": "아카이브 자료는 단독 파일이 아니라 전시와 항목의 증거가 됩니다."
+        },
+        "collection_items": {
+          "title": "컬렉션에서 항목으로",
+          "body": "컬렉션은 항목을 보존, 연구, 프로젝트 기준으로 다시 묶습니다."
+        }
+      },
+      "gaps": {
+        "item_missing_record": {
+          "title": "항목에 연결된 기록이 부족합니다",
+          "body": "작품 항목은 공개 준비 상태지만 관련 기록 노트가 한 개뿐입니다.",
+          "action": "항목 편집으로 이동"
+        },
+        "archive_missing_exhibition": {
+          "title": "자료의 전시 관계가 불완전합니다",
+          "body": "아카이브 자료는 식별자를 갖고 있지만 연결 전시 검토가 필요합니다.",
+          "action": "자료 편집으로 이동"
+        },
+        "collection_missing_items": {
+          "title": "컬렉션 항목 연결이 비어 있습니다",
+          "body": "컬렉션 구조는 있으나 포함 항목이 아직 확정되지 않았습니다.",
+          "action": "관계 검토로 이동"
+        }
+      }
+    }
+  },
+  "common": {
+    "search_placeholder": "검색"
+  },
+  "nav": {
+    "home": "홈",
+    "all_boards": "전체 게시판",
+    "popular": "인기글",
+    "qna": "질문답변"
+  },
+  "auth": {
+    "login": "로그인",
+    "register_link": "회원가입",
+    "logout": "로그아웃",
+    "roles": {
+      "member": "회원",
+      "admin": "관리자",
+      "curator": "큐레이터",
+      "moderator": "운영자",
+      "guest": "방문자"
+    },
+    "menu": {
+      "admin": "관리자",
+      "management_board": "관리 보드",
+      "gallery_management": "갤러리 관리",
+      "mypage": "마이페이지",
+      "language": "언어",
+      "language_ko": "한국어",
+      "language_en": "English"
+    },
+    "login_page": {
+      "meta_title": "로그인",
+      "kicker": "PUBLIC ARCHIVE ACCESS",
+      "title": "Gallery Bz Beta2",
+      "subtitle": "공개 아카이브의 보존 기록과 열람 흐름을 이어가기 위한 로그인입니다.",
+      "email": "이메일",
+      "email_placeholder": "이메일",
+      "password": "비밀번호",
+      "password_placeholder": "비밀번호",
+      "submit": "로그인",
+      "submitting": "로그인 중",
+      "back_to_archive": "아카이브로 돌아가기"
+    },
+    "register_page": {
+      "meta_title": "회원가입",
+      "kicker": "PUBLIC ARCHIVE ACCESS",
+      "title": "Gallery Bz Beta2",
+      "subtitle": "공개 아카이브의 기록 열람을 이어가기 위한 기본 계정을 만듭니다.",
+      "name": "이름",
+      "name_placeholder": "이름",
+      "email": "이메일",
+      "email_placeholder": "이메일",
+      "password": "비밀번호",
+      "password_placeholder": "비밀번호",
+      "password_confirmation": "비밀번호 확인",
+      "password_confirmation_placeholder": "비밀번호 확인",
+      "submit": "회원가입",
+      "submitting": "가입 처리 중",
+      "back_to_login": "로그인으로 돌아가기"
+    }
+  },
+  "footer": {
+    "community": "커뮤니티",
+    "info": "정보",
+    "policy": "정책",
+    "about": "소개",
+    "faq": "자주 묻는 질문",
+    "contact": "문의",
+    "terms": "이용약관",
+    "privacy": "개인정보처리방침",
+    "refund": "환불 정책",
+    "powered_by": "Powered by GnuBoard7",
+    "all_boards": "전체 게시판"
+  }
+}

@@ -1,0 +1,23 @@
+<partial>
+  <section class="gallery-section gallery-section-muted">
+    <span class="gallery-kicker">$t:gallery.exhibition_detail.archive_materials_kicker</span>
+    <h2 class="gallery-section-title">$t:gallery.exhibition_detail.archive_materials_title</h2>
+    <div class="gallery-grid gallery-grid-3">
+      <a data-each="material in gallery_exhibition_detail.archive_materials" href='{{material.href ?? "/archive"}}' class="gallery-card gallery-record-link">
+        <div class="gallery-media-frame gallery-media-archive-preview gallery-media-scan">
+          <img data-if="{{material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.image ?? material.media?.url ?? false}}" src='{{(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.image ?? material.media?.url ?? "")}}' alt="{{material.title_label ?? $t(material.title_key ?? 'gallery.media.archive_material')}}" class="gallery-media-image"/>
+          <div data-if="{{!(material.preview_image ?? material.thumbnail_url ?? material.image_url ?? material.image ?? material.media?.url ?? false)}}" class="gallery-media-placeholder gallery-media-document">
+            <span class="gallery-media-placeholder-label">$t:gallery.media.archive_material</span>
+          </div>
+        </div>
+        <span class="gallery-meta">{{material.category}}</span>
+        <h3 class="gallery-card-title">{{$t(material.title_key)}}</h3>
+        <p class="gallery-card-body">{{$t(material.body_key)}}</p>
+      </a>
+    </div>
+    <div class="gallery-artwork-slot">
+      <span class="gallery-kicker">$t:gallery.exhibition_detail.artwork_slot_kicker</span>
+      <p class="gallery-muted">$t:gallery.exhibition_detail.artwork_slot_body</p>
+    </div>
+  </section>
+</partial>

@@ -1,0 +1,22 @@
+<partial>
+  <div class="gallery-exhibition-card">
+    <div class="gallery-media-frame gallery-media-secondary gallery-exhibition-cover">
+      <img data-if="{{!!(exhibition.image_url ?? exhibition.preview_image ?? exhibition.cover_image ?? exhibition.featured_image?.url ?? '')}}" src="{{(exhibition.image_url ?? exhibition.preview_image ?? exhibition.cover_image ?? exhibition.featured_image?.url ?? '')}}" alt="{{exhibition.title_label ?? $t(exhibition.title_key ?? 'gallery.media.featured_exhibition')}}" class="gallery-media-image"/>
+      <div data-if="{{!(!!(exhibition.image_url ?? exhibition.preview_image ?? exhibition.cover_image ?? exhibition.featured_image?.url ?? ''))}}" class="gallery-media-placeholder gallery-media-installation">
+        <span class="gallery-media-placeholder-label">$t:gallery.media.featured_exhibition</span>
+      </div>
+    </div>
+    <div class="gallery-exhibition-card-body">
+      <span class="gallery-meta">{{$t(exhibition.period_key)}} / {{$t(exhibition.location_key)}}</span>
+      <h2 class="gallery-record-title">{{$t(exhibition.title_key)}}</h2>
+      <p class="gallery-record-body gallery-longform-preview">{{$t(exhibition.curator_summary_key)}}</p>
+      <div data-if="{{(exhibition.relationship_meta ?? []).length > 0}}" class="gallery-relationship-row">
+        <span data-each="meta in exhibition.relationship_meta">{{meta.value !== undefined ? $t(meta.label_key) + ' ' + meta.value : $t(meta.label_key)}}</span>
+      </div>
+      <div class="gallery-record-meta-list">
+        <span data-each="tag in exhibition.tags" class="gallery-chip">{{$t("gallery.tags." + tag)}}</span>
+      </div>
+      <a href="/exhibitions/{{exhibition.slug}}" class="gallery-text-link">$t:gallery.exhibitions.read_record</a>
+    </div>
+  </div>
+</partial>

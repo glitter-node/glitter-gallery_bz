@@ -1,0 +1,8 @@
+<partial>
+  <section class="gallery-section gallery-section-tight">
+    <span class="gallery-kicker">$t:gallery.records.index.type_summary</span>
+    <div class="gallery-chip-list">
+      <span data-each="type in gallery_records_index.record_types" class="gallery-chip">{{$t(type.label_key)}} · {{type.count ?? 0}}</span>
+    </div>
+  </section>
+</partial>

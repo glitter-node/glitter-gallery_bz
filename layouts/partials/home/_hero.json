@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-hero"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-hero-panel"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Span",
+          "props": {
+            "className": "gallery-kicker"
+          },
+          "text": "$t:gallery.home.kicker"
+        },
+        {
+          "type": "basic",
+          "name": "H1",
+          "props": {
+            "className": "gallery-hero-title"
+          },
+          "text": "$t:gallery.home.title"
+        },
+        {
+          "type": "basic",
+          "name": "P",
+          "props": {
+            "className": "gallery-hero-lead"
+          },
+          "text": "$t:gallery.home.lead"
+        },
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-actions"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "A",
+              "props": {
+                "href": "/exhibitions",
+                "className": "gallery-button"
+              },
+              "text": "$t:gallery.home.primary_action"
+            },
+            {
+              "type": "basic",
+              "name": "A",
+              "props": {
+                "href": "/archive",
+                "className": "gallery-button-ghost"
+              },
+              "text": "$t:gallery.home.secondary_action"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-stat-row"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Div",
+              "props": {
+                "className": "gallery-stat"
+              },
+              "iteration": {
+                "source": "gallery_home_stats",
+                "item_var": "stat"
+              },
+              "children": [
+                {
+                  "type": "basic",
+                  "name": "Span",
+                  "props": {
+                    "className": "gallery-stat-value"
+                  },
+                  "text": "{{stat.value ?? ''}}"
+                },
+                {
+                  "type": "basic",
+                  "name": "Span",
+                  "props": {
+                    "className": "gallery-stat-label"
+                  },
+                  "text": "{{$t(stat.label_key)}}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

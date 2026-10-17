@@ -1,0 +1,118 @@
+{
+  "version": "1.0.0",
+  "layout_name": "collections",
+  "permissions": [],
+  "extends": "_user_base",
+  "data_sources": [
+    {
+      "id": "gallery_collections",
+      "type": "static",
+      "data": [
+        {
+          "id": "held-works",
+          "index": "01",
+          "title_key": "gallery.collections.items.held_works.title",
+          "body_key": "gallery.collections.items.held_works.body",
+          "visibility": "public"
+        },
+        {
+          "id": "project-records",
+          "index": "02",
+          "title_key": "gallery.collections.items.project_records.title",
+          "body_key": "gallery.collections.items.project_records.body",
+          "visibility": "public"
+        },
+        {
+          "id": "research-notes",
+          "index": "03",
+          "title_key": "gallery.collections.items.research_notes.title",
+          "body_key": "gallery.collections.items.research_notes.body",
+          "visibility": "public"
+        }
+      ]
+    }
+  ],
+  "slots": {
+    "content": [
+      {
+        "type": "basic",
+        "name": "Section",
+        "props": {
+          "className": "gallery-page-head"
+        },
+        "children": [
+          {
+            "type": "basic",
+            "name": "Span",
+            "props": {
+              "className": "gallery-kicker"
+            },
+            "text": "$t:gallery.collections.kicker"
+          },
+          {
+            "type": "basic",
+            "name": "H1",
+            "props": {
+              "className": "gallery-page-title"
+            },
+            "text": "$t:gallery.collections.title"
+          },
+          {
+            "type": "basic",
+            "name": "P",
+            "props": {
+              "className": "gallery-page-lead"
+            },
+            "text": "$t:gallery.collections.lead"
+          }
+        ]
+      },
+      {
+        "type": "basic",
+        "name": "Section",
+        "props": {
+          "className": "gallery-collection-grid"
+        },
+        "children": [
+          {
+            "type": "basic",
+            "name": "Div",
+            "props": {
+              "className": "gallery-collection-card"
+            },
+            "iteration": {
+              "source": "gallery_collections",
+              "item_var": "collection"
+            },
+            "children": [
+              {
+                "type": "basic",
+                "name": "Span",
+                "props": {
+                  "className": "gallery-collection-index"
+                },
+                "text": "{{collection.index ?? \"\"}}"
+              },
+              {
+                "type": "basic",
+                "name": "H2",
+                "props": {
+                  "className": "gallery-card-title"
+                },
+                "text": "{{$t(collection.title_key)}}"
+              },
+              {
+                "type": "basic",
+                "name": "P",
+                "props": {
+                  "className": "gallery-card-body"
+                },
+                "text": "{{$t(collection.body_key)}}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

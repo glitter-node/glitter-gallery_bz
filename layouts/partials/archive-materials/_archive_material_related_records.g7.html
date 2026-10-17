@@ -1,0 +1,12 @@
+<partial>
+  <section class="gallery-section">
+    <span class="gallery-kicker">$t:gallery.archive_materials.related_records</span>
+    <div class="gallery-list">
+      <a data-each="record in gallery_archive_material_detail.related_records" href='{{record.href ?? "/records"}}' class="gallery-record gallery-record-link">
+        <span class="gallery-meta">{{record.type}}</span>
+        <h3 class="gallery-record-title">{{$t(record.title_key)}}</h3>
+        <p class="gallery-record-body">{{$t(record.summary_key)}}</p>
+      </a>
+    </div>
+  </section>
+</partial>

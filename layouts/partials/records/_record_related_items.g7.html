@@ -1,0 +1,12 @@
+<partial>
+  <section class="gallery-section gallery-section-muted">
+    <span class="gallery-kicker">$t:gallery.records.related_items</span>
+    <div class="gallery-list">
+      <a data-each="item in gallery_record_detail.related_items" href='{{item.href ?? "/items"}}' class="gallery-record gallery-record-link">
+        <span class="gallery-meta">{{item.type}} / {{item.year ?? ""}}</span>
+        <h3 class="gallery-record-title">{{$t(item.title_key)}}</h3>
+        <p class="gallery-record-body">{{$t(item.artist_name_key)}} / {{$t(item.medium_key)}}</p>
+      </a>
+    </div>
+  </section>
+</partial>

@@ -1,0 +1,11 @@
+<partial>
+  <section class="gallery-section gallery-section-tight">
+    <span class="gallery-kicker">$t:gallery.admin.dashboard.status_summary</span>
+    <div class="gallery-grid gallery-grid-4 gallery-admin-status-grid">
+      <div data-each="status in admin_gallery.status_summary" class="gallery-stat">
+        <span class="gallery-stat-value">{{status.count ?? 0}}</span>
+        <span class="gallery-stat-label">{{$t(status.label_key)}}</span>
+      </div>
+    </div>
+  </section>
+</partial>

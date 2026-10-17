@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "layout_name": "errors/401",
+  "extends": "_user_base",
+  "slots": {
+    "content": [
+      {
+        "type": "basic",
+        "name": "Section",
+        "props": {
+          "className": "gallery-error"
+        },
+        "children": [
+          {
+            "type": "basic",
+            "name": "Span",
+            "props": {
+              "className": "gallery-kicker"
+            },
+            "text": "$t:gallery.errors.unauthorized_code"
+          },
+          {
+            "type": "basic",
+            "name": "H1",
+            "text": "$t:gallery.errors.unauthorized_title"
+          },
+          {
+            "type": "basic",
+            "name": "P",
+            "text": "$t:gallery.errors.unauthorized_body"
+          }
+        ]
+      }
+    ]
+  }
+}

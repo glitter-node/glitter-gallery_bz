@@ -1,0 +1,12 @@
+<partial>
+  <section class="gallery-section gallery-section-tight gallery-home-section">
+    <div class="gallery-home-section-inner">
+      <span class="gallery-kicker">$t:gallery.home.archive_categories_compact.kicker</span>
+      <h2 class="gallery-section-title">$t:gallery.home.archive_categories_compact.title</h2>
+      <div class="gallery-home-category-chips">
+        <a data-each="category in {{(gallery_home.data?.archive_categories ?? gallery_home.archive_categories ?? []).slice(0, 6)}}" href='{{category.href ?? "/archive"}}' class="gallery-chip">{{$t(category.label_key ?? ('gallery.archive.categories.' + (category.slug ?? category.category ?? 'material') + '.title'))}}</a>
+        <p data-if="{{((gallery_home.data?.archive_categories ?? gallery_home.archive_categories ?? []).slice(0, 6)).length == 0}}" class="gallery-muted">$t:gallery.home.archive_categories_compact.empty</p>
+      </div>
+    </div>
+  </section>
+</partial>

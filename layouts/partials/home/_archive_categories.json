@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-section gallery-section-muted"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Span",
+      "props": {
+        "className": "gallery-kicker"
+      },
+      "text": "$t:gallery.home.archive_kicker"
+    },
+    {
+      "type": "basic",
+      "name": "H2",
+      "props": {
+        "className": "gallery-section-title"
+      },
+      "text": "$t:gallery.home.archive_title"
+    },
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-grid-3"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "{{category.card_class ?? 'gallery-card'}}"
+          },
+          "iteration": {
+            "source": "gallery_archive_categories",
+            "item_var": "category"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-meta"
+              },
+              "text": "{{$t(category.meta_key)}}"
+            },
+            {
+              "type": "basic",
+              "name": "H3",
+              "props": {
+                "className": "gallery-card-title"
+              },
+              "text": "{{$t(category.title_key)}}"
+            },
+            {
+              "type": "basic",
+              "name": "P",
+              "props": {
+                "className": "gallery-card-body"
+              },
+              "text": "{{$t(category.body_key)}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

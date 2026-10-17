@@ -1,0 +1,13 @@
+<partial>
+  <section class="gallery-section gallery-section-muted">
+    <span class="gallery-kicker">$t:gallery.exhibition_detail.curator_note</span>
+    <p class="gallery-body-lg gallery-curator-note">{{$t(gallery_exhibition_detail.curator_note_key)}}</p>
+    <div class="gallery-list gallery-section-list">
+      <div data-each="section in gallery_exhibition_detail.sections" class="gallery-record">
+        <span class="gallery-meta">{{section.id}}</span>
+        <h2 class="gallery-record-title">{{$t(section.title_key)}}</h2>
+        <p class="gallery-record-body">{{$t(section.body_key)}}</p>
+      </div>
+    </div>
+  </section>
+</partial>

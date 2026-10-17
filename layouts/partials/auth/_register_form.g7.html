@@ -1,0 +1,30 @@
+<partial>
+  <form data-key="registerForm" class="gallery-auth-form">
+    <div data-if="{{_local.registerError}}" class="gallery-auth-error">
+      <p>{{_local.registerError}}</p>
+    </div>
+    <div class="gallery-auth-field">
+      <label for="register_name" class="gallery-auth-label">$t:auth.register_page.name</label>
+      <input id="register_name" name="name" type="text" autoComplete="name" :required="true" disabled="{{_local.isRegistering}}" placeholder="$t:auth.register_page.name_placeholder" class="gallery-auth-input"/>
+      <p data-if="{{_local.registerErrors?.name}}" class="gallery-auth-field-error">{{Array.isArray(_local.registerErrors?.name) ? _local.registerErrors.name[0] : _local.registerErrors?.name}}</p>
+    </div>
+    <div class="gallery-auth-field">
+      <label for="register_email" class="gallery-auth-label">$t:auth.register_page.email</label>
+      <input id="register_email" name="email" type="email" autoComplete="email" :required="true" disabled="{{_local.isRegistering}}" placeholder="$t:auth.register_page.email_placeholder" class="gallery-auth-input"/>
+      <p data-if="{{_local.registerErrors?.email}}" class="gallery-auth-field-error">{{Array.isArray(_local.registerErrors?.email) ? _local.registerErrors.email[0] : _local.registerErrors?.email}}</p>
+    </div>
+    <div class="gallery-auth-field">
+      <label for="register_password" class="gallery-auth-label">$t:auth.register_page.password</label>
+      <input id="register_password" name="password" type="password" autoComplete="new-password" :required="true" disabled="{{_local.isRegistering}}" placeholder="$t:auth.register_page.password_placeholder" class="gallery-auth-input"/>
+      <p data-if="{{_local.registerErrors?.password}}" class="gallery-auth-field-error">{{Array.isArray(_local.registerErrors?.password) ? _local.registerErrors.password[0] : _local.registerErrors?.password}}</p>
+    </div>
+    <div class="gallery-auth-field">
+      <label for="register_password_confirmation" class="gallery-auth-label">$t:auth.register_page.password_confirmation</label>
+      <input id="register_password_confirmation" name="password_confirmation" type="password" autoComplete="new-password" :required="true" disabled="{{_local.isRegistering}}" placeholder="$t:auth.register_page.password_confirmation_placeholder" class="gallery-auth-input"/>
+      <p data-if="{{_local.registerErrors?.password_confirmation}}" class="gallery-auth-field-error">{{Array.isArray(_local.registerErrors?.password_confirmation) ? _local.registerErrors.password_confirmation[0] : _local.registerErrors?.password_confirmation}}</p>
+    </div>
+    <button type="submit" class="gallery-auth-submit" disabled="{{_local.isRegistering}}">{{_local.isRegistering ? $t('auth.register_page.submitting') : $t('auth.register_page.submit')}}</button>
+    <a href="/login" class="gallery-auth-back-link">$t:auth.register_page.back_to_login</a>
+    <json key="actions">[{"type":"submit","handler":"sequence","actions":[{"handler":"setState","params":{"target":"local","isRegistering":true,"registerError":null,"registerErrors":null}},{"handler":"apiCall","target":"/api/auth/register","params":{"method":"POST","body":{"name":"{{_local.registerForm.name}}","email":"{{_local.registerForm.email}}","password":"{{_local.registerForm.password}}","password_confirmation":"{{_local.registerForm.password_confirmation}}"}},"onSuccess":[{"handler":"setState","params":{"target":"local","isRegistering":false}},{"handler":"navigate","target":"{{query.redirect || '/'}}"}],"onError":[{"handler":"setState","params":{"target":"local","isRegistering":false,"registerError":"{{error.message}}","registerErrors":"{{error.errors}}"}}]}]}]</json>
+  </form>
+</partial>

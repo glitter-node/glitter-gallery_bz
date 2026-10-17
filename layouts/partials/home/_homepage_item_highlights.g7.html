@@ -1,0 +1,23 @@
+<partial>
+  <section class="gallery-section gallery-home-section">
+    <div class="gallery-home-section-inner">
+      <span class="gallery-kicker">$t:gallery.home.item_highlights.kicker</span>
+      <h2 class="gallery-section-title">$t:gallery.home.item_highlights.title</h2>
+      <div class="gallery-home-item-strip">
+        <a data-each="item in {{((gallery_home.data?.highlighted_items ?? gallery_home.highlighted_items ?? []).length > 0 ? (gallery_home.data?.highlighted_items ?? gallery_home.highlighted_items ?? []) : (gallery_home_item_highlights_fallback ?? [])).slice(0, 3)}}" href='{{item.href ?? "/items"}}' class="gallery-home-item-card">
+          <div class="gallery-media-frame gallery-media-thumbnail gallery-home-media-standard">
+            <img data-if="{{!!(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '') &amp;&amp; !(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '').startsWith('/images/gallery/') &amp;&amp; !(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '').startsWith('images/gallery/') &amp;&amp; !(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '').startsWith('/api/templates/assets/glitter-gallery_bz/images/gallery/')}}" src="{{(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '')}}" alt="{{item.title_label ?? $t(item.title_key ?? 'gallery.home.item_highlights.empty_title')}}" class="gallery-media-image" loading="lazy" decoding="async" :width="900" :height="900"/>
+            <div data-if="{{!(!!(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '') &amp;&amp; !(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '').startsWith('/images/gallery/') &amp;&amp; !(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '').startsWith('images/gallery/') &amp;&amp; !(item.thumbnail_url ?? item.image_url ?? item.preview_image ?? item.thumbnail_media?.url ?? item.visual?.url ?? '').startsWith('/api/templates/assets/glitter-gallery_bz/images/gallery/'))}}" class="gallery-media-placeholder gallery-media-placeholder-small">
+              <span class="gallery-media-placeholder-label">$t:gallery.media.item_thumbnail</span>
+            </div>
+          </div>
+          <span class="gallery-meta">{{$t(item.type_label_key ?? item.label_key ?? 'gallery.home.item_highlights.labels.artwork')}}</span>
+          <h3 class="gallery-card-title">{{item.title_label ?? $t(item.title_key ?? 'gallery.home.item_highlights.empty_title')}}</h3>
+          <p class="gallery-card-body">{{item.artist_label ?? $t(item.artist_name_key ?? 'gallery.home.item_highlights.empty_meta')}} · {{item.year_label ?? item.year ?? ''}} · {{item.medium_label ?? $t(item.medium_key ?? 'gallery.home.item_highlights.empty_meta')}}</p>
+          <p class="gallery-muted">{{item.summary_label ?? $t(item.relation_key ?? 'gallery.home.item_highlights.empty_relation')}}</p>
+        </a>
+        <p data-if="{{(((gallery_home.data?.highlighted_items ?? gallery_home.highlighted_items ?? []).length > 0 ? (gallery_home.data?.highlighted_items ?? gallery_home.highlighted_items ?? []) : (gallery_home_item_highlights_fallback ?? [])).slice(0, 3)).length == 0}}" class="gallery-muted">$t:gallery.home.item_highlights.empty</p>
+      </div>
+    </div>
+  </section>
+</partial>

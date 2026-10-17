@@ -1,0 +1,10 @@
+<partial>
+  <section class="gallery-section">
+    <span class="gallery-kicker">$t:gallery.archive_materials.related_exhibition</span>
+    <a href='{{gallery_archive_material_detail.related_exhibition.href ?? "/exhibitions"}}' class="gallery-record gallery-record-link">
+      <span class="gallery-meta">{{gallery_archive_material_detail.exhibition_slug}}</span>
+      <h2 class="gallery-record-title">{{$t(gallery_archive_material_detail.related_exhibition.title_key)}}</h2>
+      <p class="gallery-record-body">{{$t(gallery_archive_material_detail.related_exhibition.summary_key)}}</p>
+    </a>
+  </section>
+</partial>

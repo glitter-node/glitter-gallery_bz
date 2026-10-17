@@ -1,0 +1,20 @@
+<partial>
+  <section class="gallery-section">
+    <span class="gallery-kicker">$t:gallery.exhibition_detail.timeline_references</span>
+    <h2 class="gallery-section-title">$t:gallery.exhibition_detail.timeline_references_title</h2>
+    <div class="gallery-list gallery-timeline-list">
+      <div data-each="event in gallery_exhibition_detail.timeline_references" class="gallery-record">
+        <span class="gallery-meta">{{$t(event.date_key)}}</span>
+        <h3 class="gallery-record-title">{{$t(event.title_key)}}</h3>
+        <p class="gallery-record-body">{{$t(event.body_key)}}</p>
+      </div>
+    </div>
+    <div class="gallery-grid gallery-grid-2">
+      <a data-each="collection in gallery_exhibition_detail.related_collections" href='{{collection.href ?? "/collections"}}' class="gallery-card gallery-record-link">
+        <span class="gallery-meta">$t:gallery.exhibition_detail.related_collections</span>
+        <h3 class="gallery-card-title">{{$t(collection.title_key)}}</h3>
+        <p class="gallery-card-body">{{$t(collection.body_key)}}</p>
+      </a>
+    </div>
+  </section>
+</partial>

@@ -1,0 +1,47 @@
+<partial>
+  <section class="gallery-section gallery-section-muted gallery-home-section">
+    <div class="gallery-feature-split">
+      <div>
+        <span class="gallery-kicker">$t:gallery.home.records.kicker</span>
+        <h2 class="gallery-section-title">$t:gallery.home.records.title</h2>
+        <p class="gallery-body-lg">$t:gallery.home.records.body</p>
+      </div>
+      <div class="gallery-note-list">
+        <a data-each="record in {{(gallery_home.data?.recent_records ?? gallery_home.recent_records ?? []).slice(0, 3)}}" href='{{record.href ?? "/records"}}' class="gallery-note gallery-home-record-note">
+          <div class="gallery-media-frame gallery-media-record-note gallery-home-media-note">
+            <img data-if="{{!!(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '') &amp;&amp; !(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '').startsWith('/images/gallery/') &amp;&amp; !(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '').startsWith('images/gallery/') &amp;&amp; !(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '').startsWith('/api/templates/assets/glitter-gallery_bz/images/gallery/')}}" src="{{(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '')}}" alt="{{record.title_label ?? $t(record.title_key ?? 'gallery.home.records.empty_title')}}" class="gallery-media-image"/>
+            <div data-if="{{!(!!(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '') &amp;&amp; !(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '').startsWith('/images/gallery/') &amp;&amp; !(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '').startsWith('images/gallery/') &amp;&amp; !(record.image_url ?? record.thumbnail_url ?? record.preview_image ?? '').startsWith('/api/templates/assets/glitter-gallery_bz/images/gallery/'))}}" class="gallery-media-placeholder gallery-media-placeholder-small">
+              <span class="gallery-media-placeholder-label">$t:gallery.media.record_note</span>
+            </div>
+          </div>
+          <span class="gallery-meta">{{record.recorded_at_display ?? $t(record.date_key ?? 'gallery.home.records.empty_date')}} · {{$t(record.type_label_key ?? 'gallery.home.records.empty_type')}}</span>
+          <div class="gallery-home-record-hierarchy">
+            <span class="gallery-quiet-label">$t:gallery.home.records.labels.record_type</span>
+            <span class="gallery-quiet-value">{{$t(record.type_label_key ?? 'gallery.home.records.empty_type')}}</span>
+          </div>
+          <h3 class="gallery-card-title">{{record.title_label ?? $t(record.title_key ?? 'gallery.home.records.empty_title')}}</h3>
+          <p>{{record.summary_label ?? $t(record.excerpt_key ?? 'gallery.home.records.empty_summary')}}</p>
+          <span class="gallery-home-related-context">{{record.related_exhibition?.title?.[$locale] ?? record.related_exhibition?.slug ?? $t(record.related_context_key ?? 'gallery.home.records.empty_related')}}</span>
+          <div data-if="{{(record.relationship_meta ?? []).length > 0}}" class="gallery-relationship-row">
+            <span data-each="meta in record.relationship_meta">{{meta.value !== undefined ? $t(meta.label_key) + ' ' + meta.value : $t(meta.label_key)}}</span>
+          </div>
+          <div class="gallery-home-record-context-grid">
+            <div class="gallery-archive-meta-pair">
+              <span class="gallery-quiet-label">$t:gallery.home.records.labels.relationship</span>
+              <span class="gallery-quiet-value">{{record.relationship_label ?? $t(record.relationship_key ?? 'gallery.home.records.relationships.connected_record')}}</span>
+            </div>
+            <div class="gallery-archive-meta-pair">
+              <span class="gallery-quiet-label">$t:gallery.home.records.labels.chronology</span>
+              <span class="gallery-quiet-value">{{record.chronology_label ?? $t(record.chronology_key ?? 'gallery.home.records.chronology.recorded_during')}}</span>
+            </div>
+            <div class="gallery-archive-meta-pair gallery-archive-meta-pair-wide">
+              <span class="gallery-quiet-label">$t:gallery.home.records.labels.continue</span>
+              <span class="gallery-quiet-value">{{record.continuity_label ?? $t(record.continuity_key ?? 'gallery.home.records.continuity.same_exhibition')}}</span>
+            </div>
+          </div>
+        </a>
+        <p data-if="{{((gallery_home.data?.recent_records ?? gallery_home.recent_records ?? []).slice(0, 3)).length == 0}}" class="gallery-muted">$t:gallery.home.records.empty</p>
+      </div>
+    </div>
+  </section>
+</partial>

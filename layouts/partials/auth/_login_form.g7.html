@@ -1,0 +1,20 @@
+<partial>
+  <form data-key="loginForm" class="gallery-auth-form">
+    <div data-if="{{_local.loginError}}" class="gallery-auth-error">
+      <p>{{_local.loginError}}</p>
+    </div>
+    <div class="gallery-auth-field">
+      <label for="login_email" class="gallery-auth-label">$t:auth.login_page.email</label>
+      <input id="login_email" name="email" type="email" autoComplete="email" :required="true" disabled="{{_local.isLoggingIn}}" placeholder="$t:auth.login_page.email_placeholder" class="gallery-auth-input"/>
+      <p data-if="{{_local.loginErrors?.email}}" class="gallery-auth-field-error">{{Array.isArray(_local.loginErrors?.email) ? _local.loginErrors.email[0] : _local.loginErrors?.email}}</p>
+    </div>
+    <div class="gallery-auth-field">
+      <label for="login_password" class="gallery-auth-label">$t:auth.login_page.password</label>
+      <input id="login_password" name="password" type="password" autoComplete="current-password" :required="true" disabled="{{_local.isLoggingIn}}" placeholder="$t:auth.login_page.password_placeholder" class="gallery-auth-input"/>
+      <p data-if="{{_local.loginErrors?.password}}" class="gallery-auth-field-error">{{Array.isArray(_local.loginErrors?.password) ? _local.loginErrors.password[0] : _local.loginErrors?.password}}</p>
+    </div>
+    <button type="submit" class="gallery-auth-submit" disabled="{{_local.isLoggingIn}}">{{_local.isLoggingIn ? $t('auth.login_page.submitting') : $t('auth.login_page.submit')}}</button>
+    <a href="/archive" class="gallery-auth-back-link">$t:auth.login_page.back_to_archive</a>
+    <json key="actions">[{"type":"submit","handler":"sequence","actions":[{"handler":"setState","params":{"target":"local","isLoggingIn":true,"loginError":null,"loginErrors":null}},{"handler":"login","target":"user","params":{"body":{"email":"{{_local.loginForm.email}}","password":"{{_local.loginForm.password}}"}},"onSuccess":[{"handler":"setState","params":{"target":"global","currentUser":"{{response.user}}"}},{"handler":"setState","params":{"target":"local","isLoggingIn":false}},{"handler":"navigate","target":"{{query.redirect || '/'}}"}],"onError":[{"handler":"setState","params":{"target":"local","isLoggingIn":false,"loginError":"{{error.message}}","loginErrors":"{{error.errors}}"}}]}]}]</json>
+  </form>
+</partial>

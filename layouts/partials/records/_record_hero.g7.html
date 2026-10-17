@@ -1,0 +1,16 @@
+<partial>
+  <section class="gallery-page-head gallery-record-detail-hero">
+    <span class="gallery-kicker">{{$t("gallery.records.types." + gallery_record_detail.type)}}</span>
+    <h1 class="gallery-page-title">{{$t(gallery_record_detail.title_key)}}</h1>
+    <p class="gallery-page-lead">{{$t(gallery_record_detail.subtitle_key)}}</p>
+    <p class="gallery-muted">{{$t(gallery_record_detail.summary_key)}}</p>
+    <div class="gallery-media-frame gallery-media-record-note gallery-media-detail-panel">
+      <img data-if="{{gallery_record_detail.preview_image ?? gallery_record_detail.thumbnail_url ?? gallery_record_detail.image_url ?? gallery_record_detail.media?.url ?? false}}" src='{{(gallery_record_detail.preview_image ?? gallery_record_detail.thumbnail_url ?? gallery_record_detail.image_url ?? gallery_record_detail.media?.url ?? "")}}' alt="{{gallery_record_detail.title_label ?? $t(gallery_record_detail.title_key ?? 'gallery.media.record_note')}}" class="gallery-media-image"/>
+      <div data-if="{{!(gallery_record_detail.preview_image ?? gallery_record_detail.thumbnail_url ?? gallery_record_detail.image_url ?? gallery_record_detail.media?.url ?? false)}}" class="gallery-media-placeholder gallery-media-placeholder-small">
+        <span class="gallery-media-placeholder-label">$t:gallery.media.record_note</span>
+      </div>
+      <span class="gallery-media-caption">{{gallery_record_detail.media_caption ?? gallery_record_detail.media?.credit ?? $t('gallery.media.preview_caption')}}</span>
+    </div>
+    <a href='{{gallery_record_detail.parent_href ?? "/exhibitions"}}' class="gallery-text-link">$t:gallery.records.back_to_context</a>
+  </section>
+</partial>

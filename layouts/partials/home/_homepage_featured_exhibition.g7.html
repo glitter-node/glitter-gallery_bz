@@ -1,0 +1,29 @@
+<partial>
+  <section class="gallery-home-current-exhibition gallery-home-section">
+    <div class="gallery-home-hero-grid">
+      <div class="gallery-home-hero-copy">
+        <span class="gallery-kicker">$t:gallery.home.current_exhibition_kicker</span>
+        <h1 class="gallery-hero-title">{{gallery_home.data?.featured_exhibition?.title_label ?? gallery_home.featured_exhibition?.title_label ?? $t('gallery.home.featured_empty_title')}}</h1>
+        <p class="gallery-home-subtitle">{{gallery_home.data?.featured_exhibition?.subtitle_label ?? gallery_home.featured_exhibition?.subtitle_label ?? $t('gallery.home.featured_empty_subtitle')}}</p>
+        <p class="gallery-hero-lead">{{gallery_home.data?.featured_exhibition?.summary_label ?? gallery_home.featured_exhibition?.summary_label ?? $t('gallery.home.featured_empty_body')}}</p>
+        <div class="gallery-actions">
+          <a href="{{gallery_home.data?.featured_exhibition?.href ?? gallery_home.featured_exhibition?.href ?? '/exhibitions'}}" class="gallery-button">$t:gallery.home.explore_current_exhibition</a>
+          <a href="/archive" class="gallery-button-ghost">$t:gallery.home.explore_archive</a>
+        </div>
+      </div>
+      <div class="gallery-home-hero-aside">
+        <div class="gallery-media-frame gallery-media-primary gallery-home-visual-placeholder">
+          <img data-if="{{!!(gallery_home.data?.featured_exhibition?.image_url ?? gallery_home.data?.featured_exhibition?.preview_image ?? gallery_home.data?.featured_exhibition?.featured_image?.url ?? gallery_home.featured_exhibition?.image_url ?? gallery_home.featured_exhibition?.preview_image ?? gallery_home.featured_exhibition?.featured_image?.url ?? '') &amp;&amp; !(gallery_home.data?.featured_exhibition?.image_url ?? gallery_home.data?.featured_exhibition?.preview_image ?? gallery_home.data?.featured_exhibition?.featured_image?.url ?? gallery_home.featured_exhibition?.image_url ?? gallery_home.featured_exhibition?.preview_image ?? gallery_home.featured_exhibition?.featured_image?.url ?? '').startsWith('/images/gallery/') &amp;&amp; !(gallery_home.data?.featured_exhibition?.image_url ?? gallery_home.data?.featured_exhibition?.preview_image ?? gallery_home.data?.featured_exhibition?.featured_image?.url ?? gallery_home.featured_exhibition?.image_url ?? gallery_home.featured_exhibition?.preview_image ?? gallery_home.featured_exhibition?.featured_image?.url ?? '').startsWith('images/gallery/') &amp;&amp; !(gallery_home.data?.featured_exhibition?.image_url ?? gallery_home.data?.featured_exhibition?.preview_image ?? gallery_home.data?.featured_exhibition?.featured_image?.url ?? gallery_home.featured_exhibition?.image_url ?? gallery_home.featured_exhibition?.preview_image ?? gallery_home.featured_exhibition?.featured_image?.url ?? '').startsWith('/api/templates/assets/glitter-gallery_bz/images/gallery/')}}" src="{{(gallery_home.data?.featured_exhibition?.image_url ?? gallery_home.data?.featured_exhibition?.preview_image ?? gallery_home.data?.featured_exhibition?.featured_image?.url ?? gallery_home.featured_exhibition?.image_url ?? gallery_home.featured_exhibition?.preview_image ?? gallery_home.featured_exhibition?.featured_image?.url ?? '')}}" alt="{{gallery_home.data?.featured_exhibition?.title_label ?? gallery_home.featured_exhibition?.title_label ?? $t('gallery.media.featured_exhibition')}}" class="gallery-media-image" loading="eager" fetchPriority="high" decoding="async" :width="1400" :height="900" sizes="(max-width: 1023px) 100vw, 50vw"/>
+          <div data-if="{{!(!!(gallery_home.data?.featured_exhibition?.image_url ?? gallery_home.data?.featured_exhibition?.preview_image ?? gallery_home.data?.featured_exhibition?.featured_image?.url ?? gallery_home.featured_exhibition?.image_url ?? gallery_home.featured_exhibition?.preview_image ?? gallery_home.featured_exhibition?.featured_image?.url ?? '') &amp;&amp; !(gallery_home.data?.featured_exhibition?.image_url ?? gallery_home.data?.featured_exhibition?.preview_image ?? gallery_home.data?.featured_exhibition?.featured_image?.url ?? gallery_home.featured_exhibition?.image_url ?? gallery_home.featured_exhibition?.preview_image ?? gallery_home.featured_exhibition?.featured_image?.url ?? '').startsWith('/images/gallery/') &amp;&amp; !(gallery_home.data?.featured_exhibition?.image_url ?? gallery_home.data?.featured_exhibition?.preview_image ?? gallery_home.data?.featured_exhibition?.featured_image?.url ?? gallery_home.featured_exhibition?.image_url ?? gallery_home.featured_exhibition?.preview_image ?? gallery_home.featured_exhibition?.featured_image?.url ?? '').startsWith('images/gallery/') &amp;&amp; !(gallery_home.data?.featured_exhibition?.image_url ?? gallery_home.data?.featured_exhibition?.preview_image ?? gallery_home.data?.featured_exhibition?.featured_image?.url ?? gallery_home.featured_exhibition?.image_url ?? gallery_home.featured_exhibition?.preview_image ?? gallery_home.featured_exhibition?.featured_image?.url ?? '').startsWith('/api/templates/assets/glitter-gallery_bz/images/gallery/'))}}" class="gallery-media-placeholder">
+            <span class="gallery-media-placeholder-label">$t:gallery.media.featured_exhibition</span>
+          </div>
+          <span class="gallery-media-caption">{{gallery_home.data?.featured_exhibition?.media_caption ?? gallery_home.data?.featured_exhibition?.featured_image?.credit ?? gallery_home.featured_exhibition?.media_caption ?? gallery_home.featured_exhibition?.featured_image?.credit ?? $t('gallery.home.visual_placeholder')}}</span>
+        </div>
+        <div class="gallery-feature-details">
+          <p data-each="meta in {{gallery_featured_exhibition_metadata ?? []}}">{{$t(meta.label_key)}}: {{$t(meta.value_key)}}</p>
+          <p>$t:gallery.home.publication_signal</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</partial>

@@ -1,0 +1,12 @@
+<partial>
+  <section class="gallery-section gallery-section-muted gallery-item-section">
+    <span class="gallery-kicker">$t:gallery.items.section_kicker</span>
+    <h2 class="gallery-section-title">$t:gallery.items.section_title</h2>
+    <p class="gallery-body-lg">$t:gallery.items.section_description</p>
+    <div class="gallery-list gallery-item-list">
+      <div data-each="item in gallery_exhibition_items.items" class="gallery-record gallery-item-record">
+        <include src="partials/exhibitions/_exhibition_item_card.g7.html"/>
+      </div>
+    </div>
+  </section>
+</partial>

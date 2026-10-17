@@ -1,0 +1,8 @@
+<partial>
+  <section class="gallery-page-head gallery-archive-material-hero">
+    <span class="gallery-kicker">{{$t("gallery.archive_materials.types." + gallery_archive_material_detail.type)}}</span>
+    <h1 class="gallery-page-title">{{$t(gallery_archive_material_detail.title_key)}}</h1>
+    <p class="gallery-page-lead">{{$t(gallery_archive_material_detail.subtitle_key)}}</p>
+    <a href='{{gallery_archive_material_detail.category_href ?? "/archive"}}' class="gallery-text-link">$t:gallery.archive_materials.back_to_category</a>
+  </section>
+</partial>

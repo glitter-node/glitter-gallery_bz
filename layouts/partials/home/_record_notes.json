@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-section gallery-section-muted"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-feature-split"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "Div",
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-kicker"
+              },
+              "text": "$t:gallery.home.notes_kicker"
+            },
+            {
+              "type": "basic",
+              "name": "H2",
+              "props": {
+                "className": "gallery-section-title"
+              },
+              "text": "$t:gallery.home.notes_title"
+            },
+            {
+              "type": "basic",
+              "name": "P",
+              "props": {
+                "className": "gallery-body-lg"
+              },
+              "text": "$t:gallery.home.notes_body"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-note-list"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Div",
+              "props": {
+                "className": "gallery-note gallery-note-longform"
+              },
+              "iteration": {
+                "source": "gallery_record_notes",
+                "item_var": "note"
+              },
+              "children": [
+                {
+                  "type": "basic",
+                  "name": "Span",
+                  "props": {
+                    "className": "gallery-meta"
+                  },
+                  "text": "{{$t(note.meta_key)}}"
+                },
+                {
+                  "type": "basic",
+                  "name": "H3",
+                  "props": {
+                    "className": "gallery-card-title"
+                  },
+                  "text": "{{$t(note.title_key)}}"
+                },
+                {
+                  "type": "basic",
+                  "name": "P",
+                  "text": "{{$t(note.body_key)}}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

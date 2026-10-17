@@ -1,0 +1,1162 @@
+{
+  "version": "1.0.0",
+  "layout_name": "_user_base",
+  "meta": {
+    "title": "$t:gallery.meta.base_title",
+    "is_base": true,
+    "seo": {
+      "enabled": false,
+      "og": {
+        "type": "website"
+      }
+    }
+  },
+  "globalHeaders": [],
+  "transition_overlay": {
+    "enabled": true,
+    "style": "spinner",
+    "target": "main_content_area",
+    "spinner": {
+      "component": "PageLoading"
+    }
+  },
+  "data_sources": [
+    {
+      "id": "current_user",
+      "type": "api",
+      "endpoint": "/api/auth/user",
+      "method": "GET",
+      "auto_fetch": true,
+      "auth_required": true,
+      "loading_strategy": "progressive",
+      "fallback": {
+        "data": null
+      },
+      "initGlobal": "currentUser",
+      "errorHandling": {
+        "401": {
+          "handler": "suppress"
+        }
+      }
+    }
+  ],
+  "components": [
+    {
+      "id": "global_toast",
+      "type": "composite",
+      "name": "Toast",
+      "props": {
+        "toasts": "{{_global.toasts}}",
+        "position": "bottom-center",
+        "duration": 5000
+      }
+    },
+    {
+      "id": "page_transition_indicator",
+      "type": "composite",
+      "name": "PageTransitionIndicator"
+    },
+    {
+      "id": "gallery_root",
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-shell"
+      },
+      "children": [
+        {
+          "id": "site_header",
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-header"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Div",
+              "props": {
+                "className": "gallery-header-inner"
+              },
+              "children": [
+                {
+                  "type": "basic",
+                  "name": "Div",
+                  "props": {
+                    "className": "gallery-header-topbar"
+                  },
+                  "children": [
+                    {
+                      "type": "basic",
+                      "name": "Div",
+                      "props": {
+                        "className": "gallery-brand-block"
+                      },
+                      "children": [
+                        {
+                      "type": "basic",
+                      "name": "Div",
+                      "props": {
+                        "className": "gallery-brand-copy"
+                      },
+                      "children": [
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "{{_global.settings?.general?.site_url ?? '/'}}",
+                            "className": "gallery-brand"
+                          },
+                          "text": "{{_global.settings?.general?.site_name ?? $t('gallery.brand.name')}}"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "Span",
+                          "props": {
+                            "className": "gallery-brand-subtitle"
+                          },
+                          "text": "$t:gallery.header.subtitle"
+                        }
+                      ]
+                    }
+                      ]
+                    },
+                    {
+                      "type": "basic",
+                      "name": "Nav",
+                      "props": {
+                        "className": "gallery-nav"
+                      },
+                      "children": [
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/exhibitions",
+                            "className": "gallery-nav-link gallery-nav-link-priority"
+                          },
+                          "text": "$t:gallery.nav.current_exhibition"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/archive",
+                            "className": "gallery-nav-link"
+                          },
+                          "text": "$t:gallery.nav.archive"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/records",
+                            "className": "gallery-nav-link"
+                          },
+                          "text": "$t:gallery.nav.records"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/collections",
+                            "className": "gallery-nav-link"
+                          },
+                          "text": "$t:gallery.nav.collections"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/about",
+                            "className": "gallery-nav-link"
+                          },
+                          "text": "$t:gallery.nav.about"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "basic",
+                      "name": "Div",
+                      "props": {
+                        "className": "gallery-header-utility"
+                      },
+                      "children": [
+                        {
+                          "type": "composite",
+                          "name": "ThemeToggle",
+                          "props": {
+                            "variant": "headerGear",
+                            "ariaLabel": "{{$t('gallery.mode_control.aria_label')}}",
+                            "autoText": "{{$t('gallery.mode_control.system')}}",
+                            "lightText": "{{$t('gallery.mode_control.light')}}",
+                            "darkText": "{{$t('gallery.mode_control.dark')}}"
+                          }
+                        },
+                        {
+                          "type": "basic",
+                          "name": "Button",
+                          "props": {
+                            "type": "button",
+                            "className": "gallery-header-language-toggle"
+                          },
+                          "actions": [
+                            {
+                              "type": "click",
+                              "handler": "setLocale",
+                              "target": "{{($locale ?? 'ko') === 'ko' ? 'en' : 'ko'}}",
+                              "onSuccess": [
+                                {
+                                  "handler": "setState",
+                                  "params": {
+                                    "target": "global",
+                                    "galleryMobileMenuOpen": false
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "text": "{{($locale ?? 'ko') === 'ko' ? $t('auth.menu.language_ko') : $t('auth.menu.language_en')}}"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "Div",
+                          "if": "{{!_global.currentUser?.uuid && !_global.currentUser?.email}}",
+                          "props": {
+                            "className": "gallery-header-auth-cluster gallery-header-auth-guest"
+                          },
+                          "children": [
+                            {
+                              "type": "basic",
+                              "name": "A",
+                              "props": {
+                                "href": "/login",
+                                "className": "gallery-header-auth-link gallery-header-auth-login"
+                              },
+                              "text": "$t:auth.login"
+                            },
+                            {
+                              "type": "basic",
+                              "name": "A",
+                              "props": {
+                                "href": "/register",
+                                "className": "gallery-header-auth-link gallery-header-auth-register"
+                              },
+                              "text": "$t:auth.register_link"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "basic",
+                          "name": "Div",
+                          "if": "{{_global.currentUser?.uuid || _global.currentUser?.email}}",
+                          "props": {
+                            "className": "gallery-header-auth-cluster gallery-header-auth-user"
+                          },
+                          "children": [
+                            {
+                              "type": "basic",
+                              "name": "Button",
+                              "props": {
+                                "type": "button",
+                                "className": "gallery-header-auth-dropdown-trigger",
+                                "aria-haspopup": "menu",
+                                "aria-expanded": "false"
+                              },
+                              "children": [
+                                {
+                                  "type": "basic",
+                                  "name": "Span",
+                                  "props": {
+                                    "className": "gallery-header-auth-avatar"
+                                  },
+                                  "text": "{{(_global.currentUser?.name || _global.currentUser?.email || '?').charAt(0).toUpperCase()}}"
+                                },
+                                {
+                                  "type": "basic",
+                                  "name": "Span",
+                                  "props": {
+                                    "className": "gallery-header-auth-user-name"
+                                  },
+                                  "text": "{{_global.currentUser?.name || (_global.currentUser?.email ? _global.currentUser.email.split('@')[0] : '')}}"
+                                },
+                                {
+                                  "type": "basic",
+                                  "name": "Icon",
+                                  "props": {
+                                    "name": "chevron-down",
+                                    "className": "gallery-header-auth-chevron"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "basic",
+                              "name": "Div",
+                              "props": {
+                                "className": "gallery-header-auth-menu",
+                                "role": "menu"
+                              },
+                              "children": [
+                                {
+                                  "type": "basic",
+                                  "name": "Div",
+                                  "props": {
+                                    "className": "gallery-header-auth-menu-summary"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "basic",
+                                      "name": "Span",
+                                      "props": {
+                                        "className": "gallery-header-auth-menu-avatar"
+                                      },
+                                      "text": "{{(_global.currentUser?.name || _global.currentUser?.email || '?').charAt(0).toUpperCase()}}"
+                                    },
+                                    {
+                                      "type": "basic",
+                                      "name": "Div",
+                                      "props": {
+                                        "className": "gallery-header-auth-menu-copy"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "basic",
+                                          "name": "Span",
+                                          "props": {
+                                            "className": "gallery-header-auth-menu-name"
+                                          },
+                                          "text": "{{_global.currentUser?.name || (_global.currentUser?.email ? _global.currentUser.email.split('@')[0] : '')}}"
+                                        },
+                                        {
+                                          "type": "basic",
+                                          "name": "Span",
+                                          "props": {
+                                            "className": "gallery-header-auth-menu-role"
+                                          },
+                                          "text": "{{$t(_global.currentUser?.role_key || ('auth.roles.' + (_global.currentUser?.role || 'member')))}}"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "basic",
+                                  "name": "A",
+                                  "if": "{{_global.currentUser?.is_admin}}",
+                                  "props": {
+                                    "href": "/admin/dashboard",
+                                    "className": "gallery-header-auth-menu-item gallery-header-auth-menu-admin",
+                                    "role": "menuitem"
+                                  },
+                                  "text": "$t:auth.menu.management_board"
+                                },
+                                {
+                                  "type": "basic",
+                                  "name": "A",
+                                  "if": "{{_global.currentUser?.is_admin}}",
+                                  "props": {
+                                    "href": "/admin/gallery",
+                                    "className": "gallery-header-auth-menu-item gallery-header-auth-menu-admin",
+                                    "role": "menuitem"
+                                  },
+                                  "text": "$t:auth.menu.gallery_management"
+                                },
+                                {
+                                  "type": "basic",
+                                  "name": "Button",
+                                  "props": {
+                                    "type": "button",
+                                    "className": "gallery-header-auth-menu-item gallery-header-auth-menu-logout",
+                                    "role": "menuitem"
+                                  },
+                                  "actions": [
+                                    {
+                                      "type": "click",
+                                      "handler": "logout",
+                                      "onSuccess": [
+                                        {
+                                          "handler": "setState",
+                                          "params": {
+                                            "target": "global",
+                                            "galleryUserMenuOpen": false,
+                                            "currentUser": null
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "text": "$t:auth.logout"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "basic",
+                      "name": "Button",
+                      "props": {
+                        "type": "button",
+                        "className": "gallery-mobile-menu-toggle",
+                        "aria-label": "$t:gallery.header.mobile_menu_open",
+                        "aria-expanded": "{{_global.galleryMobileMenuOpen ? 'true' : 'false'}}",
+                        "aria-controls": "gallery_mobile_nav_panel"
+                      },
+                      "actions": [
+                        {
+                          "type": "click",
+                          "handler": "setState",
+                          "params": {
+                            "target": "global",
+                            "galleryMobileMenuOpen": "{{!_global.galleryMobileMenuOpen}}"
+                          }
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "basic",
+                          "name": "Icon",
+                          "props": {
+                            "name": "menu",
+                            "className": "gallery-mobile-menu-toggle-icon"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "basic",
+              "name": "Div",
+              "if": "{{_global.galleryMobileMenuOpen}}",
+              "props": {
+                "className": "gallery-mobile-menu-layer"
+              },
+              "children": [
+                {
+                  "type": "basic",
+                  "name": "Button",
+                  "props": {
+                    "type": "button",
+                    "className": "gallery-mobile-menu-backdrop",
+                    "aria-label": "$t:gallery.header.mobile_menu_close"
+                  },
+                  "actions": [
+                    {
+                      "type": "click",
+                      "handler": "setState",
+                      "params": {
+                        "target": "global",
+                        "galleryMobileMenuOpen": false
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "basic",
+                  "name": "Div",
+                  "props": {
+                    "id": "gallery_mobile_nav_panel",
+                    "className": "gallery-mobile-menu-panel",
+                    "role": "dialog",
+                    "aria-modal": "true",
+                    "aria-label": "$t:gallery.header.mobile_menu_label"
+                  },
+                  "children": [
+                    {
+                      "type": "basic",
+                      "name": "Div",
+                      "props": {
+                        "className": "gallery-mobile-menu-head"
+                      },
+                      "children": [
+                        {
+                          "type": "basic",
+                          "name": "Span",
+                          "props": {
+                            "className": "gallery-mobile-menu-title"
+                          },
+                          "text": "$t:gallery.header.mobile_menu_title"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "Button",
+                          "props": {
+                            "type": "button",
+                            "className": "gallery-mobile-menu-close",
+                            "aria-label": "$t:gallery.header.mobile_menu_close"
+                          },
+                          "actions": [
+                            {
+                              "type": "click",
+                              "handler": "setState",
+                              "params": {
+                                "target": "global",
+                                "galleryMobileMenuOpen": false
+                              }
+                            }
+                          ],
+                          "children": [
+                            {
+                              "type": "basic",
+                              "name": "Icon",
+                              "props": {
+                                "name": "x",
+                                "className": "gallery-mobile-menu-close-icon"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "basic",
+                      "name": "Div",
+                      "props": {
+                        "className": "gallery-mobile-utility-row"
+                      },
+                      "children": [
+                        {
+                          "type": "composite",
+                          "name": "ThemeToggle",
+                          "props": {
+                            "variant": "headerGear",
+                            "className": "gallery-mobile-mode-dropdown",
+                            "ariaLabel": "{{$t('gallery.mode_control.aria_label')}}",
+                            "autoText": "{{$t('gallery.mode_control.system')}}",
+                            "lightText": "{{$t('gallery.mode_control.light')}}",
+                            "darkText": "{{$t('gallery.mode_control.dark')}}"
+                          }
+                        },
+                        {
+                          "type": "basic",
+                          "name": "Button",
+                          "props": {
+                            "type": "button",
+                            "className": "gallery-mobile-language-toggle"
+                          },
+                          "actions": [
+                            {
+                              "type": "click",
+                              "handler": "setLocale",
+                              "target": "{{($locale ?? 'ko') === 'ko' ? 'en' : 'ko'}}",
+                              "onSuccess": [
+                                {
+                                  "handler": "setState",
+                                  "params": {
+                                    "target": "global",
+                                    "galleryMobileMenuOpen": false
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "text": "{{($locale ?? 'ko') === 'ko' ? $t('auth.menu.language_ko') : $t('auth.menu.language_en')}}"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "basic",
+                      "name": "Nav",
+                      "props": {
+                        "className": "gallery-mobile-nav"
+                      },
+                      "children": [
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/exhibitions",
+                            "className": "gallery-mobile-nav-link gallery-nav-link"
+                          },
+                          "actions": [
+                            {
+                              "type": "click",
+                              "handler": "navigate",
+                              "params": {
+                                "path": "/exhibitions"
+                              },
+                              "onSuccess": [
+                                {
+                                  "handler": "setState",
+                                  "params": {
+                                    "target": "global",
+                                    "galleryMobileMenuOpen": false
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "text": "$t:gallery.nav.current_exhibition"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/archive",
+                            "className": "gallery-mobile-nav-link gallery-nav-link"
+                          },
+                          "actions": [
+                            {
+                              "type": "click",
+                              "handler": "navigate",
+                              "params": {
+                                "path": "/archive"
+                              },
+                              "onSuccess": [
+                                {
+                                  "handler": "setState",
+                                  "params": {
+                                    "target": "global",
+                                    "galleryMobileMenuOpen": false
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "text": "$t:gallery.nav.archive"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/records",
+                            "className": "gallery-mobile-nav-link gallery-nav-link"
+                          },
+                          "actions": [
+                            {
+                              "type": "click",
+                              "handler": "navigate",
+                              "params": {
+                                "path": "/records"
+                              },
+                              "onSuccess": [
+                                {
+                                  "handler": "setState",
+                                  "params": {
+                                    "target": "global",
+                                    "galleryMobileMenuOpen": false
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "text": "$t:gallery.nav.records"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/collections",
+                            "className": "gallery-mobile-nav-link gallery-nav-link"
+                          },
+                          "actions": [
+                            {
+                              "type": "click",
+                              "handler": "navigate",
+                              "params": {
+                                "path": "/collections"
+                              },
+                              "onSuccess": [
+                                {
+                                  "handler": "setState",
+                                  "params": {
+                                    "target": "global",
+                                    "galleryMobileMenuOpen": false
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "text": "$t:gallery.nav.collections"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/about",
+                            "className": "gallery-mobile-nav-link gallery-nav-link"
+                          },
+                          "actions": [
+                            {
+                              "type": "click",
+                              "handler": "navigate",
+                              "params": {
+                                "path": "/about"
+                              },
+                              "onSuccess": [
+                                {
+                                  "handler": "setState",
+                                  "params": {
+                                    "target": "global",
+                                    "galleryMobileMenuOpen": false
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "text": "$t:gallery.nav.about"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "basic",
+                      "name": "Div",
+                      "if": "{{!_global.currentUser?.uuid && !_global.currentUser?.email}}",
+                      "props": {
+                        "className": "gallery-mobile-auth"
+                      },
+                      "children": [
+                        {
+                          "type": "basic",
+                          "name": "Div",
+                          "props": {
+                            "className": "gallery-mobile-auth-grid"
+                          },
+                          "children": [
+                            {
+                              "type": "basic",
+                              "name": "A",
+                              "props": {
+                                "href": "/login",
+                                "className": "gallery-mobile-auth-link gallery-mobile-auth-login"
+                              },
+                              "actions": [
+                                {
+                                  "type": "click",
+                                  "handler": "navigate",
+                                  "params": {
+                                    "path": "/login"
+                                  },
+                                  "onSuccess": [
+                                    {
+                                      "handler": "setState",
+                                      "params": {
+                                        "target": "global",
+                                        "galleryMobileMenuOpen": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              ],
+                              "text": "$t:auth.login"
+                            },
+                            {
+                              "type": "basic",
+                              "name": "A",
+                              "props": {
+                                "href": "/register",
+                                "className": "gallery-mobile-auth-link gallery-mobile-auth-register"
+                              },
+                              "actions": [
+                                {
+                                  "type": "click",
+                                  "handler": "navigate",
+                                  "params": {
+                                    "path": "/register"
+                                  },
+                                  "onSuccess": [
+                                    {
+                                      "handler": "setState",
+                                      "params": {
+                                        "target": "global",
+                                        "galleryMobileMenuOpen": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              ],
+                              "text": "$t:auth.register_link"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "basic",
+                      "name": "Div",
+                      "if": "{{_global.currentUser?.uuid || _global.currentUser?.email}}",
+                      "props": {
+                        "className": "gallery-mobile-profile"
+                      },
+                      "children": [
+                        {
+                          "type": "basic",
+                          "name": "Div",
+                          "props": {
+                            "className": "gallery-mobile-profile-summary"
+                          },
+                          "children": [
+                            {
+                              "type": "basic",
+                              "name": "Span",
+                              "props": {
+                                "className": "gallery-mobile-profile-avatar"
+                              },
+                              "text": "{{(_global.currentUser?.name || _global.currentUser?.email || '?').charAt(0).toUpperCase()}}"
+                            },
+                            {
+                              "type": "basic",
+                              "name": "Div",
+                              "props": {
+                                "className": "gallery-mobile-profile-copy"
+                              },
+                              "children": [
+                                {
+                                  "type": "basic",
+                                  "name": "Span",
+                                  "props": {
+                                    "className": "gallery-mobile-profile-name"
+                                  },
+                                  "text": "{{_global.currentUser?.name || (_global.currentUser?.email ? _global.currentUser.email.split('@')[0] : '')}}"
+                                },
+                                {
+                                  "type": "basic",
+                                  "name": "Span",
+                                  "props": {
+                                    "className": "gallery-mobile-profile-role"
+                                  },
+                                  "text": "{{$t(_global.currentUser?.role_key || ('auth.roles.' + (_global.currentUser?.role || 'member')))}}"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "basic",
+                          "name": "Div",
+                          "props": {
+                            "className": "gallery-mobile-profile-actions"
+                          },
+                          "children": [
+                            {
+                              "type": "basic",
+                              "name": "A",
+                              "props": {
+                                "href": "/mypage",
+                                "className": "gallery-mobile-profile-link"
+                              },
+                              "actions": [
+                                {
+                                  "type": "click",
+                                  "handler": "navigate",
+                                  "params": {
+                                    "path": "/mypage"
+                                  },
+                                  "onSuccess": [
+                                    {
+                                      "handler": "setState",
+                                      "params": {
+                                        "target": "global",
+                                        "galleryMobileMenuOpen": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              ],
+                              "text": "$t:auth.menu.mypage"
+                            },
+                            {
+                              "type": "basic",
+                              "name": "A",
+                              "if": "{{_global.currentUser?.is_admin}}",
+                              "props": {
+                                "href": "/admin/dashboard",
+                                "className": "gallery-mobile-profile-link gallery-mobile-profile-admin"
+                              },
+                              "actions": [
+                                {
+                                  "type": "click",
+                                  "handler": "navigate",
+                                  "params": {
+                                    "path": "/admin/dashboard"
+                                  },
+                                  "onSuccess": [
+                                    {
+                                      "handler": "setState",
+                                      "params": {
+                                        "target": "global",
+                                        "galleryMobileMenuOpen": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              ],
+                              "text": "$t:auth.menu.management_board"
+                            },
+                            {
+                              "type": "basic",
+                              "name": "A",
+                              "if": "{{_global.currentUser?.is_admin}}",
+                              "props": {
+                                "href": "/admin/gallery",
+                                "className": "gallery-mobile-profile-link gallery-mobile-profile-admin"
+                              },
+                              "actions": [
+                                {
+                                  "type": "click",
+                                  "handler": "navigate",
+                                  "params": {
+                                    "path": "/admin/gallery"
+                                  },
+                                  "onSuccess": [
+                                    {
+                                      "handler": "setState",
+                                      "params": {
+                                        "target": "global",
+                                        "galleryMobileMenuOpen": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              ],
+                              "text": "$t:auth.menu.gallery_management"
+                            },
+                            {
+                              "type": "basic",
+                              "name": "Button",
+                              "props": {
+                                "type": "button",
+                                "className": "gallery-mobile-logout"
+                              },
+                              "actions": [
+                                {
+                                  "type": "click",
+                                  "handler": "logout",
+                                  "onSuccess": [
+                                    {
+                                      "handler": "setState",
+                                      "params": {
+                                        "target": "global",
+                                        "galleryUserMenuOpen": false,
+                                        "galleryMobileMenuOpen": false,
+                                        "currentUser": null
+                                      }
+                                    }
+                                  ]
+                                }
+                              ],
+                              "text": "$t:auth.logout"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "main_content_area",
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-main"
+          },
+          "children": [
+            {
+              "id": "main_content",
+              "type": "basic",
+              "name": "Div",
+              "slot": "content",
+              "props": {
+                "className": "gallery-container"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "site_footer",
+          "type": "basic",
+          "name": "Div",
+          "props": {
+            "className": "gallery-footer"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Div",
+              "props": {
+                "className": "gallery-footer-grid"
+              },
+              "children": [
+                {
+                  "type": "basic",
+                  "name": "Div",
+                  "props": {
+                    "className": "gallery-footer-identity"
+                  },
+                  "children": [
+                    {
+                      "type": "basic",
+                      "name": "H2",
+                      "props": {
+                        "className": "gallery-footer-title"
+                      },
+                      "text": "{{_global.settings?.general?.site_name ?? $t('gallery.brand.name')}}"
+                    },
+                    {
+                      "type": "basic",
+                      "name": "P",
+                      "props": {
+                        "className": "gallery-footer-mission"
+                      },
+                      "text": "$t:gallery.footer.mission"
+                    },
+                    {
+                      "type": "basic",
+                      "name": "P",
+                      "props": {
+                        "className": "gallery-footer-meta"
+                      },
+                      "text": "$t:gallery.footer.metadata"
+                    }
+                  ]
+                },
+                {
+                  "type": "basic",
+                  "name": "Div",
+                  "props": {
+                    "className": "gallery-footer-nav"
+                  },
+                  "children": [
+                    {
+                      "type": "basic",
+                      "name": "Div",
+                      "props": {
+                        "className": "gallery-footer-link-group"
+                      },
+                      "children": [
+                        {
+                          "type": "basic",
+                          "name": "Span",
+                          "props": {
+                            "className": "gallery-footer-heading"
+                          },
+                          "text": "$t:gallery.footer.sections_heading"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/exhibitions"
+                          },
+                          "text": "$t:gallery.nav.current_exhibition"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/records"
+                          },
+                          "text": "$t:gallery.nav.records"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/about"
+                          },
+                          "text": "$t:gallery.nav.about"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "basic",
+                      "name": "Div",
+                      "props": {
+                        "className": "gallery-footer-link-group"
+                      },
+                      "children": [
+                        {
+                          "type": "basic",
+                          "name": "Span",
+                          "props": {
+                            "className": "gallery-footer-heading"
+                          },
+                          "text": "$t:gallery.footer.archive_heading"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/archive/exhibition"
+                          },
+                          "text": "$t:gallery.archive.categories.exhibition.title"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/archive/material"
+                          },
+                          "text": "$t:gallery.archive.categories.material.title"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/archive/research"
+                          },
+                          "text": "$t:gallery.archive.categories.research.title"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "basic",
+                      "name": "Div",
+                      "props": {
+                        "className": "gallery-footer-link-group"
+                      },
+                      "children": [
+                        {
+                          "type": "basic",
+                          "name": "Span",
+                          "props": {
+                            "className": "gallery-footer-heading"
+                          },
+                          "text": "$t:gallery.footer.context_heading"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/records"
+                          },
+                          "text": "$t:gallery.records.types.curator_note"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/records"
+                          },
+                          "text": "$t:gallery.records.types.field_note"
+                        },
+                        {
+                          "type": "basic",
+                          "name": "A",
+                          "props": {
+                            "href": "/collections"
+                          },
+                          "text": "$t:gallery.nav.collections"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

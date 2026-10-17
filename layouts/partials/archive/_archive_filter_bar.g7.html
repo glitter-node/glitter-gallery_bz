@@ -1,0 +1,10 @@
+<partial>
+  <section class="gallery-section gallery-filter-panel">
+    <span class="gallery-kicker">$t:gallery.filters.ready_kicker</span>
+    <p class="gallery-muted">$t:gallery.archive.index.filter_ready_body</p>
+    <div class="gallery-chip-list">
+      <span data-each="filter in (gallery_archive_index?.filters?.material_type_filters ?? gallery_archive_category_detail?.filters?.material_type_filters ?? [])" class="gallery-chip">{{$t(filter.label_key)}}</span>
+      <span data-each="sort in (gallery_archive_index?.filters?.sort_options ?? gallery_archive_category_detail?.filters?.sort_options ?? [])" class="gallery-chip">{{$t(sort.label_key)}}</span>
+    </div>
+  </section>
+</partial>

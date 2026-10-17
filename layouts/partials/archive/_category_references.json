@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "is_partial": true
+  },
+  "type": "basic",
+  "name": "Section",
+  "props": {
+    "className": "gallery-section"
+  },
+  "children": [
+    {
+      "type": "basic",
+      "name": "Div",
+      "props": {
+        "className": "gallery-list"
+      },
+      "children": [
+        {
+          "type": "basic",
+          "name": "A",
+          "props": {
+            "href": "{{reference.href ?? \"/archive\"}}",
+            "className": "gallery-record gallery-record-link"
+          },
+          "iteration": {
+            "source": "gallery_archive_category_detail.references",
+            "item_var": "reference"
+          },
+          "children": [
+            {
+              "type": "basic",
+              "name": "Span",
+              "props": {
+                "className": "gallery-meta"
+              },
+              "text": "{{reference.category}}"
+            },
+            {
+              "type": "basic",
+              "name": "H2",
+              "props": {
+                "className": "gallery-record-title"
+              },
+              "text": "{{$t(reference.title_key)}}"
+            },
+            {
+              "type": "basic",
+              "name": "P",
+              "props": {
+                "className": "gallery-record-body"
+              },
+              "text": "{{$t(reference.body_key)}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

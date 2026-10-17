@@ -1,0 +1,197 @@
+{
+  "version": "1.0.0",
+  "layout_name": "record-detail",
+  "permissions": [],
+  "extends": "_user_base",
+  "data_sources": [
+    {
+      "id": "gallery_record_detail",
+      "type": "static",
+      "data": {
+        "id": "curator-note",
+        "slug": "curator-note",
+        "type": "curator_note",
+        "title_key": "gallery.records.curator_note.title",
+        "subtitle_key": "gallery.records.curator_note.subtitle",
+        "author_name_key": "gallery.records.authors.chief_curator",
+        "recorded_at_key": "gallery.records.curator_note.recorded_at",
+        "summary_key": "gallery.records.curator_note.summary",
+        "body_sections": [
+          {
+            "id": "opening-frame",
+            "title_key": "gallery.records.curator_note.sections.opening_frame.title",
+            "body_key": "gallery.records.curator_note.sections.opening_frame.body"
+          },
+          {
+            "id": "material-reading",
+            "title_key": "gallery.records.curator_note.sections.material_reading.title",
+            "body_key": "gallery.records.curator_note.sections.material_reading.body"
+          },
+          {
+            "id": "archive-afterlife",
+            "title_key": "gallery.records.curator_note.sections.archive_afterlife.title",
+            "body_key": "gallery.records.curator_note.sections.archive_afterlife.body"
+          }
+        ],
+        "exhibition_slug": "light-afterimage-record",
+        "item_slugs": [
+          "pale-grid-01",
+          "press-fragment-a"
+        ],
+        "archive_material_slugs": [
+          "press-release",
+          "installation-photo-set"
+        ],
+        "tags": [
+          "curatorial",
+          "essay",
+          "exhibition-context"
+        ],
+        "visibility_state": "published",
+        "published_at": "2026-04-01T09:00:00+09:00",
+        "metadata": [
+          {
+            "id": "type",
+            "label_key": "gallery.records.metadata.type",
+            "value_key": "gallery.records.types.curator_note"
+          },
+          {
+            "id": "author",
+            "label_key": "gallery.records.metadata.author",
+            "value_key": "gallery.records.authors.chief_curator"
+          },
+          {
+            "id": "recorded_at",
+            "label_key": "gallery.records.metadata.recorded_at",
+            "value_key": "gallery.records.curator_note.recorded_at"
+          },
+          {
+            "id": "visibility",
+            "label_key": "gallery.records.metadata.visibility_state",
+            "value_key": "gallery.items.visibility.published"
+          }
+        ],
+        "related_exhibition": {
+          "slug": "light-afterimage-record",
+          "title_key": "gallery.content.exhibitions.light_afterimage.title",
+          "summary_key": "gallery.content.exhibitions.light_afterimage.curator_summary",
+          "href": "/exhibitions/light-afterimage-record"
+        },
+        "related_items": [
+          {
+            "id": "pale-grid-01",
+            "slug": "pale-grid-01",
+            "type": "artwork",
+            "title_key": "gallery.items.pale_grid.title",
+            "subtitle_key": "gallery.items.pale_grid.subtitle",
+            "artist_name_key": "gallery.items.artists.min_jiwon",
+            "year": "2025",
+            "medium_key": "gallery.items.pale_grid.medium",
+            "href": "/items/pale-grid-01"
+          },
+          {
+            "id": "installation-axis-note",
+            "slug": "installation-axis-note",
+            "type": "installation",
+            "title_key": "gallery.items.installation_axis.title",
+            "subtitle_key": "gallery.items.installation_axis.subtitle",
+            "artist_name_key": "gallery.items.artists.gallery_team",
+            "year": "2026",
+            "medium_key": "gallery.items.installation_axis.medium",
+            "href": "/items/installation-axis-note"
+          }
+        ],
+        "related_archive_materials": [
+          {
+            "id": "installation-photo-set",
+            "slug": "installation-photo-set",
+            "category": "material",
+            "type": "installation_photo",
+            "title_key": "gallery.archive_materials.installation_photo_set.title",
+            "subtitle_key": "gallery.archive_materials.installation_photo_set.subtitle",
+            "date_label_key": "gallery.archive_materials.installation_photo_set.date_label",
+            "source_key": "gallery.archive_materials.sources.gallery_records_team",
+            "rights_key": "gallery.archive_materials.rights.gallery_bz",
+            "format_key": "gallery.archive_materials.formats.digital_image_set",
+            "identifier": "GBZ-MAT-2026-001",
+            "image": "",
+            "summary_key": "gallery.archive_materials.installation_photo_set.summary",
+            "description_key": "gallery.archive_materials.installation_photo_set.description",
+            "exhibition_slug": "light-afterimage-record",
+            "item_slugs": [
+              "pale-grid-01",
+              "installation-axis-note"
+            ],
+            "record_slugs": [
+              "field-note",
+              "installation-note"
+            ],
+            "tags": [
+              "installation",
+              "photo",
+              "space"
+            ],
+            "visibility_state": "published",
+            "published_at": "2026-04-04T09:00:00+09:00",
+            "href": "/archive/material/installation-photo-set"
+          },
+          {
+            "id": "press-release",
+            "slug": "press-release",
+            "category": "document",
+            "type": "press",
+            "title_key": "gallery.archive_materials.press_release.title",
+            "subtitle_key": "gallery.archive_materials.press_release.subtitle",
+            "date_label_key": "gallery.archive_materials.press_release.date_label",
+            "source_key": "gallery.archive_materials.sources.archive_editor",
+            "rights_key": "gallery.archive_materials.rights.gallery_bz",
+            "format_key": "gallery.archive_materials.formats.pdf_document",
+            "identifier": "GBZ-DOC-2026-002",
+            "image": "",
+            "summary_key": "gallery.archive_materials.press_release.summary",
+            "description_key": "gallery.archive_materials.press_release.description",
+            "exhibition_slug": "light-afterimage-record",
+            "item_slugs": [
+              "press-fragment-a"
+            ],
+            "record_slugs": [
+              "curator-note",
+              "process-note"
+            ],
+            "tags": [
+              "press",
+              "document",
+              "context"
+            ],
+            "visibility_state": "published",
+            "published_at": "2026-04-06T09:00:00+09:00",
+            "href": "/archive/document/press-release"
+          }
+        ],
+        "parent_href": "/exhibitions/light-afterimage-record"
+      }
+    }
+  ],
+  "slots": {
+    "content": [
+      {
+        "partial": "partials/records/_record_hero.json"
+      },
+      {
+        "partial": "partials/records/_record_metadata.json"
+      },
+      {
+        "partial": "partials/records/_record_body_sections.json"
+      },
+      {
+        "partial": "partials/records/_record_exhibition_context.json"
+      },
+      {
+        "partial": "partials/records/_record_related_items.json"
+      },
+      {
+        "partial": "partials/records/_record_archive_materials.json"
+      }
+    ]
+  }
+}

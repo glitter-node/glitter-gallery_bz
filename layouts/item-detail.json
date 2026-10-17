@@ -1,0 +1,211 @@
+{
+  "version": "1.0.0",
+  "layout_name": "item-detail",
+  "permissions": [],
+  "extends": "_user_base",
+  "data_sources": [
+    {
+      "id": "gallery_item_detail",
+      "type": "static",
+      "data": {
+        "id": "pale-grid-01",
+        "slug": "pale-grid-01",
+        "type": "artwork",
+        "title_key": "gallery.items.pale_grid.title",
+        "subtitle_key": "gallery.items.pale_grid.subtitle",
+        "artist_name_key": "gallery.items.artists.min_jiwon",
+        "year": "2025",
+        "medium_key": "gallery.items.pale_grid.medium",
+        "dimensions_key": "gallery.items.pale_grid.dimensions",
+        "collection_name_key": "gallery.collections.items.held_works.title",
+        "credit_line_key": "gallery.items.pale_grid.credit_line",
+        "section_id": "context",
+        "exhibition_slug": "light-afterimage-record",
+        "archive_category": "material",
+        "tags": [
+          "light",
+          "grid",
+          "paper"
+        ],
+        "thumbnail_image": "",
+        "detail_image": "",
+        "summary_key": "gallery.items.pale_grid.summary",
+        "curator_note_key": "gallery.items.pale_grid.curator_note",
+        "visibility_state": "published",
+        "published_at": "2026-04-01T09:00:00+09:00",
+        "related_records": [
+          "curator-note",
+          "field-note"
+        ],
+        "related_archive_materials": [
+          "installation-photo-set",
+          "lighting-plan"
+        ],
+        "relationships": {
+          "artist_profile": "min-jiwon",
+          "archive_category": "material",
+          "record_notes": [
+            "curator-note",
+            "field-note"
+          ],
+          "collection": "held-works",
+          "exhibition_section": "context",
+          "timeline_reference": "research-start"
+        },
+        "exhibition_title_key": "gallery.content.exhibitions.light_afterimage.title",
+        "exhibition_href": "/exhibitions/light-afterimage-record",
+        "section_title_key": "gallery.content.exhibition_sections.context.title",
+        "archive_category_title_key": "gallery.archive.categories.material.title",
+        "material_description_key": "gallery.items.pale_grid.material_description",
+        "metadata": [
+          {
+            "id": "artist",
+            "label_key": "gallery.items.metadata.artist",
+            "value_key": "gallery.items.artists.min_jiwon"
+          },
+          {
+            "id": "year",
+            "label_key": "gallery.items.metadata.year",
+            "value": "2025"
+          },
+          {
+            "id": "medium",
+            "label_key": "gallery.items.metadata.medium",
+            "value_key": "gallery.items.pale_grid.medium"
+          },
+          {
+            "id": "dimensions",
+            "label_key": "gallery.items.metadata.dimensions",
+            "value_key": "gallery.items.pale_grid.dimensions"
+          },
+          {
+            "id": "collection",
+            "label_key": "gallery.items.metadata.collection",
+            "value_key": "gallery.collections.items.held_works.title"
+          },
+          {
+            "id": "credit",
+            "label_key": "gallery.items.metadata.credit_line",
+            "value_key": "gallery.items.pale_grid.credit_line"
+          },
+          {
+            "id": "visibility",
+            "label_key": "gallery.items.metadata.visibility_state",
+            "value_key": "gallery.items.visibility.published"
+          }
+        ],
+        "related_record_items": [
+          {
+            "id": "curator-note",
+            "slug": "curator-note",
+            "type": "curator_note",
+            "title_key": "gallery.records.curator_note.title",
+            "subtitle_key": "gallery.records.curator_note.subtitle",
+            "summary_key": "gallery.records.curator_note.summary",
+            "href": "/records/curator-note"
+          },
+          {
+            "id": "field-note",
+            "slug": "field-note",
+            "type": "field_note",
+            "title_key": "gallery.records.field_note.title",
+            "subtitle_key": "gallery.records.field_note.subtitle",
+            "summary_key": "gallery.records.field_note.summary",
+            "href": "/records/field-note"
+          }
+        ],
+        "archive_material_items": [
+          {
+            "id": "installation-photo-set",
+            "slug": "installation-photo-set",
+            "category": "material",
+            "type": "installation_photo",
+            "title_key": "gallery.archive_materials.installation_photo_set.title",
+            "subtitle_key": "gallery.archive_materials.installation_photo_set.subtitle",
+            "date_label_key": "gallery.archive_materials.installation_photo_set.date_label",
+            "source_key": "gallery.archive_materials.sources.gallery_records_team",
+            "rights_key": "gallery.archive_materials.rights.gallery_bz",
+            "format_key": "gallery.archive_materials.formats.digital_image_set",
+            "identifier": "GBZ-MAT-2026-001",
+            "image": "",
+            "summary_key": "gallery.archive_materials.installation_photo_set.summary",
+            "description_key": "gallery.archive_materials.installation_photo_set.description",
+            "exhibition_slug": "light-afterimage-record",
+            "item_slugs": [
+              "pale-grid-01",
+              "installation-axis-note"
+            ],
+            "record_slugs": [
+              "field-note",
+              "installation-note"
+            ],
+            "tags": [
+              "installation",
+              "photo",
+              "space"
+            ],
+            "visibility_state": "published",
+            "published_at": "2026-04-04T09:00:00+09:00",
+            "href": "/archive/material/installation-photo-set"
+          },
+          {
+            "id": "lighting-plan",
+            "slug": "lighting-plan",
+            "category": "field-record",
+            "type": "note",
+            "title_key": "gallery.archive_materials.lighting_plan.title",
+            "subtitle_key": "gallery.archive_materials.lighting_plan.subtitle",
+            "date_label_key": "gallery.archive_materials.lighting_plan.date_label",
+            "source_key": "gallery.archive_materials.sources.installation_team",
+            "rights_key": "gallery.archive_materials.rights.gallery_bz",
+            "format_key": "gallery.archive_materials.formats.field_note_scan",
+            "identifier": "GBZ-FLD-2026-004",
+            "image": "",
+            "summary_key": "gallery.archive_materials.lighting_plan.summary",
+            "description_key": "gallery.archive_materials.lighting_plan.description",
+            "exhibition_slug": "light-afterimage-record",
+            "item_slugs": [
+              "pale-grid-01"
+            ],
+            "record_slugs": [
+              "field-note"
+            ],
+            "tags": [
+              "lighting",
+              "field-record",
+              "installation"
+            ],
+            "visibility_state": "published",
+            "published_at": "2026-04-05T09:00:00+09:00",
+            "href": "/archive/field-record/lighting-plan"
+          }
+        ]
+      }
+    }
+  ],
+  "slots": {
+    "content": [
+      {
+        "partial": "partials/items/_item_hero.json"
+      },
+      {
+        "partial": "partials/items/_item_visual.json"
+      },
+      {
+        "partial": "partials/items/_item_metadata.json"
+      },
+      {
+        "partial": "partials/items/_item_curator_note.json"
+      },
+      {
+        "partial": "partials/items/_item_exhibition_context.json"
+      },
+      {
+        "partial": "partials/items/_item_related_records.json"
+      },
+      {
+        "partial": "partials/items/_item_archive_materials.json"
+      }
+    ]
+  }
+}

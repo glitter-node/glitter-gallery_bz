@@ -1,0 +1,14 @@
+<partial>
+  <section class="gallery-section gallery-section-tight">
+    <div class="gallery-item-visual-panel">
+      <div class="gallery-media-frame gallery-media-detail gallery-media-detail-panel gallery-item-detail-image">
+        <img data-if="{{gallery_item_detail.image_url ?? gallery_item_detail.preview_image ?? gallery_item_detail.detail_image ?? gallery_item_detail.media?.url ?? false}}" src='{{(gallery_item_detail.image_url ?? gallery_item_detail.preview_image ?? gallery_item_detail.detail_image ?? gallery_item_detail.media?.url ?? "")}}' alt="{{gallery_item_detail.title_label ?? $t(gallery_item_detail.title_key ?? 'gallery.media.item_thumbnail')}}" class="gallery-media-image"/>
+        <div data-if="{{!(gallery_item_detail.image_url ?? gallery_item_detail.preview_image ?? gallery_item_detail.detail_image ?? gallery_item_detail.media?.url ?? false)}}" class="gallery-media-placeholder">
+          <span class="gallery-media-placeholder-label">$t:gallery.media.detail_hero</span>
+        </div>
+        <span class="gallery-media-caption">{{gallery_item_detail.media_caption ?? gallery_item_detail.media?.credit ?? $t(gallery_item_detail.credit_line_key ?? 'gallery.media.preview_caption')}}</span>
+      </div>
+      <p class="gallery-muted">{{$t(gallery_item_detail.credit_line_key)}}</p>
+    </div>
+  </section>
+</partial>

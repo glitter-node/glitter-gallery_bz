@@ -1,0 +1,20 @@
+<partial>
+  <section class="gallery-section">
+    <span class="gallery-kicker">$t:gallery.exhibition_detail.related_records</span>
+    <h2 class="gallery-section-title">$t:gallery.exhibition_detail.related_records_title</h2>
+    <div class="gallery-list">
+      <a data-each="record in gallery_exhibition_detail.related_records" href='{{record.href ?? "/records"}}' class="gallery-record gallery-record-link">
+        <span class="gallery-meta">{{record.type}}</span>
+        <h3 class="gallery-record-title">{{$t(record.title_key)}}</h3>
+        <p class="gallery-record-body">{{$t(record.body_key)}}</p>
+      </a>
+    </div>
+    <div class="gallery-list gallery-section-list">
+      <div data-each="note in gallery_exhibition_detail.field_notes" class="gallery-record">
+        <span class="gallery-meta">$t:gallery.exhibition_detail.field_notes_kicker</span>
+        <h3 class="gallery-record-title">{{$t(note.title_key)}}</h3>
+        <p class="gallery-record-body">{{$t(note.body_key)}}</p>
+      </div>
+    </div>
+  </section>
+</partial>
